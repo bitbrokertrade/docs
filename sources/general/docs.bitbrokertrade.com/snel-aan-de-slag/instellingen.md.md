@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/snel-aan-de-slag/instellingen.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/snel-aan-de-slag/instellingen.md). # Instellingen In dit menu zijn de trader instellingen en de koppeling met de beurzen/exchanges vastgelegd. In theorie kun je bij meerdere beurzen een account hebben en bij een beurs kun je meerdere traders activeren. In theorie kan iedere trader een eigen strategie volgen. Zie hiervoor ook \*\*"Trader instellingen"\*\*.

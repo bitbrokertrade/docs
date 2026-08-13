@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/welke-coins-ondersteunt-bbt-bij-coinbase-pro.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/welke-coins-ondersteunt-bbt-bij-coinbase-pro.md). # Welke coins ondersteunt BBT bij Coinbase pro? \\ We ondersteunen bij Coinbase pro de volgende coinparen: \*\*BTC\*\*/euro \*\*ETH\*\*/euro \*\*ADA\*\*/euro \*\*BCH\*\*/euro \*\*DOGE\*\*/euro \*\*LTC\*\*/euro \*\*EOS\*\*/euro \*\*LINK\*\*/euro

@@ -1,0 +1,55 @@
+---
+title: "Trader doet geen aankopen — mogelijke oorzaken"
+sidebarTitle: "Geen Aankopen"
+description: "Ontdek waarom je trader geen nieuwe posities inkoopt: te weinig saldo, geen credits, ongekoppelde API of een te groot gereserveerd bedrag."
+---
+
+Als je trader geen nieuwe posities inkoopt, betekent dit altijd dat aan één of meer van de vereiste criteria niet wordt voldaan. Hieronder vind je alle mogelijke oorzaken op een rij, zodat je snel kunt achterhalen wat er in jouw situatie aan de hand is.
+
+<Note>
+  Bij de **BBT-strategie** koopt de trader alleen aan bij de **aanvang van een opwaartse trend** — niet gedurende een al lopende stijging. Het is dus mogelijk dat de koers stijgt terwijl de trader niets doet: dat is bewust en correct gedrag. Bij de **Updown-strategie** gelden andere aankoopmomenten op basis van koersranges.
+</Note>
+
+## Mogelijke oorzaken
+
+<Accordion title="1. Aankoopmomenten van de BBT-strategie">
+  De BBT-strategie werkt volgens een vast format: de trader koopt **alleen aan bij de aanvang van een opwaartse trend**, mits binnen een bepaalde bandbreedte er geen andere vergelijkbare transactie openstaat.
+
+  **Gedurende een koersstijging doet de BBT-strategie geen nieuwe aankopen.** Wacht op een nieuw aankoopmoment aan het begin van de volgende trend.
+</Accordion>
+
+<Accordion title="2. Onvoldoende eurosaldo op de exchange">
+  De trader heeft minimaal **€ 25,-** aan vrij eurosaldo op je exchange-account nodig om een transactie te plaatsen.
+
+  Controleer je saldo bij de exchange. Als je saldo lager is dan € 25,-, kan de trader niet aankopen totdat je bijstort of een bestaande positie wordt verkocht en het saldo vrijkomt.
+</Accordion>
+
+<Accordion title="3. Geen credits beschikbaar in BBT">
+  BBT gebruikt credits om de platformdiensten te bekostigen. Als je credits-saldo op is, stopt de trader met handelen.
+
+  Ga naar **Instellingen → Credits** in je BBT-account en voeg credits toe. Zodra het saldo aangevuld is, hervat de trader automatisch zijn werkzaamheden.
+</Accordion>
+
+<Accordion title="4. API niet of onjuist gekoppeld">
+  Als de API-sleutel niet correct is gekoppeld of inactief is, heeft de trader geen verbinding met de exchange en kan hij geen opdrachten plaatsen.
+
+  Controleer de status van je API-verbinding via **Instellingen → Beurzen**. Staat de beurs op inactief? Raadpleeg dan de pagina [API-sleutel problemen](/foutmeldingen/api-sleutel-problemen) voor de oplossing.
+</Accordion>
+
+<Accordion title="5. Te groot gereserveerd bedrag ingesteld">
+  Als je in de exchange-instelling een gereserveerd bedrag hebt opgegeven dat groter is dan of gelijk is aan je vrije eurosaldo, is er **geen vrij saldo** beschikbaar voor nieuwe aankopen.
+
+  Ga naar **Instellingen → Beurzen** en verlaag het gereserveerde bedrag, of wacht tot er voldoende saldo vrijkomt uit een verkoop.
+</Accordion>
+
+<Accordion title="6. Koersplafond bereikt">
+  Als de huidige koers van de coin **boven het ingestelde koersplafond** ligt, doet de trader geen nieuwe aankopen. Dit is een bewuste beveiliging om te voorkomen dat er bij historisch hoge koersen wordt ingekocht.
+
+  Controleer de koersplafond-instelling in je trader. Pas het aan als de situatie dit rechtvaardigt.
+</Accordion>
+
+<Accordion title="7. Maximum aantal open aankopen bereikt">
+  Als het ingestelde maximum voor gelijktijdig open aankopen al bereikt is, doet de trader geen nieuwe aankopen — ook niet bij een nieuw aankoopmoment.
+
+  Verhoog het maximum via de trader-instelling **"Maximaal open aankopen"**, of wacht tot bestaande posities worden verkocht.
+</Accordion>

@@ -1,0 +1,139 @@
+---
+title: "Trader toevoegen en instellen in BitBrokerTrade"
+sidebarTitle: "Trader Instellen"
+description: "Voeg een nieuwe trader toe via Instellingen → Traders en configureer naam, beurs, munt, strategie en alle handelsparameters voor optimaal resultaat."
+---
+
+Via het instellingenmenu voeg je eenvoudig een nieuwe trader toe en configureer je elke parameter naar jouw wensen. Een goed geconfigureerde trader vormt de basis voor consistente resultaten — neem dus even de tijd om elke instelling door te lezen voordat je hem activeert.
+
+## Trader toevoegen
+
+Navigeer in het menu naar **Instellingen → Traders** en klik op **Trader toevoegen**. Er opent een formulier met alle onderstaande instellingen.
+
+---
+
+## Basisinstellingen
+
+<Accordion title="Naam">
+  Geef je trader een herkenbare, beschrijvende naam. Het dashboard gebruikt deze naam in al je overzichten.
+
+  **Aanbeveling:** gebruik een combinatie van exchange en munt, bijvoorbeeld **"Bitvavo BTC"** of **"Binance ETH"**. Zo zie je in één oogopslag welke exchange en welke munt de trader beheert.
+</Accordion>
+
+<Accordion title="Beurs">
+  Kies de exchange waaraan je deze trader wil koppelen. Zorg dat je al een actieve API-koppeling hebt aangemaakt voor de betreffende exchange. Zie de exchange-pagina's voor instructies:
+
+  - [Bitvavo](/exchanges/bitvavo)
+  - [Binance](/exchanges/binance)
+  - [Bybit](/exchanges/bybit)
+  - [Bitstamp](/exchanges/bitstamp)
+  - [Coinbase](/exchanges/coinbase)
+  - [KuCoin](/exchanges/kucoin)
+  - [Simulator](/exchanges/simulator)
+</Accordion>
+
+<Accordion title="Markt">
+  Kies de cryptomunt waarmee de trader moet handelen, bijvoorbeeld **BTC/EUR** of **ETH/EUR**. Het beschikbare aanbod is afhankelijk van de gekozen exchange. Bekijk alle ondersteunde paren op de pagina [Ondersteunde Coins](/traders/ondersteunde-coins).
+</Accordion>
+
+<Accordion title="Handelsstrategie">
+  Kies welke strategie de trader volgt. Er zijn twee opties:
+
+  | Strategie | Candles | Methode |
+  |---|---|---|
+  | **BitBrokerTrade** | 15 minuten | MACD-trendberekening |
+  | **Updown** | 1 minuut | Directe koersvergelijking |
+
+  Lees de uitgebreide vergelijking op de pagina [Handelsstrategie](/traders/handelsstrategie) om de beste keuze te maken voor jouw situatie.
+</Accordion>
+
+---
+
+## Aankoop-instellingen
+
+<Accordion title="Minimumpercentage tussen transacties (standaard: 6%)">
+  Deze instelling bepaalt hoeveel koersverschil er moet zitten tussen opeenvolgende aankopen. Zo voorkom je dat de trader in een dalende markt te snel achter elkaar meerdere posities inneemt.
+
+  **Waarom 6%?** Simulaties tonen aan dat een hogere drempel voorkomt dat je in een dalende markt onnodig veel posities opbouwt. In een zijwaartse of stijgende markt heeft dit hoge percentage geen negatief effect.
+</Accordion>
+
+<Accordion title="Stop aankopen boven (koersplafond)">
+  Vul hier een koers in euro's in waarboven de trader geen nieuwe aankopen meer doet. Laat dit veld leeg als je geen plafond wilt instellen.
+
+  **Hoe stel je een goed plafond in?**
+  1. Bekijk de huidige koers en de historische koersontwikkeling van de betreffende munt.
+  2. Als je verwacht dat de koers boven een bepaald niveau slechts een eenmalige piek is, stel dan een koersplafond in op **3% onder dat niveau**.
+  3. Als je minimum winstpercentage lager is dan 3%, verkoopt de trader zijn laatste positie alsnog bij zo'n piekkoers — zo behaal je maximaal rendement op het topmomentin.
+</Accordion>
+
+<Accordion title="Gemiddeld aankoopbedrag">
+  Standaard koopt de trader **18% van je vrije eurosaldo** in als positie. Bij € 1.000,- beschikbaar saldo is dat dus € 180,- per aankoop.
+
+  Wil je liever een vast bedrag instellen? Vul hier het gewenste aankoopbedrag in, bijvoorbeeld **€ 200,-**. De trader koopt dan altijd posities in van precies dat bedrag, ongeacht je totale saldo.
+
+  <Note>
+    Het minimale transactiebedrag is **€ 25,-**. Bedragen daaronder worden niet uitgevoerd.
+  </Note>
+</Accordion>
+
+<Accordion title="Maximum open aankopen">
+  Stel hier in hoeveel posities er maximaal tegelijk open mogen staan voor deze trader. Combineer dit met het gemiddeld aankoopbedrag voor een nauwkeurige limiet op je totale investering per munt.
+
+  **Speciale functie — trader leegverkopen:**
+  Vul je **0** in bij deze instelling? Dan doet de trader geen nieuwe aankopen meer, maar verkoopt hij bestaande posities wel gewoon zodra het verkoopsignaal en het minimum winstpercentage dat toelaten. Gebruik dit als je een munt rustig wil afbouwen zonder nieuwe posities te openen.
+</Accordion>
+
+---
+
+## Verkoop-instellingen
+
+<Accordion title="Minimum winstpercentage">
+  De trader verkoopt een positie alleen als het rendement op dat moment **hoger is dan dit percentage**. Dit is de belangrijkste instelling voor je winstgevendheid.
+
+  **Richtlijn:**
+  - Bijna alle exchanges rekenen **0,25% aankoopkosten + 0,25% verkoopkosten = 0,5% totaal**.
+  - Stel je minimum winstpercentage dus in op minimaal **0,5%** om break-even te draaien.
+  - Een aanbevolen instelling ligt tussen **0,7% en 0,9%** voor een goede balans tussen transactievolume en netto winst.
+  - Bij een hoger percentage (bijv. 5%) doet de trader minder transacties maar maakt hij per transactie meer winst.
+  - Bij een lager percentage (bijv. 1%) profiteer je van meer transacties en mogelijk een beter totaalrendement.
+</Accordion>
+
+<Accordion title="Winststrategie">
+  Kies hoe de trader omgaat met de opbrengst na een verkoop:
+
+  <CardGroup cols={2}>
+    <Card title="Herinvesteren" icon="arrows-rotate">
+      Het volledige verkoopbedrag (aankoopbedrag + winst) vloeit terug naar je eurosaldo en wordt direct weer ingezet voor nieuwe posities. Kies dit als je wil dat je kapitaal maximaal blijft werken.
+    </Card>
+    <Card title="HODL" icon="vault">
+      Alleen het oorspronkelijke aankoopbedrag wordt omgezet naar euro's. De winst blijft in de cryptovaluta staan. Kies dit als je geleidelijk een cryptovoorraad wil opbouwen.
+    </Card>
+  </CardGroup>
+</Accordion>
+
+<Accordion title="Stoploss percentage">
+  De stoploss is een noodrem: zodra het verlies op een positie dit percentage bereikt, verkoopt de trader de positie automatisch om verder verlies te voorkomen.
+
+  <Warning>
+    BitBrokerTrade biedt deze functie aan omdat gebruikers erom vragen, maar **wij raden het gebruik ervan sterk af**. In alle tests op historische data (tot 12 maanden terug) leidt de stoploss-functie tot een **aanzienlijk lagere rentabiliteit** — en in veel gevallen zelfs tot verlies op de totale investering. Laat dit veld leeg als je twijfelt.
+  </Warning>
+</Accordion>
+
+---
+
+## Trader activeren
+
+Heb je alle instellingen naar wens ingevuld? Vink dan de **activeer-checkbox** aan onderaan het formulier en sla op.
+
+<Note>
+  Gefeliciteerd — je trader is nu actief! Hij begint direct met het verzamelen van koersdata en genereert zijn eerste signalen zodra de marktomstandigheden dat toelaten. Houd je **Aankooptransacties** in de gaten voor de eerste orders.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Hoe werkt de trader?" icon="robot" href="/traders/wat-is-een-trader">
+    Leer meer over de MACD-methode en hoe de trader besluiten neemt.
+  </Card>
+  <Card title="Strategie kiezen" icon="map" href="/traders/handelsstrategie">
+    Vergelijk BitBrokerTrade- en Updown-strategie naast elkaar.
+  </Card>
+</CardGroup>

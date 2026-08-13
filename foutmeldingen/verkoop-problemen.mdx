@@ -1,0 +1,61 @@
+---
+title: "Transactie wordt niet verkocht — oorzaken en oplossingen"
+sidebarTitle: "Verkoop Problemen"
+description: "Los verkoopproblemen op: waarom een positie niet wordt verkocht ondanks het behalen van het rendementspercentage, en hoe de Updown-strategie verkoopt."
+---
+
+Het kan voorkomen dat een positie niet wordt verkocht, ook al lijkt het rendementsdoel gehaald te zijn. Dit is bijna altijd te verklaren door de manier waarop de verkooplogica van de BBT- en Updown-strategie werkt. Hieronder vind je de meest voorkomende oorzaken en hun oplossingen.
+
+<Note>
+  De trader verkoopt pas als **beide** condities tegelijkertijd vervuld zijn: (1) het rendement is boven het minimumpercentage én (2) er is een verkoopsignaal vanuit de strategie. Alleen rendement behalen is niet genoeg.
+</Note>
+
+## Verkoopproblemen per situatie
+
+<Accordion title="Rendement gehaald maar positie toch niet verkocht (BBT-strategie)">
+  Bij de **BBT-strategie** verkoopt de trader pas als de **stijgende trend breekt**. Dit verkoopsignaal treedt nooit op het hoogste punt van de koers op, maar pas nadat de trend van stijgen naar dalen is omgeslagen.
+
+  Dit betekent: als het rendement op een moment boven de ingestelde waarde was maar de trend op dat moment nog stijgend was, verkoopt de trader niet. Hij wacht op de trendbreuk. Daarna kan het zijn dat de koers al wat gedaald is en het rendement lager uitvalt dan de kortstondige piek.
+
+  Dit is normaal en correct gedrag van de BBT-strategie.
+</Accordion>
+
+<Accordion title="Rendement gehaald maar positie toch niet verkocht (Updown-strategie)">
+  Bij de **Updown-strategie** werkt het verkoopsignaal als volgt: de trader verkoopt pas als de **slotkoers van de laatste candle fundamenteel lager is dan die van de voorgaande candle** (zowel in koers als volume). Updown werkt met candles van 1 minuut.
+
+  Als de koers binnen een minuut boven de doelkoers uitstijgt maar **onder de doelkoers sluit** aan het einde van die minuut, neemt de trader geen actie. De slotkoers van de candle is bepalend — niet de intracandle-piek.
+
+  Dit verklaart waarom de koers soms zichtbaar boven het doelpercentage uitkomt zonder dat er verkocht wordt.
+</Accordion>
+
+<Accordion title="Updown: koers komt boven doelpercentage maar trader verkoopt niet">
+  Bij de Updown-strategie geldt: aankoopkoers + rendementspercentage = doelkoers. De **slotkoers van de candle** (iedere minuut vastgesteld) moet boven de doelkoers sluiten én de koers moet dalend zijn.
+
+  Als de koers binnen die minuut piekt boven de doelkoers maar onder de doelkoers sluit, neemt de trader geen actie. Wacht op een candle die volledig boven de doelkoers sluit met een dalend signaal daarna.
+</Accordion>
+
+<Accordion title="BNB-transactie geeft foutmelding bij verkoop">
+  Dit probleem speelt als je bij **Binance** hebt ingesteld dat transactiekosten in **BNB** mogen worden verrekend (wat korting geeft). Binance muteert dan jouw BNB-saldo negatief voor de transactiekosten.
+
+  Als je geen BNB bijkoopt om deze kosten te dekken, daalt het BNB-saldo. De trader heeft dan niet genoeg BNB-saldo meer om de positie te verkopen en geeft een foutmelding.
+
+  **Oplossing:** log in bij Binance en koop voldoende BNB bij om de transactiekosten te dekken.
+</Accordion>
+
+<Accordion title="Extreem hoge handelskosten bij verkooptransacties (Binance)">
+  Dit probleem treedt op als je bij Binance hebt aangegeven dat transactiekosten in BNB verrekend mogen worden. Binance geeft echter aan BBT niet door dat er in BNB is afgerekend. De BBT-software ontvangt een aantal in rekening gebrachte cryptomunten als transactiekosten en denkt dat dit de coin is waarin gehandeld is. Als het BNB betreft, rekent de software met een verkeerd aantal, wat leidt tot absurd hoge of absurd lage transactiekosten in het scherm.
+
+  **Belangrijk:** de werkelijk in rekening gebrachte kosten zijn correct. Het bedrag in de trader is alleen een weergavefout.
+</Accordion>
+
+<Accordion title="Positie met rood kruis in aankooptransacties: wat betekent dit?">
+  Een rood kruis bij een transactieregel heeft twee mogelijke oorzaken:
+
+  **Oorzaak 1 — Verkoopopdracht niet volledig uitgevoerd:**
+  De trader heeft een verkoopopdracht geplaatst, maar de koers daalde zo snel dat de exchange de order niet volledig kon afwikkelen. De exchange mag een order in stukjes verkopen. De restorder blijft open totdat de koers het verkoopniveau weer bereikt.
+
+  Wil je niet wachten? Klik op het **rode kruis** om de resterende order af te handelen. De order wordt dan gesplitst in twee delen: het al verkochte gedeelte (verschijnt in verkooptransacties) en het onverkochte gedeelte (blijft in aankooptransacties). Beide orders hebben hetzelfde ordernummer.
+
+  **Oorzaak 2 — Aankoopopdracht niet volledig ingevuld:**
+  De trader plaatste een aankooporder, maar door het snelle stijgen van de koers kon de exchange de order niet volledig invullen. De trader wacht op afhandeling. Druk op het **rode kruis** om de trader opdracht te geven de order af te handelen. Het aangekochte deel blijft in aankooptransacties staan; het niet-aangekochte deel verschijnt als nultransactie in het verkoopscherm.
+</Accordion>

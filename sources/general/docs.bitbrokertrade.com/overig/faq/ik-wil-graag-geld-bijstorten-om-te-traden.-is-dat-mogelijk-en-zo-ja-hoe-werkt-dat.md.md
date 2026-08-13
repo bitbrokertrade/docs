@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/ik-wil-graag-geld-bijstorten-om-te-traden.-is-dat-mogelijk-en-zo-ja-hoe-werkt-dat.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/overig/faq/ik-wil-graag-geld-bijstorten-om-te-traden.-is-dat-mogelijk-en-zo-ja-hoe-werkt-dat.md). # Ik wil graag geld bijstorten om te traden. Is dat mogelijk en zo ja, hoe werkt dat? In de exchange kun je vanuit je eigen bankrekeningnummer geld storten op de euro rekening. De trader zal vanaf dat moment met het nieuwe beschikbare saldo in euro gaan rekenen.

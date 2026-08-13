@@ -1,0 +1,49 @@
+---
+title: "Dashboard klopt niet of saldo wijkt af — oorzaken"
+sidebarTitle: "Dashboard & Saldo"
+description: "Waarom je dashboard lager winst toont, wat het verschil-symbool (*) bij het exchange-saldo betekent en hoe je dit corrigeert."
+---
+
+Soms lijken de cijfers in je BBT-dashboard niet overeen te komen met wat je verwacht: de getoonde winst daalt opeens, het saldo wijkt af van de transactiegeschiedenis, of er staat een asterisk (\*) bij je exchange-saldo. Op deze pagina leggen we uit hoe dit kan ontstaan en wat je eraan kunt doen.
+
+<Warning>
+  Handel **nooit handmatig** in cryptomunten op de exchange buiten de BBT-trader om, tenzij je de consequenties begrijpt. De trader houdt zijn eigen boekhouding bij en weet niet van externe transacties. Dit leidt tot saldoverschillen en kan verkoopproblemen veroorzaken.
+</Warning>
+
+## Veelvoorkomende dashboard- en saldoproblemen
+
+<Accordion title="Mijn dashboard toont opeens een lagere winst — wat is er aan de hand?">
+  Het dashboard toont **alleen de resultaten van actieve traders**. Als je een trader inactief maakt of verwijdert, wordt zijn bijdrage aan het winstsaldo in het dashboard niet meer meegeteld. Dit zorgt voor een zichtbare daling van de getoonde winst.
+
+  De **verkooptransacties** blijven altijd volledig zichtbaar in het scherm Verkooptransacties. Die kun je niet verwijderen en ze verdwijnen niet uit de historie.
+
+  <Note>
+    Verwijder een trader alleen definitief als je hem niet meer nodig hebt. Bij het inactiveren blijft de historiek bewaard en kun je de trader later weer activeren zonder gegevensverlies.
+  </Note>
+</Accordion>
+
+<Accordion title="Dashboardgegevens kloppen niet met de transactiegeschiedenis">
+  Het dashboard geeft alleen de resultaten van **actieve traders** weer. Als je een trader hebt verwijderd, vervalt ook zijn resultaat in het dashboard — maar de bijbehorende verkooptransacties blijven wél zichtbaar in het scherm Verkooptransacties.
+
+  Dit verschil tussen het dashboard-totaal en de volledige transactiegeschiedenis is daardoor te verklaren: de transactiegeschiedenis toont alles, het dashboard alleen de actieve traders.
+</Accordion>
+
+<Accordion title="Saldoverschil (*) bij exchange in het dashboard">
+  Een asterisk (\*) bij het exchange-saldo in BBT geeft aan dat er een **verschil is** tussen de cryptohoeveelheid die BBT verwacht op basis van zijn aankoopposities en de werkelijke hoeveelheid die op de exchange staat.
+
+  Dit ontstaat als je **handmatig posities op de exchange hebt verkocht** buiten de trader om. De trader weet niet van die externe verkopen en houdt nog steeds rekening met die posities in zijn boekhouding.
+
+  **Oplossing:** koop het verschil handmatig bij op de exchange, zodat de trader zijn openstaande posities alsnog kan verkopen en de boekhouding klopt.
+</Accordion>
+
+<Accordion title="Openstaande positie in BBT maar niet genoeg cryptosaldo op de exchange">
+  Dit probleem ontstaat als je buiten de trader om posities hebt verkocht op de exchange, zonder BBT daarvan op de hoogte te stellen. De trader denkt dat de positie nog open staat, maar het bijbehorende cryptosaldo ontbreekt op de exchange.
+
+  Je hebt drie opties:
+
+  1. **Bijkopen op de exchange:** koop eenmalig de ontbrekende crypto bij op de exchange. De trader handelt daarna alle transacties af en de historiek blijft bewaard.
+  2. **Positie op hold zetten:** zet de betreffende orderregel op **on hold** (button "II" in het aankoopscherm). De trader negeert de transactie en de historiek blijft bewaard.
+  3. **Trader resetten:** verwijder de betreffende trader en voeg hem opnieuw toe. Alle posten zijn dan gereset en de trader begint opnieuw. **Let op: de trader-historiek wordt hiermee gewist.**
+
+  Kies de optie die het beste bij jouw situatie past.
+</Accordion>

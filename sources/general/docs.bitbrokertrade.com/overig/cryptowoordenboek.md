@@ -1,0 +1,315 @@
+# Source: https://docs.bitbrokertrade.com/overig/cryptowoordenboek
+
+For the complete documentation index, see [llms.txt](https://docs.bitbrokertrade.com/llms.txt). This page is also available as [Markdown](https://docs.bitbrokertrade.com/overig/cryptowoordenboek.md).
+
+**2FA:**
+
+Two factor authentication: Een beveiligingstool waardoor het voor hackers onmogelijk wordt om je account te hacken door alleen het kraken van je wachtwoord. Een 2FA kan bestaan uit het sturen van een bevestiging-email naar je email adres of het opvragen van een toegezonden sms code.
+
+**ABI:**
+
+(Appliction Binary Interface) :
+
+Een interface tussen twee binaire programma modules. Vaak is één programma van de database en de andere wordt gebruikt door de gebruiker.
+
+**Altcoin:**
+
+Alle virtuele munten die intussen bestaan naast Bitcoin.
+
+**ATH:**
+
+All time high: De hoogste koers die een munt tot nu toe heeft behaald.
+
+**ASIC:**
+
+(Appliciation Specific Integrated Circuits):
+
+Hardware processors die slechts één taak kunnen uitvoeren, maar dat veel sneller kunnen doen dan de normale CPU’s die je ook terugvindt in je computer.
+
+**API:**
+
+(Application Programming Interface):
+
+Gedeelte van een op afstand bestuurbare software dat op verzoek informatie opvraagt, verstuurt en daarop reageert.
+
+**Bevestiging:**
+
+Betekent dat een transactie is geverifieerd door het netwerk en (bijna) niet meer ongedaan kan worden gemaakt. Transacties ontvangen een bevestiging wanneer deze in een blok zijn opgenomen en voor elk volgende blok. Eén bevestiging is behoorlijk veilig voor alledaagse transacties met lage bedragen. Voor hogere bedragen, bijvoorbeeld €1000 en hoger, zou u kunnen wachten op 6 of meer bevestigingen. Met elke bevestiging wordt het risico van terugdraaien exponentieel kleiner.
+
+**Bit:**
+
+is een algemene eenheid die gebruikt wordt om een sub-eenheid aan te duiden van een Bitcoin - 1.000.000 bits is gelijk aan 1 Bitcoin (BTC of ₿) Deze eenheid is meestal makkelijker voor het bepalen van de prijs van fooien, goederen en diensten. In de volksmond noemt met dit ook Satoshi.
+
+**Bitcoin:**
+
+De eerste en meest populaire cryptocurrency gebaseerd op decentrale grootboek opslag in de blockchain.
+
+**Bitcoin-adres:**
+
+Een Bitcoin-adres is vergelijkbaar met een huis- of e-mailadres. Het is het enige wat u aan anderen hoeft te geven om hen in staat te stellen betalingen via Bitcoin aan u te sturen. Een belangrijk verschil is echter dat elk adres slechts één keer voor één transactie dient te worden gebruikt.
+
+**Block / Blok:**
+
+Een blok is een verzameling van transacties die moeten worden bevestigd en een schakel in de blokketen. Gemiddeld wordt elke 10 minuten een blok toegevoegd aan de blokketen - en daarmee een pakket transacties bevestigd - door middel van mijnen/mining.
+
+**Blockchain/ Blokketen:**
+
+Is een openbaar archief van alle Bitcoin-transacties, in chronologische volgorde. De blokketen wordt gedeeld door alle Bitcoin-gebruikers. Het wordt gebruikt om de bestendigheid van Bitcoin-transacties te verifiëren en om dubbele uitgaven tegen te gaan.
+
+**Blocktime / Bloktijd:**
+
+De tijd die nodig is voor het ontcijferen van een nieuw block. Deze tijd wordt constant gehouden door het difficulty adjustment algorithm (DAA.) Voor Bitcoin is de blocktime momenteel 10 minuten. Dat wil zeggen dat er elke tien minuten een vast bepaald aantal Bitcoin worden gecreëerd.
+
+**Break-Out:**
+
+Wanneer de prijs plotseling doorbreekt boven de trendlijn, de verwachte prijsrange die de verschillende indicators voorspellen.
+
+**Block reward / Blok beloning:**
+
+Het aantal coins dat je ontvangt als jouw computer of miner de volgende block kan ontcijferen.
+
+**Block size / Blok grootte:**
+
+Het aantal transacties dat maximaal in één block kan worden opgeslagen. Hoe groter de blocksize, hoe moeilijker het wordt om een block te ontcijferen en hoe meer rekenkracht hiervoor nodig is.
+
+**BTC:**
+
+BTC is een algemene eenheid die gebruikt wordt om één Bitcoin (₿) aan te duiden.
+
+#### Burning/Coin burn
+
+Coin burning is het proces waarbij munten permanent uit de circulatie worden gehaald, waardoor het totale aanbod in munten verminderd wordt. Normaliter wordt dit gedaan om door minder aanbod, de koers positief te beïnvloeden
+
+**Coin / Munt:**
+
+Representatie van een digitaal bezit vastgelegd en opgebouwd in de blockchain.
+
+**Centralized/ gecentraliseerd:**
+
+Een netwerk wat centraal de authenticatie van een transactie op de blockchain registreert, bevestigd en verwerkt. Vaak door een groep, overheid of bedrijf.
+
+**Chaincode / Kettingcode:**
+
+De openbare beschrijving van het programma wat precies de systematiek van het digitale grootboek blootlegt door de daaraan gekoppelde applicaties. Het is de digitale grootboek fabriek die gelijk staat aan slimme contracten / Smart contracts.
+
+**Consensus / overeenstemming:**
+
+Wanneer een meerderheid bezig met één bepaalde munteenheid overeenstemming bereikt over de te varen koers m.b.t. de validatie van de transacties.
+
+**Cryptocurrency:**
+
+Een virtuele munt of token.
+
+**Cryptografie:**
+
+Cryptografie is de tak van wiskunde die zorgt voor wiskundig bewezen beveiliging. Winkels en banken gebruiken cryptografie om hun transacties via internet te beveiligen. In het geval van Bitcoin wordt cryptografie gebruikt om te zorgen dat niemand geld kan uitgeven uit andermans portemonnee en om te voorkomen dat iemand de integriteit van de blokketen kan aantasten. Het kan ook worden gebruikt om een portemonnee te versleutelen, zodat niemand erbij kan die het bijbehorende wachtwoord niet kent.
+
+**DAA:**
+
+(Difficulty Adjustment Algorithm):
+
+Hoe meer miners een bepaalde virtuele munt gaan minen, hoe groter de totale rekenkracht, en hoe sneller in principe blocks zullen worden ontcijferd. Om dit te balanceren zit in een virtuele munt een algoritme geprogrammeerd dat de moeilijkheidsgraad van de op te lossen encryptie automatisch verhoogt als er meer rekenkracht op wordt losgelaten. Deze balans is belangrijk om de blocktime constant te houden.
+
+**DAO:**
+
+(Decentralized Autonomous Organization):
+
+een gedecentraliseerd zelf-besturend orgaan dat volledig autonoom opereert en zichzelf van fondsen kan voorzien voor het onderhouden van het netwerk. Een voorbeeld hiervan is virtuele munt DASH.
+
+**Decentralized / gedecentraliseerd:**
+
+Het concept van een gedeeld netwerk van losse computers of supercomputers (nodes) die een transactie in de blockchain kunnen en mogen verwerken. Niet op één plaats gecentraliseerd. Daarnaast kunnen er computers in de keten uitvallen, zonder dat dit het grootboek van de keten beïnvloed.
+
+**Digitale handtekening:**
+
+Een cryptografische handtekening is een wiskundig mechanisme waarmee iemand kan aantonen dat hij of zij eigenaar is. In het geval van Bitcoin zijn een Bitcoin-portemonnee en de bijbehorende geheime sleutel(s) met wat wiskundige trucjes aan elkaar gekoppeld. Zodra de Bitcoin-software een transactie ondertekent met de gepaste geheime sleutel, kan het hele netwerk zien dat de ondertekening overeenkomt met de uitgegeven Bitcoins. Er bestaat echter geen enkele manier waarop iemand anders uw geheime sleutel kan raden om met uw zuurverdiende Bitcoins aan de haal te gaan.
+
+**Dubbele uitgave:**
+
+Dubbele uitgaven is een vorm van fraude waarbij iemand probeert zijn Bitcoins op twee of meer plekken tegelijkertijd uit te geven, voordat het systeem in de gaten heeft dat de Bitcoin al is uitgegeven. De manier waarop Bitcoin-mining en de blokketen werken, zorgen ervoor dat altijd maar één van de twee transacties door kan gaan.
+
+**FIAT:**
+
+Fiduciair geld. Geld dat zijn waarde niet ontleent aan de materie waaruit het gemaakt is, maar aan het vertrouwen dat er goederen en diensten mee gekocht kunnen worden. In de context van virtuele munten wordt de term FIAT aangewend om munten als de Dollar, Yen en Euro aan te duiden.
+
+**FOMO:**
+
+Fear of Missing Out: Veel mensen kopen een munt bij als ze zien dat de koers snel stijgt. Ze willen niet aan de zijlijn blijven staan terwijl de prijs verder blijft stijgen.
+
+**Fork / Vork:**
+
+Een upgrade van het algoritme van een virtuele munt veroorzaakt een fork. Daaruit vloeien twee mogelijkheden. Een Soft fork is gewoon een update van de software van de nodes waarvoor geen nieuwe blockchain moet worden gecreëerd, een hard fork is een splitsing van een virtuele munt in een oude en een nieuwe blockchain, waarbij beide blockchains blijven bestaan.
+
+**FUD:**
+
+Fear, Uncertainty and Doubt: term waarmee nieuwsberichten over een virtuele munt worden aangeduid die beschouwd worden als ongegronde paniekzaaierij, bedoeld om de koers te manipuleren.
+
+**Future contract/ termijncontract**:
+
+Een financieel contract tussen twee partijen die zich verbinden om op een bepaald tijdstip een bepaalde hoeveelheid van een product of financieel instrument te verhandelen tegen een vooraf bepaalde prijs. Men komt dus een transactie in de toekomst overeen.
+
+**Github:**
+
+De plaats op het internet waar de open-source code van een cryptocurrency wordt geplaatst, en waar ontwikkelaars fouten kunnen signaleren en deze code kunnen aanpassen.
+
+**Google Authenticator:**
+
+De meest gebruikte applicatie voor een 2FA beveiliging waarmee je een account kan koppelen aan een toestel zoals bijvoorbeeld je ipad of smartphone.
+
+**Geheime sleutel:**
+
+Een geheime sleutel (Engels: Private Key) is een geheim stuk data waarmee u kunt bewijzen dat de Bitcoins die bij een bepaald Bitcoin-adres horen van u zijn middels een cryptografische handtekening. Uw geheime sleutels zijn op uw computer opgeslagen als u een softwareportemonnee gebruikt en op externe servers bij gebruik van een webportemonnee. Geheime sleutels dienen nooit te worden onthuld, want deze stellen u in staat om Bitcoins uit de aan de sleutels gekoppelde Bitcoinportemonnees uit te geven.
+
+**Hard Fork / Harde Vork:**
+
+Wanneer de code van een munt wordt aangepast kan het soms zijn dat de nieuwe code niet compatibel is met de huidige wallets en er dus een nieuwe wallet nodig is. Hierdoor ontstaat er dus een nieuwe blockchain, de oude met de niet-aangepaste code, en de nieuwe met de aangepaste code. Bij een hard-fork wordt deze coin gesplitst in twee nieuwe blockchains. Het is wel zo dat de hoofdcomputers / nodes, hiervoor toestemming moeten verlenen en vaak een update nodig hebben.
+
+**Hashrate / Hashsnelheid:**
+
+De hashsnelheid oftewel hash rate is de maat voor de totale rekenkracht van het Bitcoin-netwerk. Om veiligheidsredenen moet het Bitcoin-netwerk steeds intensieve wiskundige bewerkingen blijven uitvoeren. Als het netwerk bijvoorbeeld een hashsnelheid van 10 TH/s bereikt, betekent dat dat het 10 biljoen (tien triljoen, 10.000.000.000.000) berekeningen per seconde kan maken.
+
+**HODL:**
+
+Verkeerde spelling van HOLD, je coins bijhouden en niet verkopen, zelfs al keert de markt zich tegen je.
+
+**ICO:**
+
+Initial coin offering. Voordat een virtuele munt op de markt beschikbaar is kan een ICO worden gelanceerd waarbij je als investeerder de kans krijgt om de coin aan te kopen voor die op de vrije markt komt. Vaak tegen een gunstiger tarief. LET OP veel SCAM!!!
+
+**KYC :**
+
+(Know Your Customer) / Ken uw Klant:
+
+Dit is een wetgeving procedure in de preventie van o.a. witwassen. Exchanges moeten kunnen oevrelggen wie de klanten zijn waarvoor ze opdrachten uitvoeren Aan de hand van een verificatieproces wordt je gevraagd om een aantal persoonlijke gegevens door te geven aan de website. Dat kan gaan van een kopie van je paspoort (voor- en achterkant), een recente foto, of een videogesprek via Skype. Afhankelijk van de website duurt verificatie tussen de 15 minuten en een paar maanden.
+
+**Open-source:**
+
+De code van een cryptocurrency staat altijd op het internet en is door iedereen te lezen en aan te passen.
+
+**Market cap:**
+
+Het totale aantal coins in circulatie x de waarde van de coin in FIAT (bijvoorbeeld US dollar of Euro).
+
+**Masternode:**
+
+Een vooraf bepaald aantal coins dat je in je wallet houdt om zo een winstuitkering te verdienen.
+
+Slechts een aantal cryptocurrencies hebben een masternode systeem, waaronder DASH en VIVO.
+
+**Mining difficulty:**
+
+De moeilijkheidsgraad voor het ontcijferen van een block in de blockchain. Hoe hoger dit getal hoe langer het duurt voor het vinden van een nieuwe block, ook wel de blocktime genoemd.
+
+**Mining Pool:**
+
+Een groep miners die gezamenlijk werken aan de ontcijfering van de encryptie van het volgende block. Eens je pool een block heeft gevonden krijgt iedereen in de groep een percentage van de totale block-reward.
+
+**MOON / Maan:**
+
+Term die wordt gebruikt om aan te geven dat een munt ontzettend hard stijgt. Virtuele munten kunnen stijgen naar zulke hoge prijsniveaus dat men spreekt van mooning.
+
+**Mining / Mijnen:**
+
+Bitcoin-mining is het laten uitvoeren van wiskundige berekeningen door een computer om het Bitcoin-netwerk transacties te laten bevestigen en om de veiligheid te waarborgen. Als beloning voor het verrichte werk krijgen Bitcoin-"miners" de commissie die op sommige van de transacties wordt meegegeven - en bovendien ook nieuwe gemijnde Bitcoins. Bitcoin-mining is tegenwoordig een gespecialiseerde markt, waarin de opbrengsten worden verdeeld onder de leden van gespecialiseerde groepen naar rato van hoeveel rekenkracht wordt ingebracht. Lang niet alle Bitcoingebruikers doen aan mining en het is geen gemakkelijke manier om aan Bitcoins te komen.
+
+**Node:**
+
+Een knooppunt op het netwerk van een virtuele munt in de vorm van een hardware computer die verbonden is met het internet en waarop de gepaste software draait die compatibel is met het algoritme van die virtuele munt.
+
+**P2P / Peer to Peer:**
+
+Een peer-to-peer-netwerk is een systeem dat zich gedraagt als een georganiseerd collectief waarin individuele systemen direct met elkaar communiceren, in plaats van via een centrale server. In het geval van Bitcoin is het netwerk zó georganiseerd, dat elke gebruiker de transacties waar hij weet van heeft uitzendt naar alle andere gebruikers. Een belangrijke eigenschap van deze inrichting: er is geen bank of andere derde partij nodig.
+
+**Portemonnee / Wallet:**
+
+Een Bitcoin-portemonnee is heel losjes gezegd het equivalent van een fysieke portemonnee op het Bitcoin-netwerk. Deze portemonnee bestaat uit uw geheime sleutels waarmee u de aan uw portemonnee toegewezen Bitcoins in de blokketen kunt uitgeven. U kunt in elke Bitcoinportemonnee het totaalsaldo van alle Bitcoins in de portemonnee zien. Daarnaast kunt u een specifiek bedrag aan een specifieke persoon betalen, net als met een echte portemonnee. Dit is anders dan bij creditcards, waarbij u door de verkoper kosten in rekening wordt gebracht.
+
+**Paper wallet:**
+
+Een papieren document waarop de private key staat die je toegang geeft tot een (Bitcoin of altcoin) adres.
+
+**Private key:**
+
+De unieke code die je toegang geeft tot een (Bitcoin of altcoin) adres en je in staat stelt om er transacties op uit te voeren. Verlies je de private key van een adres dan heb je op geen enkele manier nog toegang tot dat adres en worden de munten die op dit adres staan opgeslagen in de blockchain als verloren beschouwd.
+
+**Proof of Work:**
+
+Een algoritme dat de cryptocurrency blockchain beveiligt met rekenkracht en een beloning uitreikt aan de miner die een nieuw block ontcijfert.
+
+**Proof of Stake:**
+
+Je ontvangt extra coins door de coins in je wallet te verzamelen en bij te houden.
+
+**Pump:**
+
+Wanneer de koers van een virtuele munt fors stijgt na een periode van consolidatie.
+
+**P&D / Pump and dump:**
+
+Wanneer de koers van een kleine virtuele munt snel fors begint te stijgen en kort daarop zeer snel daalt. Meestal een gevolg van koersmanipulatie door whales of p&d groepen.
+
+**Replay protection:**
+
+Nadat een virtuele munt werd gesplitst door een hard fork, is het in principe mogelijk om één transactie op één van de blockchains te kopiëren en op de andere blockchain ook uit te voeren,. Een transactie is altijd publiek zichtbaar, dus malafide gebruikers of hackers zouden jouw publieke transactie kunnen uitvoeren op de andere blockchain en aan jouw transactie verdienen. Een replay protection code zorgt ervoor dat transacties die uitgevoerd worden op de eerste blockchain niet meer geldig zijn op de andere blockchain.
+
+**Roadmap:**
+
+Een plan of strategie om bepaalde doelen te bereiken
+
+**Satoshi:**
+
+De kleinste eenheid van een Bitcoin, oftewel 1 honderd miljoenste van een bitcoin. De term werd opgedragen aan de anonieme ontwikkelaar van Bitcoin, de heer Satoshi Nakamoto.
+
+**SEPA:**
+
+Single European Payments Area. De benaming voor een online overschrijving met de betaalapplicatie van je bank.
+
+**Segwit / Segregated Witness:**
+
+Een protocol waarbij vitale informatie van elke transactie in de blockchain parallel wordt opgeslaan in plaats van in de blockchain zelf. Op die manier wordt de omvang van het blockchain bestand kleiner.
+
+**Soft fork:**
+
+Een upgrade van het algoritme van een virtuele munt die backwards compatible is. Daarom hoeven de nodes alleen een update te doen van de software om compatibel te zijn met de nieuwe code.
+
+**Smart contract:**
+
+een programma dat aan sommige virtuele munten kan worden toegevoegd. De code beslist of er aan condities zijn voldaan om de transactie te versturen naar de bestemming of terug te betalen aan de uitvoerder, of een combinatie hiervan. Omdat dit programma ook wordt opgeslagen in de blockchain is deze code onveranderlijk en wordt er een veiligheid ingebouwd.
+
+**Staking:**
+
+Door je coins in je wallet te houden word je beloond met extra coins. Slechts een aantal coins hebben Proof of Stake. Deze beloningen worden uitgekeerd om er voor te zorgen dat er minder gehandeld wordt.
+
+**Tether:**
+
+De virtuele munt van het bedrijf tether die wordt ge-backed door de Amerikaanse dollar. Elke tether is altijd 1-op-1 gelinkt aan de dollar, door het aanwenden van een 100% fysieke geldreserve in cash dollar kunnen op elk moment alle tethers door het bedrijf worden omgewisseld in echte dollar. Zo blijft de prijs van 1 tether dollar constant gelijk aan 1 US Dollar. De meeste exchanges waar je Bitcoin tegenover de dollar kan traden maken gebruik van een geldreserve in tether dollar in plaats van echte dollar. Deze virtuele dollarmunt kan je door dit systeem op alle momenten uitwisselen voor cash geld.
+
+**Token:**
+
+Een digitale representatie van een bepaalde waarde.
+
+**Volatility / Volatiliteit:**
+
+De mate van beweeglijkheid van de koers van een virtuele munt.
+
+**Volume:**
+
+Het aantal trading acties per minuut, uur of dag van een cryptocurrency pair. Hoe groter het volume hoe groter de interesse voor het traden van deze munt.
+
+**Wallet:**
+
+Een publiek zichtbaar adres op de blockchain waar je toegang toe hebt met een unieke private key.
+
+**Whale:**
+
+Iemand die zodanig veel coins van een munt in bezit heeft dat hij of zij de koers kan beïnvloeden.
+
+**White paper:**
+
+Een document dat beschrijft hoe een technologie een specifiek probleem oplost. Witboeken worden gebruikt om de investeerder van objectieve, relevante informatie te voorzien die kan worden gebruikt voor het nemen van een beslissing.
+
+**www.BitBrokerTrade.com**
+
+[PreviousInlezen exportbestand laatste Excel versie](https://docs.bitbrokertrade.com/overig/inlezen-exportbestand-laatste-excel-versie) [NextFAQ](https://docs.bitbrokertrade.com/overig/faq)
+
+Last updated 5 years ago

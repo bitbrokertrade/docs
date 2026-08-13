@@ -1,0 +1,55 @@
+---
+title: "Coinbase Advanced koppelen aan BitBrokerTrade"
+sidebarTitle: "Coinbase"
+description: "Genereer een API-sleutel in Coinbase Advanced Trade en koppel je Coinbase account aan BitBrokerTrade. Volg deze handleiding stap voor stap."
+---
+
+BitBrokerTrade werkt met de **Coinbase Advanced Trade**-API. Dit is de professionele handelsomgeving van Coinbase. Maak via het Advanced API-menu een sleutel aan en voeg die vervolgens toe in BitBrokerTrade. Volg de stappen hieronder.
+
+## Deel 1: API-sleutel aanmaken in Coinbase
+
+<Steps>
+  <Step title="Open Advanced API">
+    Log in op [coinbase.com](https://coinbase.com) en klik links in de menubalk op **"Meer"**. Kies in hetzelfde scherm voor de optie **"Advanced API"**.
+  </Step>
+  <Step title="Nieuw sleutelproces starten">
+    Klik op **"Uw API-sleutel maken"** en vervolgens op **"API-sleutel maken"** in het volgende scherm.
+  </Step>
+  <Step title="Sleutel configureren in het pop-up">
+    In het pop-upvenster stel je het volgende in:
+    - **Naam**: geef de sleutel een herkenbare naam
+    - **Portefeuille**: kies `standaard`
+    - **Rechten**: vink **View** en **Trade** aan
+    - **IP Whitelist**: laat het veld leeg — het voorgedrukte adres is een nep-IP en hoeft niet verwijderd te worden
+
+    Klik op **"Maken en downloaden"**.
+  </Step>
+  <Step title="Sleutels opslaan">
+    Er verschijnt een pop-upscherm met je twee sleutels: de **API Key** en de **API Secret Key**. Kopieer beide naar je kladblok. Het `.json`-bestand dat wordt gedownload, hoef je niets mee te doen.
+  </Step>
+  <Step title="Bevestigen">
+    Klik op **"Ik heb mijn sleutel opgeslagen"** om het pop-upvenster te sluiten.
+  </Step>
+</Steps>
+
+## Deel 2: Exchange toevoegen in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigeer naar Beurzen">
+    Log in bij BitBrokerTrade. Klik in de linkerkolom op **Instellingen**, dan op **Beurzen** en vervolgens op **Beurs toevoegen**.
+  </Step>
+  <Step title="Selecteer Coinbase Advanced">
+    Klik op het **Coinbase Advanced**-logo om deze exchange te selecteren.
+  </Step>
+  <Step title="Gegevens invullen en toevoegen">
+    Vul de gekopieerde **API Key** en **API Secret Key** in de bijbehorende velden in. Klik op **Toevoegen**. De verbinding met Coinbase Advanced is nu actief.
+  </Step>
+</Steps>
+
+<Note>
+  Bij Coinbase is er geen bevestigingsmail vereist. De verbinding is direct na het klikken op **Toevoegen** actief, mits de sleutels correct zijn ingevoerd.
+</Note>
+
+## Deel 3: Trader koppelen
+
+Nu de exchange is toegevoegd, koppel je een trader aan je Coinbase-account. Volg daarvoor de volledige handleiding op [Trader instellingen](/traders/trader-instellingen).

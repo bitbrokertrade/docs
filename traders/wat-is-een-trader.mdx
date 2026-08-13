@@ -1,0 +1,79 @@
+---
+title: "Wat is een BitBrokerTrade trader en hoe werkt hij?"
+sidebarTitle: "Wat is een Trader?"
+description: "Een trader is een softwareprogramma dat automatisch crypto aan- en verkoopt op basis van de MACD-indicator. Leer hoe hij werkt en besluiten neemt."
+---
+
+Een trader is een softwareprogramma dat jouw account bij een exchange administreert en beheert. Op basis van door jou ingestelde parameters bepaalt de trader automatisch de ideale aan- en verkoopmomenten van cryptovaluta — zonder dat je zelf continu de koers in de gaten hoeft te houden.
+
+## De theorie achter de trader
+
+De trader werkt volgens de zogenaamde **MACD-methode**: Moving Average Convergence Divergence. Dit is een momentum-indicator die de richting én de sterkte van een koerstrend berekent aan de hand van meerdere voortschrijdende gemiddelden.
+
+De MACD-indicator bestaat uit twee lijnen:
+
+<CardGroup cols={2}>
+  <Card title="MACD-lijn" icon="chart-line">
+    Berekend door het voortschrijdend gemiddelde van de **afgelopen 26 dagen** af te trekken van het gemiddelde van de **afgelopen 12 dagen**. Deze lijn geeft de richting van de trend aan: oplopend = positieve trend, neergaand = negatieve trend.
+  </Card>
+  <Card title="Signaallijn" icon="wave-sine">
+    Het exponentieel gemeten gemiddelde van de **afgelopen 9 dagen**. Samen met de MACD-lijn vormt dit de volledige MACD-indicator.
+  </Card>
+</CardGroup>
+
+### Koop- en verkoopsignalen
+
+Niet alleen de richting van de lijnen geeft een signaal, maar ook het moment waarop de lijnen elkaar kruisen:
+
+- **Koopsignaal**: de MACD-lijn (blauwe lijn) kruist de signaallijn (rode lijn) **opwaarts** → stijgende koerstrend aanvangt.
+- **Verkoopsignaal**: de MACD-lijn kruist de signaallijn **neerwaarts** → koerstrend slaat om van stijgen naar dalen.
+- **Trendsterkte**: hoe groter de afstand tussen beide lijnen, hoe sterker de heersende trend.
+
+<Tip>
+  De MACD is een trendvolgend systeem. Het werkt het best in een volatiele markt waarin duidelijke stijgings- en dalingsbewegingen elkaar afwisselen — precies de omgeving waarop Bitcoin en veel andere cryptomunten goed scoren.
+</Tip>
+
+## Hoe werkt de trader in de praktijk
+
+Zodra je een account hebt bij een ondersteunde exchange en daar saldo op hebt gestort, koppel je de trader aan de exchange via een **API-koppeling**.
+
+### Wat is een API-koppeling?
+
+Stel je een lamp en een stekkerblok voor: als de stekker past, gaat de lamp aan en wisselen beide objecten elektriciteit uit. Op precies dezelfde manier werkt een API (Application Programming Interface): het wisselt data uit tussen twee softwaresystemen. Via de API-koppeling kan de trader met jouw exchange-account communiceren en orders plaatsen.
+
+<Note>
+  De trader kan **nooit** valuta overboeken naar derden. De trader beheert uitsluitend de samenstelling van je exchange-account (bijvoorbeeld de verhouding Bitcoin/Euro). Geld opnemen naar je eigen bankrekening of cryptowallet doe jij altijd zelf, rechtstreeks op de exchange.
+</Note>
+
+### Van signaal tot transactie
+
+<Steps>
+  <Step title="Trader verzamelt handelsdata">
+    Zodra de koppeling en activering gereed zijn, begint de trader continu koersdata te verzamelen en de MACD-indicator te berekenen.
+  </Step>
+  <Step title="Koopsignaal → aankooporder">
+    Bij een positieve koerstrend plaatst de trader een aankooporder ter grootte van **18% van je beschikbare eurosaldo** op de exchange, met een minimum van **€ 25,-**. Voorbeeld: bij een saldo van € 1.000,- bedraagt de eerste positie € 180,-.
+  </Step>
+  <Step title="Positie bewaken">
+    De trader onthoudt elke transactie en vergelijkt continu de actuele koers met de aankoopkoers. Het lopende rendement is zichtbaar in het scherm **Aankooptransacties**.
+  </Step>
+  <Step title="Verkoopsignaal → verkooporder">
+    Zodra de trader een negatieve koerstrend signaleert én het rendement op een positie hoger is dan het door jou ingestelde minimumpercentage, stuurt hij een verkooporder naar de exchange. De winst wordt veiliggesteld in euro's en de commissie voor BitBrokerTrade wordt afgeschreven van je credit-tegoed.
+  </Step>
+  <Step title="Resultaat zichtbaar">
+    De verkochte positie verschijnt in **Verkooptransacties** met het behaalde rendement. Het totaaloverzicht vind je terug op het **Dashboard**.
+  </Step>
+</Steps>
+
+## De kracht van de trader
+
+De trader presteert het beste in een **volatiele markt**. Bitcoin en veel altcoins kennen regelmatig sterke koersbewegingen omhoog en omlaag — precies de situaties waarin de MACD-methode zijn waarde bewijst. In een stabiele zijwaartse markt met weinig beweging zal de trader minder transacties genereren.
+
+<CardGroup cols={2}>
+  <Card title="Meer weten over instellingen?" icon="sliders" href="/traders/trader-instellingen">
+    Leer hoe je een trader toevoegt en alle parameters optimaal instelt.
+  </Card>
+  <Card title="Welke strategie past bij jou?" icon="map" href="/traders/handelsstrategie">
+    Vergelijk de BitBrokerTrade MACD-strategie met de Updown-strategie.
+  </Card>
+</CardGroup>

@@ -1,0 +1,65 @@
+---
+title: "KuCoin koppelen aan BitBrokerTrade via API"
+sidebarTitle: "KuCoin"
+description: "Maak een KuCoin account aan, doorloop KYC en genereer een API-sleutel met spothandel-rechten om BitBrokerTrade aan je KuCoin account te koppelen."
+---
+
+KuCoin is een internationale exchange met een breed aanbod aan cryptovaluta. Om BitBrokerTrade te koppelen aan KuCoin heb je een geverifieerd KuCoin-account nodig en een API-sleutel met spothandel-rechten. Volg de drie stappen hieronder.
+
+<Note>
+  KuCoin vereist bij het aanmaken van een API-sleutel ook een **API-wachtwoord** dat jij zelf verzint. Je hebt dit wachtwoord later ook nodig bij het toevoegen van de exchange in BitBrokerTrade — sla het dus goed op naast je API-sleutels. Dit is anders dan bij andere exchanges.
+</Note>
+
+## Deel 1: Account aanmaken bij KuCoin
+
+Heb je al een geverifieerd KuCoin-account? Sla dit deel dan over en ga direct naar [Deel 2](#deel-2-api-sleutel-aanmaken-in-kucoin).
+
+**Wat heb je nodig:** een werkend e-mailadres, paspoort of identiteitskaart, mobiele telefoon, telefoonnummer en de Google Authenticator-app.
+
+<Steps>
+  <Step title="Account registreren">
+    Ga naar [www.kucoin.com](https://www.kucoin.com) en maak een account aan.
+  </Step>
+  <Step title="KYC doorlopen">
+    Doorloop het **KYC-traject** (Know Your Client) om je identiteit te verifiëren. Je hebt hiervoor je paspoort of identiteitskaart, je telefoonnummer en de Google Authenticator-app nodig.
+  </Step>
+  <Step title="Eurosaldo storten">
+    Stort euro's op je spot-wallet bij KuCoin. BitBrokerTrade handelt vanuit je beschikbare eurosaldo.
+  </Step>
+</Steps>
+
+## Deel 2: API-sleutel aanmaken in KuCoin
+
+<Steps>
+  <Step title="Open de API-instellingen">
+    Klik rechtsboven op het **persoonlijke icoon** en kies in het uitklapmenu voor **"API"**. Klik daarna op **"API aanmaken"**.
+  </Step>
+  <Step title="Naam en wachtwoord instellen">
+    Geef de API-sleutel een naam en verzin een **API-wachtwoord**. Onthoud dit wachtwoord goed — je hebt het later nodig in BitBrokerTrade.
+  </Step>
+  <Step title="Rechten instellen">
+    Vink de opties **"Spothandel"** en **"Geen Limiet"** aan. Klik daarna op **Volgende**.
+  </Step>
+  <Step title="Sleutels kopiëren">
+    In het pop-upscherm zie je je **API key**, **API secret** en het door jou gekozen **API-wachtwoord**. Kopieer alle drie naar een kladblok — je hebt ze alle drie nodig in BitBrokerTrade.
+  </Step>
+</Steps>
+
+## Deel 3: Exchange toevoegen in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigeer naar Beurzen">
+    Log in bij BitBrokerTrade. Klik in de linkerkolom op **Instellingen**, dan op **Beurzen** en vervolgens op **Beurs toevoegen**.
+  </Step>
+  <Step title="Selecteer KuCoin">
+    Klik op het **KuCoin-logo** om KuCoin als exchange te selecteren.
+  </Step>
+  <Step title="Gegevens invullen">
+    Vul de gekopieerde **API key**, **API secret** én het **API-wachtwoord** in de bijbehorende velden. Klik op **Toevoegen**.
+  </Step>
+  <Step title="Verbinding controleren">
+    De API-verbinding wordt direct getest. De status verandert naar **"actief"** zodra de koppeling is geslaagd.
+  </Step>
+</Steps>
+
+Nu de exchange actief is, koppel je een trader aan je KuCoin-account. Volg daarvoor de handleiding op [Trader instellingen](/traders/trader-instellingen).

@@ -1,0 +1,92 @@
+---
+title: "Transactiedata exporteren naar Excel vanuit BBT"
+sidebarTitle: "Export naar Excel"
+description: "Exporteer je verkooptransacties en creditshistorie naar Excel in twee methoden: de klassieke tekstwizard of de moderne CSV-importfunctie."
+---
+
+Vanuit BitBrokerTrade kun je je verkooptransacties en creditshistorie exporteren als CSV-bestand. Omdat Excel CSV-bestanden niet altijd automatisch correct inleest — met name wanneer decimaaltekens en scheidingstekens botsen — zijn er twee methoden beschikbaar afhankelijk van je Excel-versie.
+
+## Methode 1: Klassieke Excel (oudere versies)
+
+Gebruik deze methode als je een oudere versie van Excel hebt waarbij de tekstwizard nog beschikbaar is via "Oude wizards".
+
+<Steps>
+  <Step title="Exporteer het bestand en sla het op">
+    Download het exportbestand vanuit BBT en sla het op je computer op **zonder het te openen**.
+  </Step>
+  <Step title="Start Excel">
+    Open Microsoft Excel.
+  </Step>
+  <Step title="Open een nieuw werkblad">
+    Maak een nieuw, leeg werkblad aan.
+  </Step>
+  <Step title="Kies de tekstimport-wizard">
+    Ga naar het tabblad **Gegevens** → **Gegevens ophalen** → **Oude wizards** → kies **Uit tekst (verouderd)**.
+  </Step>
+  <Step title="Selecteer je bestand">
+    Blader naar het opgeslagen exportbestand en klik op **Importeer**.
+  </Step>
+  <Step title="Kies het scheidingstype">
+    Selecteer **Gescheiden** en klik op **Volgende**.
+  </Step>
+  <Step title="Stel het scheidingsteken in">
+    Vink **Komma** aan als scheidingsteken en klik op **Volgende**.
+  </Step>
+  <Step title="Selecteer de getalkolommen">
+    Selecteer alle kolommen die getallen bevatten en klik op **Geavanceerd**.
+  </Step>
+  <Step title="Pas decimaal- en scheidingsteken aan">
+    Verander het **decimaalteken** naar een **punt (.)** en het **duizendtallenscheidingsteken** naar een **komma (,)**. Klik op **OK**.
+  </Step>
+  <Step title="Voltooi de import">
+    Klik op **Voltooien** en vervolgens op **OK** om de data in het werkblad te plaatsen.
+  </Step>
+  <Step title="Stel de getalnotatie in">
+    Selecteer alle kolommen met eurobedragen en kies de opmaak **Getal** (het "000"-icoon in het lint) voor een correcte weergave.
+  </Step>
+  <Step title="Klaar">
+    Je werkblad is nu gereed voor gebruik.
+  </Step>
+</Steps>
+
+---
+
+## Methode 2: Nieuwere Excel-versie
+
+Gebruik deze methode als je een recente versie van Excel hebt met de ingebouwde Power Query CSV-importfunctie.
+
+<Steps>
+  <Step title="Open Excel">
+    Start Microsoft Excel.
+  </Step>
+  <Step title="Navigeer naar Gegevens ophalen">
+    Ga naar **Gegevens** → **Gegevens ophalen** → **Uit bestand** → **Uit CSV**.
+  </Step>
+  <Step title="Selecteer het exportbestand">
+    Blader naar het opgeslagen CSV-exportbestand en selecteer het.
+  </Step>
+  <Step title="Kies 'Gegevens transformeren'">
+    In het voorbeeldvenster dat verschijnt klik je op **Gegevens transformeren** (niet direct laden).
+  </Step>
+  <Step title="Wijzig het kolomtype naar Tekst">
+    Selecteer in de Power Query Editor **alle kolommen met een getalnotatie**. Klik met de rechtermuisknop en kies **Type wijzigen** → **Tekst**.
+  </Step>
+  <Step title="Bevestig de vervanging">
+    Er verschijnt een pop-up. Kies **Huidige vervangen**.
+  </Step>
+  <Step title="Sluiten en laden">
+    Klik linksboven op **Sluiten en laden**. Je werkblad opent zich nu met de geïmporteerde data.
+  </Step>
+  <Step title="Vervang punten door komma's">
+    Selecteer alle kolommen met getallen. Druk op **Ctrl + H** (zoeken en vervangen). Vul bij **Zoeken naar** een punt (`.`) in en bij **Vervangen door** een komma (`,`). Klik op **Alles vervangen**.
+  </Step>
+  <Step title="Klaar">
+    Je werkblad is nu volledig gereed voor gebruik.
+  </Step>
+</Steps>
+
+---
+
+<Tip>
+  **Welke methode moet je kiezen?** Ga naar **Gegevens** in Excel. Zie je de optie **Oude wizards** staan? Gebruik dan Methode 1. Zie je alleen **Uit bestand** → **Uit CSV**? Gebruik dan Methode 2. Bij twijfel werkt Methode 2 bij alle moderne Excel-versies (Office 2016 en nieuwer).
+</Tip>

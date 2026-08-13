@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/welke-coins-ondersteunt-bbt-bij-bl3p.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/welke-coins-ondersteunt-bbt-bij-bl3p.md). # Welke coins ondersteunt BBT bij BL3P? Dat is alleen BTC. BL3P biedt geen andere munten meer aan.

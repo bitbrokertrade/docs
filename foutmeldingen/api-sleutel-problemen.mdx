@@ -1,0 +1,79 @@
+---
+title: "API-sleutel fouten oplossen in BitBrokerTrade"
+sidebarTitle: "API Problemen"
+description: "Los veelvoorkomende API-sleutel fouten op: inactieve sleutel, verkeerde rechten, bevestigingsmail niet geklikt of 2FA niet ingesteld."
+---
+
+De API-sleutel is de verbinding tussen BitBrokerTrade en je exchange. Als deze verbinding verbreekt of inactief wordt, kan de trader geen opdrachten meer uitvoeren. Op deze pagina lees je wat de meest voorkomende oorzaken zijn en hoe je ze oplost.
+
+<Tip>
+  Controleer altijd eerst de status van je API-sleutel **in het dashboard van de exchange zelf** voordat je contact opneemt met BBT-support. In veel gevallen is de sleutel uitgeschakeld aan de kant van de exchange en is dat eenvoudig zelf te herstellen.
+</Tip>
+
+## Oorzaken van een inactieve API
+
+<Accordion title="Melding 'Fout in API sleutel' of API staat op inactief">
+  Nadat de gebruiker de API-sleutel heeft geactiveerd, zijn er een aantal oorzaken mogelijk waardoor de API toch weer inactief wordt:
+
+  1. **Je hebt de sleutel zelf uitgeschakeld** in het dashboard van de exchange.
+  2. **De exchange heeft de sleutel of een functie daarin ongeldig gemaakt** om haar moverende redenen. Binance maakt bijvoorbeeld elke 30 dagen de instelling "Enable spot & margin trading" ongeldig bij gebruikers die geen IP-adres op de IP-whitelist hebben staan.
+  3. **Er is een foutmelding in de verbinding** tussen BBT en de exchange.
+
+  In alle drie de gevallen maakt het BBT-systeem de API-verbinding inactief. Er is nu geen verbinding meer met de exchange totdat de API-sleutel hersteld is.
+
+  Je ontvangt van BBT een e-mail met de reden van de blokkade en een overzicht van welke traders niet meer actief zijn.
+</Accordion>
+
+<Accordion title="Hoe herstel ik een inactieve API-sleutel?">
+  <Steps>
+    <Step title="Log in bij de exchange">
+      Ga naar het dashboard van de betreffende exchange en log in met je accountgegevens.
+    </Step>
+    <Step title="Controleer en herstel de API-instellingen">
+      Ga naar de API-instellingen van de exchange en activeer de sleutel opnieuw. Controleer of alle vereiste rechten correct zijn ingesteld (zie hieronder per exchange).
+    </Step>
+    <Step title="Sla op in BBT">
+      Ga in BitBrokerTrade naar **Instellingen → Beurzen** en klik op de inactieve beurs. Voer in het nieuw geopende scherm de nieuwe API-sleutels in en klik op **Opslaan**.
+    </Step>
+    <Step title="Wacht op de verbindingstest">
+      BBT test nu automatisch de verbinding. Als de API-instellingen correct zijn, staat de verbinding weer op **Actief**.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="API-sleutel te veel rechten gegeven (opnames toegestaan)">
+  BBT heeft alleen rechten nodig voor **lezen** en **handelen (spot trading)**. Rechten voor opnames zijn niet nodig en vormen een veiligheidsrisico.
+
+  Als je per ongeluk opnames hebt ingeschakeld op de API-sleutel, verwijder dan de sleutel bij de exchange en maak een nieuwe aan met alleen de vereiste rechten. Voer daarna de nieuwe sleutel in via **Instellingen → Beurzen** in BBT.
+</Accordion>
+
+<Accordion title="2FA niet ingesteld terwijl de exchange dit vereist">
+  Sommige exchanges vereisen dat je twee-factor-authenticatie (2FA) hebt ingesteld voordat je een API-sleutel kunt activeren. Als 2FA ontbreekt, zal de sleutel inactief blijven of niet aangemaakt kunnen worden.
+
+  Stel 2FA in via de beveiligingsinstellingen van je exchange-account (bijv. via Google Authenticator). Daarna kun je de API-sleutel aanmaken of opnieuw activeren.
+</Accordion>
+
+## Exchange-specifieke handleidingen
+
+Volg de koppelhandleiding van je eigen exchange voor de exacte stappen:
+
+<CardGroup cols={2}>
+  <Card title="Binance" icon="link" href="/exchanges/binance">
+    API-instellingen voor Binance, inclusief IP-whitelist en spothandel-rechten.
+  </Card>
+  <Card title="Bitvavo" icon="link" href="/exchanges/bitvavo">
+    API-sleutel aanmaken en koppelen bij Bitvavo.
+  </Card>
+  <Card title="Bitstamp" icon="link" href="/exchanges/bitstamp">
+    API-configuratie voor Bitstamp.
+  </Card>
+  <Card title="Coinbase" icon="link" href="/exchanges/coinbase">
+    API-sleutel instellen bij Coinbase.
+  </Card>
+  <Card title="KuCoin" icon="link" href="/exchanges/kucoin">
+    API-koppeling voor KuCoin.
+  </Card>
+  <Card title="Bybit" icon="link" href="/exchanges/bybit">
+    API-sleutel aanmaken en koppelen bij Bybit.
+  </Card>
+</CardGroup>

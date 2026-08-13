@@ -1,0 +1,86 @@
+---
+title: "Verkooptransacties en gerealiseerde winst inzien"
+sidebarTitle: "Verkooptransacties"
+description: "Het verkooptransacties-scherm toont alle afgesloten posities met bruto rendement, handelskosten van de beurs en de 20% platformcommissie."
+---
+
+Het scherm **Verkooptransacties** geeft je een volledig historisch overzicht van alle posities die zijn verkocht door je actieve traders. Per transactie zie je niet alleen het bruto rendement, maar ook de handelskosten van de exchange en de platformcommissie van BitBrokerTrade. Zo heb je altijd een helder beeld van wat je daadwerkelijk netto hebt verdiend.
+
+## Wat zie je op dit scherm?
+
+Het overzicht toont alle afgesloten posities van al je actieve traders. Per transactie zijn de volgende kolommen beschikbaar:
+
+<CardGroup cols={2}>
+  <Card title="Positie / Munt" icon="coins">
+    De identificatie van de positie en de verhandelde cryptomunt, zoals BTC (Bitcoin) of ETH (Ethereum).
+  </Card>
+  <Card title="Aankoopbedrag" icon="arrow-down-to-line">
+    Het bedrag dat oorspronkelijk in deze positie is geïnvesteerd bij de aankoop.
+  </Card>
+  <Card title="Verkoopbedrag" icon="arrow-up-from-line">
+    Het bedrag dat bij de verkoop is ontvangen op basis van de marktkoers op het moment van verkoop.
+  </Card>
+  <Card title="Bruto rendement" icon="chart-line">
+    Het verschil tussen verkoop- en aankoopbedrag, uitgedrukt in euro's én als percentage. Dit is het rendement **vóór** aftrek van kosten.
+  </Card>
+</CardGroup>
+
+## Kostenopbouw per transactie
+
+Naast het bruto rendement toont het scherm twee kostenposten die van belang zijn voor het berekenen van je netto winst:
+
+<Accordion title="Handelskosten (exchange)">
+  Dit zijn de transactiekosten die de exchange in rekening brengt voor het uitvoeren van de aan- en verkooporder. De exacte kosten verschillen per exchange, maar doorgaans gelden de volgende tarieven:
+
+  - **Aankooporder:** ~0,25% van het transactiebedrag
+  - **Verkooporder:** ~0,25% van het transactiebedrag
+
+  Raadpleeg de documentatie van jouw exchange voor de exacte tarieven. Zie de pagina's voor [Bitvavo](/exchanges/bitvavo), [Binance](/exchanges/binance) of [Bybit](/exchanges/bybit) voor meer informatie.
+</Accordion>
+
+<Accordion title="Platformkosten (BitBrokerTrade)">
+  De platformcommissie van BitBrokerTrade bedraagt **20% van het behaalde bruto rendement** per transactie. Deze commissie wordt automatisch verrekend met je creditstegoed op het moment van verkoop.
+
+  **Voorbeeld:** bij een bruto rendement van € 50,- wordt € 10,- als platformcommissie van je credits afgeschreven. Je houdt € 40,- bruto over, minus de handelskosten van de exchange.
+</Accordion>
+
+## Bruto vs. netto winst berekenen
+
+Wil je weten wat je netto hebt verdiend op een transactie? Gebruik dan de volgende berekening:
+
+```
+Netto winst = Bruto rendement − Handelskosten exchange − Platformcommissie (20%)
+```
+
+**Concreet voorbeeld:**
+- Aankoopbedrag: € 1.000,-
+- Verkoopbedrag: € 1.050,-
+- Bruto rendement: € 50,-
+- Handelskosten exchange (± 0,50% totaal): € 5,-
+- Platformcommissie (20% van € 50,-): € 10,-
+- **Netto winst: € 35,-**
+
+<Note>
+  Het dashboard toont altijd de **bruto** winst. Houd er rekening mee dat de werkelijke netto opbrengst lager ligt door de handelskosten en de platformcommissie. Gebruik bovenstaande formule voor een accurate berekening van je netto resultaat.
+</Note>
+
+## Exporteren naar Excel of CSV
+
+Wil je je verkooptransacties analyseren in een spreadsheet of bewaren voor je eigen administratie? Je kunt het volledige overzicht exporteren naar een CSV-bestand dat je kunt openen in Excel of Google Sheets.
+
+<Card title="Exporteren naar Excel" icon="file-export" href="/overig/exporteren-naar-excel">
+  Lees hoe je je transactiegeschiedenis exporteert en verwerkt in een spreadsheet.
+</Card>
+
+## Volgende stap
+
+Nu je weet hoe je je resultaten kunt lezen en interpreteren, is het tijd om de instellingen van je exchanges en traders verder te optimaliseren.
+
+<CardGroup cols={2}>
+  <Card title="Instellingen" icon="gear" href="/aan-de-slag/instellingen">
+    Voeg exchanges toe en beheer de instellingen van je traders.
+  </Card>
+  <Card title="Trader instellingen" icon="sliders" href="/traders/trader-instellingen">
+    Verfijn de strategie van je trader voor betere resultaten.
+  </Card>
+</CardGroup>

@@ -1,0 +1,74 @@
+---
+title: "Uitleg trader-instellingen en functionaliteiten"
+sidebarTitle: "Instellingen Uitleg"
+description: "Gedetailleerde uitleg van de trader-instellingen: transactiegrootte, koersplafond, maximaal open aankopen, winststrategie en stoploss."
+---
+
+De trader heeft een aantal instellingen waarmee je nauwkeurig kunt bepalen hoe hij handelt. Op deze pagina vind je een gedetailleerde uitleg van de belangrijkste opties, zodat je de trader optimaal kunt afstemmen op je eigen strategie en risicobereidheid.
+
+<Accordion title="Hoe wordt de grootte van een transactie bepaald?">
+  Standaard beslaan transacties altijd **18% van het openstaande eurosaldo** op jouw exchange. De kleinste transactiegrootte die BBT hanteert is **€ 25,-**.
+
+  Op trader-niveau kun je dit aanpassen met de instelling **"Gemiddeld aankoopbedrag"**. Vul je hier een vast bedrag in, dan koopt de trader altijd exact dat bedrag per transactie aan — ongeacht het totale beschikbare saldo.
+
+  **Combinatie met "Maximaal open aankopen":** door beide instellingen samen te gebruiken, bepaal je tot op de euro nauwkeurig hoeveel geld je per munt wilt investeren.
+</Accordion>
+
+<Accordion title="Maximaal open aankopen: wat doet deze instelling precies?">
+  Met deze instelling geef je per trader op hoeveel aankoopposities er **tegelijkertijd open mogen staan** voor die specifieke munt.
+
+  Praktische toepassingen:
+
+  - **Limiet stellen:** stel je in op bijv. 5, dan koopt de trader maximaal 5 posities tegelijk voor die munt.
+  - **Munt leegverkopen:** vul je **0** in, dan doet de trader geen nieuwe aankopen meer maar verkoopt hij bestaande posities nog wel. Handig als je een positie wilt afbouwen zonder de trader volledig te deactiveren.
+
+  In combinatie met het gemiddelde aankoopbedrag kun je zo een precieze limiet zetten op je investering per munt.
+</Accordion>
+
+<Accordion title="Hoe stel ik een koersplafond in en wanneer gebruik ik het?">
+  Het koersplafond is een bovengrens voor de koers: de trader koopt **niet aan** als de koers van de coin boven het ingestelde plafond ligt.
+
+  **Hoe stel je het in?** Kijk als voorbereiding naar de huidige koers en de historische koersontwikkeling van de betreffende coin. Als jouw verwachting is dat de koers boven een bepaald niveau een eenmalige piek is, dan wil je niet dat de trader posities inkoopt bij dat niveau. Je geeft dan een koersplafond in van bijv. 3% onder die verwachte piekkoers.
+
+  **Voorbeeld:** je verwacht dat Bitcoin boven € 55.000,- een eenmalige piek is. Je stelt het koersplafond in op 3% daaronder. Als je rendementspercentage lager is dan 3%, zal de trader zijn laatste inkoop nog wel verkopen bij zo'n piekkoers en heb je maximaal rendement. Dat is de theorie achter de koersplafond-instelling.
+
+  <Tip>
+    Gebruik het koersplafond als bescherming bij historisch hoge koersniveaus. Bij een normale marktomgeving zonder extreme pieken kun je het koersplafond uitgeschakeld laten.
+  </Tip>
+</Accordion>
+
+<Accordion title="Wat is het verschil tussen Herinvesteren en HODL?">
+  Bij de BBT-strategie kun je kiezen wat de trader doet met de opbrengst van een verkoop:
+
+  - **Herinvesteren:** de winst wordt teruggesluisd in het vrije saldo en opnieuw ingezet voor nieuwe aankopen. Je saldo groeit zo geleidelijk mee.
+  - **HODL:** de trader accumuleert de cryptomunten en verkoopt ze niet automatisch. Je bouwt een positie op voor de lange termijn.
+
+  Welke optie het beste bij je past, hangt af van je beleggingsdoel: actief renderen of langetermijnaccumulatie.
+</Accordion>
+
+<Accordion title="Wat doet de stoploss-instelling?">
+  Met de stoploss stel je een maximaal verliespercentage in per open positie. Zodra de waarde van een aankoop onder dit percentage daalt, verkoopt de trader de positie automatisch — ook als het rendementsdoel nog niet gehaald is.
+
+  Dit beperkt het risico van grote verliezen bij langdurige koersdalingen. Zet de stoploss niet te laag, want bij normaal marktgeweld kan een positie tijdelijk in de min staan voordat hij weer herstelt.
+
+  <Warning>
+    Een stoploss activeren bij een lage instelling kan leiden tot veel verlieslatende verkopen in volatiele markten. Stel de stoploss in op een niveau waarbij je comfortabel bent met het eventuele verlies.
+  </Warning>
+</Accordion>
+
+<Accordion title="Wat is het verschil tussen de BBT-strategie en de Updown-strategie?">
+  Beide strategieën bepalen wanneer de trader koopt en verkoopt, maar op een fundamenteel andere manier:
+
+  - **BBT-strategie:** koopt alleen bij de aanvang van een opwaartse trend en verkoopt pas als de stijgende trend breekt. Werkt met candles van 15 minuten.
+  - **Updown-strategie:** koopt posities in met een koersrange en verkoopt zodra het minimumrendement behaald is én de laatste candle fundamenteel lager is dan de voorgaande. Werkt met candles van 1 minuut.
+
+  Voor een uitgebreide vergelijking en uitleg ga je naar [Handelsstrategie](/traders/handelsstrategie).
+</Accordion>
+
+<Accordion title="Binance API Management update: wat moet ik weten?">
+  Binance maakt periodiek de instelling **"Enable spot & margin trading"** ongeldig bij gebruikers van de API-verbinding, als er geen IP-adres op de IP-whitelist van dezelfde gebruiker staat. Dit gebeurt elke 30 dagen.
+
+  Als dit voorvalt, maakt het BBT-systeem de API-verbinding automatisch inactief en ontvang je een e-mail met uitleg. Herstel de API door in te loggen bij Binance en de instellingen opnieuw te activeren.
+
+  Voor de exacte stappen raadpleeg je de [Binance-koppelpagina](/exchanges/binance).
+</Accordion>

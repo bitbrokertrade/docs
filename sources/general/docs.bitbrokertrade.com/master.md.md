@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/master.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/master.md). # Wat is BitBrokerTrade \*\*BitBrokerTrade\*\* is een Nederlands softwarehuis dat applicaties genereert om consumenten op een eenvoudige, eerlijke en ontlastende manier de mogelijkheid te geven in \*\*(crypto)valuta\*\* te handelen. BitBrokerTrade biedt de gebruikers van de software de mogelijkheid om de bij een geregistreerde Exchange aangehouden crypto rekening geautomatiseerd te beheren en te administreren.

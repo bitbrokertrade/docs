@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/mijn-dashboard-toont-opeens-een-lagere-winst.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/mijn-dashboard-toont-opeens-een-lagere-winst.md). # Mijn dashboard toont opeens een lagere winst Het dashboard toont alleen de resultaten van de actieve traders. Dus als jij een trader inactief maakt of verwijderd, dan wordt het winstsaldo negatief aangepast. De verkooptransacties worden wel altijd allemaal getoond. Die kun je niet verwijderen.

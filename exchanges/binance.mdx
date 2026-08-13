@@ -1,0 +1,76 @@
+---
+title: "Binance koppelen aan BitBrokerTrade via API"
+sidebarTitle: "Binance"
+description: "Genereer een API-sleutel in Binance API Management en koppel je Binance account aan BitBrokerTrade voor geautomatiseerde crypto trading."
+---
+
+Om BitBrokerTrade te laten handelen via je Binance-account, maak je een API-sleutel aan in Binance API Management en voeg je deze toe in BitBrokerTrade. Doorloop de drie stappen hieronder om de koppeling gereed te maken.
+
+<Warning>
+  Binance stuurt na het aanmaken van een API-sleutel een bevestigingsmail. **Klik eerst op de bevestigingslink in die mail voordat je de exchange toevoegt in BitBrokerTrade.** Gebruik je 2FA via Google Authenticator, dan is er geen bevestigingsmail en kun je direct verder.
+</Warning>
+
+## Deel 1: API-sleutel aanmaken in Binance
+
+<Steps>
+  <Step title="Open API Management">
+    Log in op [binance.com](https://binance.com) en klik rechtsboven op je **accountnaam** (weergegeven met je initialen). In het uitklapmenu kies je voor **"API Management"**.
+  </Step>
+  <Step title="Nieuw label aanmaken">
+    Vul bij **"Label API key to proceed"** een naam in voor je sleutel, bijvoorbeeld `BitBrokerTrade`. Klik daarna op **"Create API"**.
+  </Step>
+  <Step title="Rechten instellen">
+    Stel de **API restrictions** zo in dat lezen en handelen zijn toegestaan. Zorg ervoor dat opnames (withdrawals) **niet** zijn ingeschakeld. Gebruik de **Copy**-button om de API key naar je klembord te kopiëren. Plak deze in een kladblok. Doe hetzelfde met de API secret.
+  </Step>
+  <Step title="Bevestigingsmail activeren">
+    Binance stuurt een bevestigingsmail. Open de mail en klik op de activatielink. Gebruik je Google Authenticator als 2FA? Dan sla je deze stap over.
+  </Step>
+</Steps>
+
+## Deel 2: Exchange toevoegen in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigeer naar Beurzen">
+    Log in bij BitBrokerTrade. Klik in de linkerkolom op **Instellingen**, dan op **Beurzen** en vervolgens op **Beurs toevoegen**.
+  </Step>
+  <Step title="Selecteer Binance">
+    Klik op het **Binance-logo** om Binance als exchange te selecteren.
+  </Step>
+  <Step title="Gegevens invullen">
+    Vul bij **Naam** het woord `Binance` in. Plak daarna de eerder gekopieerde **API key** en **API secret** in de bijbehorende velden.
+  </Step>
+  <Step title="Gereserveerd bedrag instellen (optioneel)">
+    Wil je een deel van je saldo buiten de trader houden? Schakel **"Gereserveerd bedrag"** in en vul het bedrag in euro's in. Dit bedrag wordt nooit door de trader ingezet.
+  </Step>
+  <Step title="Exchange toevoegen">
+    Controleer of je de bevestigingsmail (of 2FA) al hebt afgerond. Klik dan op **Toevoegen**. De verbinding is nu actief.
+  </Step>
+</Steps>
+
+<Note>
+  **Gereserveerd bedrag — hoe werkt dat?** Stel je hebt € 1.000,- op Binance staan en je reserveert € 250,-. De trader rekent dan alleen met € 750,-. De € 250,- blijft altijd beschikbaar op je eurorekening bij Binance.
+</Note>
+
+## Deel 3: Trader koppelen
+
+<Steps>
+  <Step title="Trader toevoegen">
+    Ga in BitBrokerTrade naar **Instellingen → Traders → Trader toevoegen**.
+  </Step>
+  <Step title="Trader configureren">
+    Vul de volgende gegevens in:
+    - **Naam**: geef de trader een duidelijke naam, bijv. `Binance Bitcoin`
+    - **Beurs**: kies `Binance`
+    - **Markt**: kies de gewenste valutacombinatie, bijv. `BTC/EUR`
+    - **Handelsstrategie**: kies de gewenste strategie
+    - **Minimum winstpercentage**: vul het percentage in waarop de trader mag verkopen
+    - **Stop aankopen boven**: vul een koersplafond in (optioneel)
+    - **Gemiddeld aankoopbedrag**: vul een vast aankoopbedrag in (optioneel, min. € 25,-)
+    - **Maximum open aankopen**: stel het maximale aantal gelijktijdige posities in
+  </Step>
+  <Step title="Trader activeren">
+    Zet het activatie-vinkje aan en sla de instellingen op. Je trader is nu actief.
+  </Step>
+</Steps>
+
+Voor de volledige uitleg van alle trader-instellingen, ga naar [Trader instellingen](/traders/trader-instellingen).

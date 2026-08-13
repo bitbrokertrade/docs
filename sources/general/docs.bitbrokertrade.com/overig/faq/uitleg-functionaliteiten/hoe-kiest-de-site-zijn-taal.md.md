@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/hoe-kiest-de-site-zijn-taal.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/hoe-kiest-de-site-zijn-taal.md). # Hoe kiest de site zijn taal? Als de gebruiker nog niet eerder op de site is geweest dan wordt de taal van de browser gebruikt. Indien deze taal niet door het platform wordt ondersteund, dan is Engels de taal.

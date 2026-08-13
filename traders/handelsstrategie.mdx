@@ -1,0 +1,89 @@
+---
+title: "BitBrokerTrade vs. Updown: kies de juiste strategie"
+sidebarTitle: "Handelsstrategie"
+description: "Vergelijk de BitBrokerTrade MACD-strategie (15-min candles) met de Updown-strategie (1-min candles) en kies de beste aanpak voor jouw doel."
+---
+
+Bij het aanmaken van een trader kies je welke handelsstrategie hij moet volgen. BitBrokerTrade biedt twee strategieën aan: de **BitBrokerTrade-strategie** (gebaseerd op de MACD-indicator) en de **Updown-strategie** (gebaseerd op minuut-voor-minuutkoersen). Beide strategieën werken fundamenteel anders — de juiste keuze hangt af van jouw handelsvoorkeur en de marktomstandigheden.
+
+## De BitBrokerTrade-strategie
+
+De BitBrokerTrade-strategie is gebaseerd op de **MACD-indicator** (Moving Average Convergence Divergence) en werkt met **candles van 15 minuten**. De strategie volgt de bredere koerstrend en handelt alleen op sleutelmomenten.
+
+<CardGroup cols={2}>
+  <Card title="Aankoop" icon="cart-plus">
+    De trader koopt **uitsluitend** aan op het moment dat een stijgende koerstrend aanvangt — dat wil zeggen wanneer de blauwe MACD-lijn de rode signaallijn opwaarts kruist.
+  </Card>
+  <Card title="Verkoop" icon="circle-dollar-to-slot">
+    De trader verkoopt **uitsluitend** op het moment dat de koerstrend omslaat van stijgen naar dalen — dat wil zeggen wanneer de blauwe lijn de rode lijn neerwaarts kruist.
+  </Card>
+</CardGroup>
+
+Omdat de strategie met 15-minuutcandles werkt, kan er **maximaal één aan- of verkoopmoment per 15 minuten** worden gegenereerd. Dit zorgt voor een rustiger handelsprofiel met minder transacties maar meer gewicht per signaal.
+
+<Tip>
+  De BitBrokerTrade-strategie is bij uitstek geschikt als je de voorkeur geeft aan een stabiel, trendvolgend systeem met minder transacties en een langere tijdshorizon per positie.
+</Tip>
+
+---
+
+## De Updown-strategie
+
+De Updown-strategie volgt **geen MACD-trendberekening**, maar kijkt simpelweg of de koers van de huidige minuut hoger of lager is dan die van de vorige minuut. De strategie werkt met **candles van 1 minuut**.
+
+<CardGroup cols={2}>
+  <Card title="Aankoop" icon="cart-plus">
+    Iedere minuut wordt de gemiddelde koers vastgesteld. Is die **hoger dan de vorige minuut**? Dan genereert de Updown-strategie een koopsignaal. De eerste aankoop vindt direct na activering van de trader plaats, mits de koers op dat moment stijgend is.
+  </Card>
+  <Card title="Verkoop" icon="circle-dollar-to-slot">
+    Is de gemiddelde koers van de laatste candle **fundamenteel lager** dan de voorgaande candle? Dan genereert de strategie een verkoopsignaal. Zolang de koers nog stijgend is, verkoopt de Updown niet — hij wacht op een echte neerwaartse beweging.
+  </Card>
+</CardGroup>
+
+Het aankoopbedrag bedraagt **18% van je vrije eurosaldo** (of het door jou ingestelde vaste bedrag), met een **minimum van € 50,-** per transactie. Er kan **maximaal één aan- of verkoopmoment per minuut** worden gegenereerd.
+
+<Tip>
+  De Updown-strategie is bij uitstek geschikt als je wil profiteren van hogere activiteit en meer transacties in een volatiele markt.
+</Tip>
+
+---
+
+## Vergelijking
+
+| Kenmerk | BitBrokerTrade-strategie | Updown-strategie |
+|---|---|---|
+| **Methode** | MACD-trendberekening | Minuut-voor-minuutkoers |
+| **Candle-interval** | 15 minuten | 1 minuut |
+| **Max. signalen** | 1 per 15 minuten | 1 per minuut |
+| **Eerste aankoop** | Bij eerste koopkruising na activering | Direct na activering (als koers stijgt) |
+| **Minimum aankoopbedrag** | € 25,- | € 50,- |
+| **Transactievolume** | Lager | Hoger |
+| **Marktomstandigheid** | Trendmarkten, rustiger | Volatiele markten, actief |
+| **MACD-gebruik** | Ja | Nee |
+
+---
+
+## Gemeenschappelijk gedrag
+
+Ongeacht welke strategie je kiest, geldt altijd het volgende: een koop- of verkoopsignaal wordt **alleen opgevolgd als aan al je individuele traderinstellingen is voldaan**. De strategie bepaalt het signaalmoment, maar de instellingen bepalen of het signaal ook daadwerkelijk leidt tot een order.
+
+<Accordion title="Welke instellingen toetst de trader bij elk signaal?">
+  Bij elk signaal controleert de trader de volgende instellingen:
+
+  - **Minimum winstpercentage**: is het huidige rendement hoog genoeg om te mogen verkopen?
+  - **Maximum open aankopen**: is het maximale aantal openstaande posities nog niet bereikt?
+  - **Koersplafond (stop aankopen boven)**: ligt de huidige koers onder het ingestelde plafond?
+  - **Minimumpercentage tussen transacties**: is het koersverschil met de vorige aankoop voldoende?
+  - **Gemiddeld aankoopbedrag**: is er voldoende eurosaldo beschikbaar voor een nieuwe positie?
+
+  Alleen als aan alle relevante voorwaarden is voldaan, stuurt de trader een order naar de exchange.
+</Accordion>
+
+<CardGroup cols={2}>
+  <Card title="Trader instellen" icon="sliders" href="/traders/trader-instellingen">
+    Voeg een trader toe en configureer alle instellingen stap voor stap.
+  </Card>
+  <Card title="Hoe werkt de trader?" icon="robot" href="/traders/wat-is-een-trader">
+    Lees meer over de MACD-methode en het besluitvormingsproces van de trader.
+  </Card>
+</CardGroup>

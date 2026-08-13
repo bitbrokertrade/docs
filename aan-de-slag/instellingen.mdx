@@ -1,0 +1,104 @@
+---
+title: "Instellingen: exchanges en traders beheren"
+sidebarTitle: "Instellingen"
+description: "Via het Instellingen-menu voeg je exchanges toe, configureer je traders en beheer je je accountgegevens in BitBrokerTrade."
+---
+
+Via het **Instellingen**-menu in de linkerzijbalk beheer je de twee kernonderdelen van je BitBrokerTrade setup: de exchanges waaraan je account is gekoppeld, en de traders die namens jou handelen. Je hebt de vrijheid om bij meerdere exchanges tegelijk actief te zijn, en per exchange meerdere traders te configureren — elk met een eigen handelsstrategie.
+
+## Wat vind je in het Instellingen-menu?
+
+Het menu **Instellingen** bestaat uit twee secties: **Beurzen** (exchanges) en **Traders**. Samen vormen ze de complete configuratie van je geautomatiseerde handelsstrategie.
+
+<CardGroup cols={2}>
+  <Card title="Beurzen / Exchanges" icon="building-columns" href="/exchanges/wat-is-een-exchange">
+    Voeg een of meerdere exchanges toe aan je account en beheer de API-koppelingen. Een exchange is het digitale wisselkantoor waar de feitelijke aan- en verkopen plaatsvinden.
+  </Card>
+  <Card title="Traders" icon="robot" href="/traders/trader-instellingen">
+    Activeer traders per exchange en stel hun individuele parameters in, zoals de coins waarop ze handelen, het investeringsbedrag per transactie en de winstdoelstelling.
+  </Card>
+</CardGroup>
+
+## Exchanges beheren
+
+BitBrokerTrade ondersteunt meerdere exchanges tegelijk. Je kunt dus bijvoorbeeld zowel een account bij Bitvavo als bij Binance koppelen en op beide exchanges gelijktijdig laten handelen.
+
+<Steps>
+  <Step title="Ga naar Instellingen → Beurzen">
+    Klik in het hoofdmenu op **Instellingen** en vervolgens op **Beurzen**.
+  </Step>
+  <Step title="Voeg een exchange toe">
+    Klik op de knop om een nieuwe exchange toe te voegen. Kies de gewenste exchange uit de lijst van ondersteunde platforms.
+  </Step>
+  <Step title="Voer je API-sleutels in">
+    Elke exchange vereist een API-sleutel en API-geheim die je aanmaakt in het instellingenmenu van de exchange zelf. Kopieer deze gegevens en plak ze in de bijbehorende velden in BitBrokerTrade.
+  </Step>
+  <Step title="Sla de koppeling op">
+    Klik op **Opslaan**. BitBrokerTrade test de verbinding en bevestigt of de koppeling geslaagd is. Je exchange verschijnt nu in het groene balkoverzicht op het dashboard.
+  </Step>
+</Steps>
+
+<CardGroup cols={2}>
+  <Card title="Bitvavo" icon="b" href="/exchanges/bitvavo">
+    Stap-voor-stap instructies voor het koppelen van Bitvavo.
+  </Card>
+  <Card title="Binance" icon="b" href="/exchanges/binance">
+    Stap-voor-stap instructies voor het koppelen van Binance.
+  </Card>
+  <Card title="Bybit" icon="b" href="/exchanges/bybit">
+    Stap-voor-stap instructies voor het koppelen van Bybit.
+  </Card>
+  <Card title="Alle exchanges" icon="list" href="/exchanges/wat-is-een-exchange">
+    Bekijk alle ondersteunde exchanges en vergelijk ze.
+  </Card>
+</CardGroup>
+
+## Traders beheren
+
+Per exchange kun je een of meerdere traders activeren. Elke trader heeft zijn eigen instellingen en volgt zijn eigen strategie onafhankelijk van de anderen.
+
+<Note>
+  Elke trader kan een compleet eigen strategie volgen — met andere coins, andere instapbedragen en andere winstdoelstellingen. Dit geeft je de flexibiliteit om te diversifiëren, ook binnen één exchange.
+</Note>
+
+<Steps>
+  <Step title="Ga naar Instellingen → Traders">
+    Klik in het hoofdmenu op **Instellingen** en vervolgens op **Traders**.
+  </Step>
+  <Step title="Voeg een trader toe">
+    Klik op de knop om een nieuwe trader aan te maken. Koppel de trader aan een van je reeds toegevoegde exchanges.
+  </Step>
+  <Step title="Configureer de trader">
+    Stel de volgende parameters in:
+    - **Coins** — op welke cryptomunten de trader handelt
+    - **Investeringsbedrag** — hoeveel euro per aankoop wordt belegd
+    - **Winstdoelstelling** — bij welk percentage de trader verkoopt
+    - **Handelsstrategie** — de aanpak die de trader volgt bij het herkennen van koop- en verkoopsignalen
+  </Step>
+  <Step title="Activeer de trader">
+    Zet de trader op actief. De trader begint nu direct met het analyseren van de markt en plaatst zijn eerste aankoop zodra hij een geschikt moment herkent.
+  </Step>
+</Steps>
+
+<Tip>
+  Begin met één trader op één exchange om vertrouwd te raken met het systeem. Zodra je ziet hoe de trader werkt en presteert, kun je extra traders toevoegen of experimenteren met verschillende strategieën.
+</Tip>
+
+## Volgende stappen
+
+Met je exchanges en traders correct geconfigureerd ben je klaar om volledig automatisch te handelen. Verdiep je daarna in de fijnere instellingen van de trader of leer meer over de ondersteunde exchanges.
+
+<CardGroup cols={2}>
+  <Card title="Trader instellingen" icon="sliders" href="/traders/trader-instellingen">
+    Gedetailleerde uitleg van alle trader-parameters en hoe je ze optimaliseert.
+  </Card>
+  <Card title="Handelsstrategie" icon="chess-knight" href="/traders/handelsstrategie">
+    Lees hoe de trader koopsignalen herkent en wanneer hij verkoopt.
+  </Card>
+  <Card title="Ondersteunde coins" icon="circle-dollar-to-slot" href="/traders/ondersteunde-coins">
+    Bekijk welke cryptomunten beschikbaar zijn voor de trader.
+  </Card>
+  <Card title="Wat is een exchange?" icon="building-columns" href="/exchanges/wat-is-een-exchange">
+    Alles wat je moet weten over exchanges en hoe je de juiste kiest.
+  </Card>
+</CardGroup>

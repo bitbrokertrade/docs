@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/welke-coins-ondersteunt-bbt-bij-binance.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/welke-coins-ondersteunt-bbt-bij-binance.md). # Welke coins ondersteunt BBT bij Binance? \*\*BTC\*\*/euro \*\*ETH\*\*/euro \*\*XRP\*\*/euro \*\*BCH\*\*/euro \*\*LTC\*\*/euro \*\*BNB\*\*/euro \*\*LINK\*\*/euro \*\*ADA\*\*/euro \*\*EOS\*\*/euro \*\*DOGE\*\*/euro

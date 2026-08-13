@@ -1,0 +1,47 @@
+# Source: https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/binance-api-management-update
+
+For the complete documentation index, see [llms.txt](https://docs.bitbrokertrade.com/llms.txt). This page is also available as [Markdown](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/binance-api-management-update.md).
+
+**Binance verwijdert je API sleutel als er 30 dagen lang geen aan- of verkooptransactie wordt gedaan.** Als dit bij jou ook het geval is, dan heb je van ons een mail gehad met de melding dat de API key niet werkt en voor welke traders dat geldt.
+
+**Wat is er gebeurd:** Binance ziet je API key als ‘veiligheidsrisico’ als je 30 dagen lang geen transactie hebt gedaan. Voldoe je aan die norm, dan verwijderen ze de API sleutel.
+
+**Hoe kun je dat herstellen:**
+
+1\. Je logt in bij Binance en kiest voor het menu API management (rechtsbovenin je scherm in een uitklapmenu).
+
+2\. Kies voor “Create API”
+
+3\. Kies voor “System generated" en dan "Next"
+
+4\. Daarna moet je je API een naam geven: bijvoorbeeld "BitBrokerTrade" en dan "Next".
+
+5\. Daarna moet je een email code invullen en je authenticator code om te bewijzen dat jij het bent.
+
+6\. Druk op “edit restrictions” en vink “Enable Spot & Margin Trading” aan.
+
+8\. Klik op “Save”.
+
+6\. Melding verschijnt: “Permission Expired”.
+
+7\. Klik op “Confirm”
+
+8\. Geef je authenticator code in.
+
+Je sleutels verschijnen nu in het scherm. Laat dit scherm openstaan, want zodra je dit scherm sluit wordt de "secret key" onzichtbaar gemaakt. Sluit het scherm pas als je de beide sleutels gekopieerd hebt naar BitBrokerTrade beursinstellingen.
+
+**Ga nu naar BitBrokerTrade en log daar in:**
+
+1\. Ga naar menu “Instellingen” en daarna naar “Beurzen”
+
+2\. Je ziet in het menu welke API niet actief is.
+
+3\. Klik op de edit knop (groene pennetje) en het API menu opent.
+
+4\. Vul hier de API Key en de Secret Key van Binance in en kies voor “opslaan”
+
+**In het menu zie je dat de beurs weer “actief” is. De verbinding is weer hersteld.**
+
+[PreviousUitleg functionaliteiten](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten) [NextBinance API management update II](https://docs.bitbrokertrade.com/overig/faq/uitleg-functionaliteiten/binance-api-management-update-ii)
+
+Last updated 3 years ago

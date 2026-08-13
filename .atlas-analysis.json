@@ -1,32 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "BitBrokerTrade",
+  "projectType": "saas",
+  "projectName": "BitBrokerTrade",
+  "projectDescription": "Geautomatiseerde crypto tradersoftware die via een API-koppeling aan een exchange handelt op basis van koerstrends, zodat gebruikers zonder handmatige inzet rendement kunnen behalen op hun crypto-investering.",
   "theme": "almond",
-  "logo": {
-    "light": "https://media.brand.dev/3363195f-06d4-4153-a5f2-19ac14268d45.svg",
-    "dark": "https://media.brand.dev/3363195f-06d4-4153-a5f2-19ac14268d45.svg"
-  },
-  "favicon": "https://media.brand.dev/d1042968-fb50-48ea-a787-1d8cc0a54442.png",
-  "colors": {
-    "primary": "#fc951d",
-    "light": "#363c43",
-    "dark": "#c9cbcd"
-  },
-  "font": {
-    "headings": {
-      "family": "Roboto"
-    },
-    "body": {
-      "family": "Roboto"
-    }
-  },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Aanmelden",
-      "href": "https://bitbroker.trade/Authentication/Register"
-    }
-  },
+  "primaryColor": "#fc951d",
+  "lightColor": "#363c43",
+  "darkColor": "#c9cbcd",
   "navigation": {
     "tabs": [
       {
@@ -107,5 +86,29 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Geautomatiseerde crypto trading via MACD-koerstrendanalyse",
+    "Updown-strategie op basis van 1-minuut candles",
+    "API-koppeling met 6 exchanges: Bitvavo, Binance, Bybit, Bitstamp, Coinbase, Kucoin",
+    "Simulator modus voor risicovrij uitproberen",
+    "Commissiesysteem op basis van no-cure-no-pay (20% van brutorendement)",
+    "Credits/prepaid tegoed systeem",
+    "Configureerbare trader-instellingen: koersplafond, aankoopbedrag, stoploss, winststrategie",
+    "Dashboard met bruto winst, handelsvolume en exchange-saldo overzicht",
+    "Referral/doorverwijzingsprogramma",
+    "Export van transactiedata naar Excel"
+  ],
+  "publicApiSurface": [
+    "Exchange API-koppeling (Bitvavo, Binance, Bybit, Bitstamp, Coinbase, Kucoin)",
+    "Simulator exchange (nep-koppeling voor testdoeleinden)",
+    "Trader configuratie: naam, beurs, markt, handelsstrategie",
+    "Instellingen: minimumpercentage tussen transacties, koersplafond, gemiddeld aankoopbedrag, maximum open aankopen",
+    "Instellingen: minimum winstpercentage, winststrategie (herinvesteren/HODL), stoploss percentage",
+    "Handmatig verkopen via aankooptransacties-scherm",
+    "Pauze-functie per positie (Hold)",
+    "Credits kopen via in-app betaling (Mollie/Pay)",
+    "Referral-link aanmaken via doorverwijzingsprogramma",
+    "Export verkoopscherm en creditshistorie naar CSV/Excel"
+  ]
 }

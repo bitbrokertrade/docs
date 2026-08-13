@@ -1,0 +1,25 @@
+# Source: https://docs.bitbrokertrade.com/exchanges/wat-is-een-exchange
+
+For the complete documentation index, see [llms.txt](https://docs.bitbrokertrade.com/llms.txt). This page is also available as [Markdown](https://docs.bitbrokertrade.com/exchanges/wat-is-een-exchange.md).
+
+## Wat is een Exchange c.q. Beurs?
+
+Een Exchange (ook wel Beurs genoemd) is een wisselkantoor dat jou de mogelijkheid biedt om cryptocurrency te kopen en verkopen. Je hebt dus een rekening nodig bij een Exchange (vergelijk het met een bankrekening) en van hieruit kun je cryptocurrency aan- en verkopen. Praktijkvoorbeeld: In de praktijk geef je de Exchange een opdracht om bijvoorbeeld voor €500,- Bitcoin aan te kopen tegen de dan geldende koers. De Exchange voert die transactie uit en haalt € 500,- + de transactiekosten van je Eurorekening bij de Exchange (je moet dus zorgen voor voldoende saldo op die rekening). Op je Bitcoinrekening bij de Exchange stort de Exchange de hoeveelheid Bitcoin die je hebt aangekocht.
+
+Geef je daarna een verkooporder voor de aangekochte hoeveelheid Bitcoin (omdat de koers is gestegen en je de koerswinst wil omzetten in euro’s) dan verkoopt de Exchange de Bitcoin, houdt daar haar transactiekosten van in en stort het verschil op de eurorekening. **Het saldo van de eurorekening bij de Exchange kun je ten allen tijde overboeken naar je eigen ibanrekening bij een bank, zodat je er weer vrij over kunt beschikken**. Bitbrokertrade ondersteunt een koppeling met 6 Exchanges, bij deze Exchanges kun je de trader inzetten:
+
+- Bitvavo
+
+- Coinbase
+
+- Binance
+
+- Bitstamp
+
+- Kucoin
+
+- Bybit
+
+[PreviousInstellingen](https://docs.bitbrokertrade.com/snel-aan-de-slag/instellingen) [NextBinance toevoegen als beurs](https://docs.bitbrokertrade.com/exchanges/binance-toevoegen-als-beurs)
+
+Last updated 11 months ago

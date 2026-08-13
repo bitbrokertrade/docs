@@ -1,0 +1,62 @@
+---
+title: "Bitvavo koppelen aan BitBrokerTrade via API"
+sidebarTitle: "Bitvavo"
+description: "Maak een API-sleutel aan in Bitvavo en koppel je account aan BitBrokerTrade. Volg deze stap-voor-stap handleiding voor een werkende verbinding."
+---
+
+Om BitBrokerTrade te laten handelen op jouw Bitvavo-account, maak je eerst een API-sleutel aan in Bitvavo en voeg je die vervolgens toe in BitBrokerTrade. Dit proces bestaat uit drie delen: de API-sleutel aanmaken, de exchange toevoegen en een trader koppelen.
+
+<Warning>
+  Bitvavo stuurt na het aanmaken van een API-sleutel een bevestigingsmail. **Klik eerst op die bevestigingslink in je mailbox voordat je de exchange toevoegt in BitBrokerTrade.** Doe je dit niet, dan mislukt de verbinding.
+</Warning>
+
+## Deel 1: API-sleutel aanmaken in Bitvavo
+
+<Steps>
+  <Step title="Open de API-instellingen">
+    Log in op [bitvavo.com](https://bitvavo.com) en klik rechtsboven op je **accountnaam**. In het uitklapmenu kies je voor **"API"**.
+  </Step>
+  <Step title="Nieuwe sleutel toevoegen">
+    Klik op **"Nieuwe API sleutel toevoegen"**. Er verschijnt een formulier voor je nieuwe sleutel.
+  </Step>
+  <Step title="Rechten instellen">
+    Geef de sleutel een herkenbare naam, bijvoorbeeld **"API BitBrokerTrade"**. Zet daarna de toggles bij **"Alleen Lezen"** én **"Verhandel digitale data"** op actief (schuif ze naar rechts). Laat het veld **IP-whitelist** leeg.
+  </Step>
+  <Step title="Sleutel genereren">
+    Klik op **"API-sleutel genereren"**. Vul je Bitvavo-wachtwoord en je 2FA-authenticatiecode in en klik op **Bevestigen**.
+  </Step>
+  <Step title="Sleutels kopiëren">
+    Klik op het kopieer-icoontje achter de **API key** om deze naar je klembord te kopiëren. Plak de sleutel daarna in een kladblok. Doe hetzelfde met de **API secret key**. Klik vervolgens op **"Ik heb de geheime API-secret bewaard"**.
+  </Step>
+  <Step title="Bevestigingsmail bevestigen">
+    Bitvavo stuurt nu een e-mail naar je opgegeven e-mailadres. **Open de mail en klik op de bevestigingslink.** Pas daarna wordt de API-sleutel actief in Bitvavo.
+  </Step>
+</Steps>
+
+## Deel 2: Exchange toevoegen in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigeer naar Beurzen">
+    Log in bij BitBrokerTrade. Klik in de linkerkolom op **Instellingen**, dan op **Beurzen** en vervolgens op **Beurs toevoegen**.
+  </Step>
+  <Step title="Selecteer Bitvavo">
+    Klik op het **Bitvavo-logo** om Bitvavo als exchange te kiezen.
+  </Step>
+  <Step title="Gegevens invullen">
+    Vul bij **Naam** het woord `Bitvavo` in. Plak daarna de eerder gekopieerde **API key** en **API secret** in de bijbehorende velden.
+  </Step>
+  <Step title="Gereserveerd bedrag instellen (optioneel)">
+    Wil je een deel van je saldo buiten de trader houden? Schakel dan **"Gereserveerd bedrag"** in en vul het gewenste bedrag in euro's in. Dit bedrag wordt nooit ingezet voor aankopen.
+  </Step>
+  <Step title="Exchange toevoegen">
+    Controleer of je de bevestigingsmail van Bitvavo al hebt bevestigd. Klik daarna op **Toevoegen**. De verbinding is nu actief.
+  </Step>
+</Steps>
+
+<Note>
+  **Gereserveerd bedrag — hoe werkt dat?** Stel je hebt € 1.000,- op Bitvavo staan en je stelt € 250,- in als gereserveerd bedrag. De trader rekent dan alleen met € 750,-. Er blijft altijd € 250,- onaangeroerd op je eurorekening staan.
+</Note>
+
+## Deel 3: Trader koppelen
+
+Nu de exchange is toegevoegd, is de volgende stap het koppelen van een trader aan je Bitvavo-account. Volg daarvoor de volledige stap-voor-stap handleiding op de pagina [Trader instellingen](/traders/trader-instellingen).

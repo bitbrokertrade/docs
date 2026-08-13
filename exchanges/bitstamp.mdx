@@ -1,0 +1,62 @@
+---
+title: "Bitstamp koppelen aan BitBrokerTrade via API"
+sidebarTitle: "Bitstamp"
+description: "Maak een nieuwe API-sleutel aan in Bitstamp met de juiste rechten en voeg je Bitstamp account toe aan BitBrokerTrade voor geautomatiseerde trading."
+---
+
+Bitstamp is een van de oudste en meest betrouwbare Europese exchanges. Om BitBrokerTrade te koppelen aan je Bitstamp-account maak je een API-sleutel aan via het Security-menu van Bitstamp. Volg de drie stappen hieronder voor een werkende verbinding.
+
+<Warning>
+  Bitstamp stuurt na het aanmaken van een API-sleutel een bevestigingsmail. **Klik eerst op de bevestigingslink in die mail voordat je de exchange toevoegt in BitBrokerTrade.** Voeg je de exchange toe vóór de bevestiging, dan mislukt de verbinding.
+</Warning>
+
+## Deel 1: API-sleutel aanmaken in Bitstamp
+
+<Steps>
+  <Step title="Open API Access">
+    Log in op [bitstamp.net](https://bitstamp.net) en klik in het menu op **"Security"**. Kies daarna voor **"API Access"**.
+  </Step>
+  <Step title="Nieuwe API-sleutel aanmaken">
+    Klik op **"NEW API key"**. Staat er al een bestaande sleutel? Verwijder die dan eerst voordat je een nieuwe aanmaakt.
+  </Step>
+  <Step title="Rechten instellen">
+    Scroll in het volgende scherm omlaag totdat je de toggle-buttons ziet. Zet de relevante rechten voor handelen aan door de betreffende toggles naar rechts te schuiven.
+  </Step>
+  <Step title="Bevestigen met 2FA">
+    Klik onderaan het scherm op de **bevestigingsbutton** en vul de 2FA-code in vanuit de authenticator-app op je telefoon.
+  </Step>
+  <Step title="Sleutels kopiëren">
+    Klik op het kopieer-icoontje achter de **API key** om deze naar je klembord te kopiëren. Plak de sleutel in een kladblok. Doe hetzelfde met de **API secret**. Je hebt beide straks nodig in BitBrokerTrade.
+  </Step>
+  <Step title="Bevestigingsmail bevestigen">
+    Bitstamp stuurt een e-mail met een activatielink. **Open de mail en klik op de link** om de API-sleutel te activeren.
+  </Step>
+</Steps>
+
+## Deel 2: Exchange toevoegen in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigeer naar Beurzen">
+    Log in bij BitBrokerTrade. Klik in de linkerkolom op **Instellingen**, dan op **Beurzen** en vervolgens op **Exchange toevoegen**.
+  </Step>
+  <Step title="Selecteer Bitstamp">
+    Klik op het **Bitstamp-logo** om Bitstamp als exchange te kiezen.
+  </Step>
+  <Step title="Gegevens invullen">
+    Vul bij **Naam** je accountnaam bij Bitstamp in. Plak daarna de gekopieerde **API key** en **API secret** in de bijbehorende velden.
+  </Step>
+  <Step title="Gereserveerd bedrag instellen (optioneel)">
+    Wil je een deel van je saldo buiten de trader houden? Schakel **"Gereserveerd bedrag"** in en vul het gewenste bedrag in euro's in. Dit bedrag wordt nooit door de trader ingezet voor aankopen.
+  </Step>
+  <Step title="Exchange toevoegen">
+    Zorg dat je de bevestigingsmail van Bitstamp al hebt bevestigd. Klik daarna op **Toevoegen**. De verbinding is nu actief.
+  </Step>
+</Steps>
+
+<Note>
+  **Gereserveerd bedrag — hoe werkt dat?** Stel je hebt € 1.000,- op Bitstamp staan en je reserveert € 250,-. De trader rekent dan alleen met € 750,-. De € 250,- blijft altijd onaangeroerd op je eurorekening bij Bitstamp.
+</Note>
+
+## Deel 3: Trader koppelen
+
+Nu de exchange is toegevoegd, is de volgende stap het koppelen van een trader aan je Bitstamp-account. Volg daarvoor de volledige handleiding op [Trader instellingen](/traders/trader-instellingen).

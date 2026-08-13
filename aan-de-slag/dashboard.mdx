@@ -1,0 +1,109 @@
+---
+title: "Het BitBrokerTrade dashboard begrijpen"
+sidebarTitle: "Dashboard"
+description: "Het dashboard toont je bruto winst, handelsvolume, creditstegoed en exchange-saldo's in één overzicht. Lees wat elke sectie betekent."
+---
+
+Het dashboard is het eerste scherm dat je ziet na het inloggen op BitBrokerTrade. Het geeft je in één oogopslag inzicht in hoe je traders presteren: van de grafiek met maandelijkse resultaten tot je openstaande creditstegoed en de saldo's op je gekoppelde exchanges. Neem de tijd om elke sectie te leren kennen — dit scherm is het centrale punt van je handelservaring.
+
+## De grafiek
+
+De grafiek bovenaan het dashboard toont de **bruto transactieresultaten per maand**. Zo zie je in één oogopslag hoe je traders het deze maand doen. Als vergelijking worden ook de resultaten van dezelfde maand in het vorige jaar weergegeven, zodat je trends over langere tijd kunt herkennen.
+
+<Note>
+  Alle bedragen in de grafiek zijn **bruto** winsten. De platformcommissie van 20% en de handelskosten van de exchange zijn hier nog niet van afgetrokken. Zie [Verkooptransacties](/aan-de-slag/verkooptransacties) voor de netto berekening.
+</Note>
+
+## De samenvattingsblokken
+
+Onder de grafiek staan vier samenvattingsblokken met de kerncijfers van je account.
+
+<CardGroup cols={2}>
+  <Card title="Totaal handelsvolume" icon="chart-bar">
+    De cumulatie van alle verkochte posities — het historische totaal aan belegd kapitaal. Let op: dit cijfer bevat alleen de resultaten van **actieve traders**. Verwijderde traders worden niet meegeteld.
+  </Card>
+  <Card title="Winst" icon="sack-dollar">
+    Het historische totaal van je **bruto** winst. Dit bedrag is inclusief de platformcommissie van 20%. Ook hier tellen alleen actieve traders mee.
+  </Card>
+  <Card title="Gemiddelde winst per transactie" icon="percent">
+    Het gemiddelde brutorendement en het gemiddelde brutowinstpercentage per verkooporder van al je actieve traders gecombineerd.
+  </Card>
+  <Card title="Tegoed / Credits" icon="coins">
+    Het openstaande creditstegoed op je BitBrokerTrade account. 1 credit = € 1,-. Dit tegoed gebruik je om de platformcommissie te betalen.
+  </Card>
+</CardGroup>
+
+## Creditstegoed en hoe het werkt
+
+BitBrokerTrade werkt op commissiebasis: bij elke winstgevende verkooptransactie wordt **20% van het bruto rendement** ingehouden als platformvergoeding. Deze commissie wordt automatisch verrekend met je creditstegoed.
+
+Je koopt tegoed via de **"Koop tegoed"**-button rechtsboven in het dashboardscherm. Eén credit kost € 1,-.
+
+<Warning>
+  Als je tegoed onvoldoende is om de commissie te verrekenen, voert de trader de verkooptransactie **niet** uit. Je ontvangt dan een e-mail met de melding dat de trader niet voor je kan handelen. Zorg dus altijd voor voldoende saldo.
+</Warning>
+
+### Hoeveel credits heb je nodig?
+
+Je kunt eenvoudig berekenen hoeveel credits je nodig hebt op basis van je saldo bij de exchange en het verwachte rendement:
+
+```
+Saldo account × rendement% × 20% = benodigde credits
+```
+
+**Voorbeeld:** bij een saldo van € 5.000,- en een verwacht rendement van 14% per jaar:
+
+```
+€ 5.000 × 14% × 20% = € 140 aan credits per jaar
+```
+
+<Tip>
+  Koop liever iets meer credits dan je denkt nodig te hebben. Zo voorkom je dat de trader een winstgevende verkoopkans mist omdat het tegoed net op is.
+</Tip>
+
+## Saldo exchanges
+
+Onderaan het dashboard vind je de sectie **Saldo exchanges**. In de groene horizontale balk staan alle exchanges die je hebt gekoppeld. Klik op een exchange om het saldo-overzicht van die exchange uit te klappen.
+
+Het overzicht toont vijf kolommen:
+
+<Accordion title="Munt">
+  De omschrijving van de munt in de wallet. Bijvoorbeeld **EUR** voor Euro of **BTC** voor Bitcoin.
+</Accordion>
+
+<Accordion title="Beschikbaar">
+  Het saldo dat op de exchange direct beschikbaar is — vrij om te investeren of op te nemen.
+</Accordion>
+
+<Accordion title="Totaal">
+  Het totale saldo van die munt in je exchange-wallet, inclusief het gedeelte dat al in open posities zit.
+</Accordion>
+
+<Accordion title="In aankooptransacties">
+  Het totale bedrag dat BitBrokerTrade momenteel heeft belegd in open aankoopposities voor die munt.
+</Accordion>
+
+<Accordion title="Verschil (*)">
+  Als het saldo op de exchange **lager** is dan het totaal van de open aankoopposities in BitBrokerTrade, verschijnt hier een asterisk (*).
+
+  Dit betekent dat je handmatig posities op de exchange hebt verkocht zonder dat via BitBrokerTrade te doen. De trader kan die externe verkopen niet terugkoppelen aan zijn eigen posities en raakt daardoor de aansluiting kwijt.
+
+  **Advies:** koop het verschil bij op de betreffende exchange. Zo herstel je de balans en werkt de trader weer accuraat.
+</Accordion>
+
+<Warning>
+  Verkoop posities altijd via BitBrokerTrade en niet rechtstreeks op de exchange. Doe je dat toch handmatig, dan ontstaat er een verschil (*) en kan de trader niet meer accuraat bijhouden welke posities open staan.
+</Warning>
+
+## Volgende stap
+
+Nu je het dashboard begrijpt, kun je je open posities bekijken en beheren via het aankooptransacties-scherm.
+
+<CardGroup cols={2}>
+  <Card title="Aankooptransacties" icon="basket-shopping" href="/aan-de-slag/aankooptransacties">
+    Bekijk je open posities en gebruik de pauze- of handmatig-verkoopfunctie.
+  </Card>
+  <Card title="Verkooptransacties" icon="receipt" href="/aan-de-slag/verkooptransacties">
+    Zie alle afgesloten posities en de gerealiseerde winst per transactie.
+  </Card>
+</CardGroup>

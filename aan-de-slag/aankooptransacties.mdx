@@ -1,0 +1,93 @@
+---
+title: "Aankooptransacties beheren in BitBrokerTrade"
+sidebarTitle: "Aankooptransacties"
+description: "Bekijk je open crypto posities, hun actuele rendement en beheer individuele posities met de pauze- en handmatig-verkoopfunctie."
+---
+
+Het scherm **Aankooptransacties** geeft je een volledig overzicht van alle open posities die je actieve traders momenteel aanhouden. Voor elke positie zie je de aangekochte munt, het geïnvesteerde bedrag en het actuele bruto rendement in real-time. Vanuit dit scherm kun je ook ingrijpen: een positie tijdelijk blokkeren of direct handmatig verkopen.
+
+## Wat zie je op dit scherm?
+
+Het overzicht toont alle open posities van al je actieve traders gecombineerd. Per positie zijn onder andere de volgende gegevens zichtbaar:
+
+- **Munt** — welke cryptomunt er is aangekocht
+- **Aankoopbedrag** — het bedrag dat in deze positie is geïnvesteerd
+- **Rendement** — het actuele **bruto** rendement van de positie op dit moment
+- **Status** — of de positie actief is of op pauze staat (Hold)
+
+<Note>
+  Het getoonde rendement is altijd het **bruto** rendement. De handelskosten van de exchange (~0,25% aan- en 0,25% verkoopzijde) en de platformcommissie van 20% worden pas bij de verkoop verrekend. Je vindt de netto details terug in het scherm [Verkooptransacties](/aan-de-slag/verkooptransacties).
+</Note>
+
+## Een positie pauzeren
+
+Wil je voorkomen dat een bepaalde positie door de trader wordt verkocht — bijvoorbeeld omdat je verwacht dat de koers verder stijgt — dan gebruik je de **pauze-button**.
+
+<Steps>
+  <Step title="Zoek de positie op">
+    Navigeer naar **Aankooptransacties** en zoek de positie die je wilt pauzeren.
+  </Step>
+  <Step title="Druk op de pauze-button (II)">
+    Klik op de pauze-button (het symbool met twee verticale streepjes, **II**) naast de betreffende positie.
+  </Step>
+  <Step title="Controleer de status">
+    De status van de positie wijzigt naar **Hold**. De trader slaat deze positie over bij zijn verkoopanalyse en raakt haar niet aan, ongeacht de koers.
+  </Step>
+  <Step title="Zet de positie weer actief">
+    Wil je de positie weer vrijgeven voor automatische handel? Druk nogmaals op dezelfde button. De status gaat terug naar actief en de trader neemt de positie weer mee in zijn beslissingen.
+  </Step>
+</Steps>
+
+<Tip>
+  Gebruik de pauze-functie wanneer je een tijdelijke koersdip verwacht te overbruggen, of wanneer je een positie strategisch wilt vasthouden tot een bepaald koersniveau. Vergeet daarna niet de pauze weer op te heffen!
+</Tip>
+
+## Een positie handmatig verkopen
+
+Wil je een positie direct verkopen, los van de strategie van de trader? Gebruik dan de **handmatig-verkoopfunctie**.
+
+<Steps>
+  <Step title="Zoek de positie op">
+    Navigeer naar **Aankooptransacties** en zoek de positie die je wilt verkopen.
+  </Step>
+  <Step title="Druk op de groene pijl-button">
+    Klik op de middelste button met het groene pijl-icoon naast de positie.
+  </Step>
+  <Step title="Bevestig de verkoopopdracht">
+    De trader vraagt je de opdracht te bevestigen. Lees de melding goed door en bevestig de verkoop.
+  </Step>
+  <Step title="Verkoop wordt uitgevoerd">
+    De trader verkoopt de positie direct tegen de actuele marktkoers. De transactie verschijnt vervolgens in het scherm [Verkooptransacties](/aan-de-slag/verkooptransacties).
+  </Step>
+</Steps>
+
+<Warning>
+  Bij een handmatige verkoop wordt de positie verkocht tegen de **actuele koers**, ook als die lager is dan de aankoopprijs. Je kunt dan verlies realiseren. De trader vraagt altijd om bevestiging zodat je nooit per ongeluk verkoopt.
+</Warning>
+
+## Rode markering bij een positie
+
+Soms zie je een rode markering of een rood kruis bij een positie. Dit geeft aan dat er iets is misgegaan tijdens de aankoop van die positie — bijvoorbeeld een gedeeltelijke uitvoering of een communicatiefout met de exchange.
+
+<Accordion title="Wat betekent een rode markering?">
+  Een rode markering bij een aankooptransactie betekent dat de aankoop niet volledig of niet correct is uitgevoerd. Dit kan komen door:
+
+  - Een tijdelijk probleem met de verbinding tussen BitBrokerTrade en de exchange
+  - Onvoldoende saldo op de exchange op het moment van aankoop
+  - Een fout in de API-communicatie
+
+  Controleer je saldo op de exchange en je API-instellingen. Raadpleeg bij aanhoudende problemen de pagina [API-sleutel problemen](/foutmeldingen/api-sleutel-problemen).
+</Accordion>
+
+## Volgende stap
+
+Na een succesvolle verkoop verschijnt de transactie in het verkooptransacties-scherm, waar je de volledige kostenopbouw en het netto resultaat kunt inzien.
+
+<CardGroup cols={2}>
+  <Card title="Verkooptransacties" icon="receipt" href="/aan-de-slag/verkooptransacties">
+    Bekijk afgesloten posities, handelskosten en platformcommissie.
+  </Card>
+  <Card title="Dashboard" icon="gauge" href="/aan-de-slag/dashboard">
+    Terug naar het totaaloverzicht van je prestaties en tegoed.
+  </Card>
+</CardGroup>

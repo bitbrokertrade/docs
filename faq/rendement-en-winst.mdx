@@ -1,0 +1,68 @@
+---
+title: "Rendement, winst en winstberekening bij BBT"
+sidebarTitle: "Rendement & Winst"
+description: "Begrijp hoe bruto en netto winst worden berekend, welk rendementspercentage optimaal is en hoe de 20% platformcommissie wordt verrekend."
+---
+
+Het begrijpen van hoe BBT winst berekent is essentieel om je trader goed in te stellen en de werkelijke opbrengst van je trades te kunnen inschatten. Op deze pagina lees je alles over het verschil tussen bruto- en nettowinst, het optimale rendementspercentage en hoe de platformcommissie wordt verrekend.
+
+<Accordion title="Hoe gaat de berekening van de winst in zijn werk?">
+  De winstbepaling werkt als volgt:
+
+  Stel: je hebt ingegeven dat de trader mag verkopen bij **1,5% winst** en dat het gemiddeld aankoopbedrag **€ 100,-** per transactie is. De trader ziet een aankoopmoment en plaatst een order van € 100,-. De exchange brengt echter 0,25% transactiekosten in rekening en schrijft dit af van je vrije saldo. In het transactiescherm verschijnt dat je voor € 100,- hebt aangekocht (terwijl de werkelijke kosten € 100,25 zijn).
+
+  **Wanneer ziet de trader 1,5% winst?** Zodra de waarde van de transactie **€ 101,50** bedraagt (100 × 1,015).
+
+  De winst die hier gemaakt wordt is **brutowinst**, want de totale transactiekosten (gemiddeld 0,5%) moeten daar nog van af. Je rendementspercentage moet dus **hoger zijn dan 0,5%** om daadwerkelijk nettowinst te maken.
+</Accordion>
+
+<Accordion title="In het dashboard staat de brutowinst — hoe bereken ik de nettowinst?">
+  Het dashboard toont de brutowinst. Gebruik de volgende formule om je nettowinst te berekenen:
+
+  ```
+  Brutowinst (= winst in dashboard)
+  -/- Totale transactiekosten
+       ((geïnvesteerd kapitaal in dashboard -/- som openstaande trades) × 0,5%)
+  -/- Commissie BBT (brutowinst × 20%)
+  = Nettowinst
+  ```
+
+  **Voorbeeld:**
+  - Brutowinst: € 200,-
+  - Transactiekosten (op € 5.000,- geïnvesteerd, € 500,- open): € 4.500,- × 0,5% = € 22,50
+  - BBT-commissie: € 200,- × 20% = € 40,-
+  - **Nettowinst: € 200,- - € 22,50 - € 40,- = € 137,50**
+</Accordion>
+
+<Accordion title="Welk rendementspercentage kan ik het beste ingeven?">
+  De trader gebruikt dit percentage om te beoordelen wanneer hij een transactie mag verkopen. Het percentage moet hoog genoeg zijn om winst te maken, maar ook realistisch genoeg om regelmatig verkopen te realiseren.
+
+  Een paar richtlijnen:
+
+  - **5%**: de trader doet relatief weinig transacties. Koersschommelingen van 5% zijn immers minder frequent.
+  - **2%**: meer transactievolume en mogelijk beter totaalrendement.
+  - **Onder 0,5%**: de transactiekosten overtreffen de winst — je maakt verlies.
+
+  <Tip>
+    Onze berekeningen op historische data (24 maanden en langer) geven aan dat tussen **0,7% en 0,9%** het maximale netto rendement wordt gehaald, rekening houdend met de gemiddelde transactiekosten van 0,25% aan- en 0,25% verkoop bij de meeste exchanges.
+  </Tip>
+</Accordion>
+
+<Accordion title="Hoeveel invloed heeft de hoogte van het rendementspercentage op de uiteindelijke winst?">
+  Een hoger of lager rendementspercentage heeft vooral veel invloed op de **hoeveelheid transacties** die gedaan worden — en daarmee op de totale transactiekosten.
+
+  - **Laag percentage**: transacties worden eerder verkocht en er worden ook eerder nieuwe posities ingenomen. Meer transacties = hogere totale transactiekosten.
+  - **Hoog percentage**: minder transacties, maar elke individuele transactie levert meer brutowinst op.
+
+  Per saldo zien we dat bij een rendementspercentage van **0,7% tot 0,9%** de hoogste netto winst wordt behaald.
+</Accordion>
+
+<Accordion title="Mijn dashboard toont opeens een lagere winst — wat is er aan de hand?">
+  Het dashboard toont **alleen de resultaten van actieve traders**. Als je een trader inactief maakt of verwijdert, wordt het winstsaldo in het dashboard negatief aangepast — want de bijdrage van die trader vervalt.
+
+  De verkooptransacties zelf worden altijd volledig getoond in het scherm Verkooptransacties. Die kun je niet verwijderen en ze blijven in de historie staan.
+
+  <Note>
+    Verwijder een trader alleen als je hem niet meer nodig hebt. Bij inactiveren blijft de historiek bewaard en kun je de trader later weer activeren.
+  </Note>
+</Accordion>

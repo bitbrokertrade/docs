@@ -1,0 +1,3 @@
+# Source: https://docs.bitbrokertrade.com/snel-aan-de-slag/verkooptransacties.md
+
+\> For the complete documentation index, see \[llms.txt\](https://docs.bitbrokertrade.com/llms.txt). Markdown versions of documentation pages are available by appending \`.md\` to page URLs; this page is available as \[Markdown\](https://docs.bitbrokertrade.com/snel-aan-de-slag/verkooptransacties.md). # Verkooptransacties !\[\](/files/-M4F32G569Bx-tAvHFX0) Dit scherm toont de verkochte posities en het gerealiseerde bruto rendement van alle actieve traders. Handelskosten betreffen de door de beurs berekende kosten. Platformkosten betreft de commissie voor de trader (20% van het behaalde bruto rendement).

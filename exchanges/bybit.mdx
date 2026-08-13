@@ -1,0 +1,65 @@
+---
+title: "Bybit koppelen aan BitBrokerTrade via API"
+sidebarTitle: "Bybit"
+description: "Maak een account aan bij Bybit, doorloop het KYC-traject en genereer een API-sleutel om BitBrokerTrade te koppelen aan je Bybit spot-wallet."
+---
+
+Bybit is een internationale exchange voor spot-trading. Om BitBrokerTrade te koppelen aan Bybit heb je een geverifieerd Bybit-account nodig en een API-sleutel met de juiste rechten. Volg de drie stappen hieronder om alles in te stellen.
+
+<Warning>
+  Activeer bij het aanmaken van de API-sleutel in Bybit **nooit** de optie **"withdrawals"** (opnames). Als opnames zijn ingeschakeld, kan een externe partij geld van je account afhalen. BitBrokerTrade heeft deze toestemming niet nodig en vraagt er ook nooit om.
+</Warning>
+
+## Deel 1: Account aanmaken bij Bybit
+
+Heb je al een geverifieerd Bybit-account? Sla dit deel dan over en ga direct naar [Deel 2](#deel-2-api-sleutel-aanmaken-in-bybit).
+
+**Wat heb je nodig:** een werkend e-mailadres, paspoort of identiteitskaart, mobiele telefoon, telefoonnummer en de Google Authenticator-app.
+
+<Steps>
+  <Step title="Account registreren">
+    Ga naar [www.bybit.com](https://www.bybit.com) en maak een account aan. Bevestig je e-mailadres via de verificatiemail die Bybit verstuurt.
+  </Step>
+  <Step title="Identity Verification (KYC) doorlopen">
+    Kies in het hoofdmenu voor **"Identity Verification"** en klik op **"Verify Now"**. Doorloop de schermen om je identiteit te bevestigen met je paspoort of identiteitskaart, je persoonlijke bankrekening en je telefoonnummer.
+  </Step>
+  <Step title="KYC-goedkeuring afwachten">
+    De verificatie kan enkele uren duren. Je ontvangt een bevestiging van Bybit zodra je account is goedgekeurd.
+  </Step>
+</Steps>
+
+## Deel 2: API-sleutel aanmaken in Bybit
+
+<Steps>
+  <Step title="Open de API-instellingen">
+    Klik rechtsboven op het **persoonlijke icoon** en kies in het uitklapmenu voor **"API"**. Klik daarna op **"Create New Key"**.
+  </Step>
+  <Step title="2FA instellen (indien nog niet gedaan)">
+    Als je nog geen 2FA hebt ingesteld, vraagt Bybit je dit eerst te doen via Google Authenticator. Volg de instructies op het scherm om 2FA te activeren.
+  </Step>
+  <Step title="Rechten instellen">
+    Stel de API-rechten in: schakel lees- en handelstoegang in. Zorg dat de optie **"withdrawals"** (opnames) **uitgeschakeld** blijft.
+  </Step>
+  <Step title="Sleutel opslaan">
+    Klik op **Submit**. Er verschijnt een scherm met je **API key** en **API Secret**. Kopieer beide naar een kladblok — je hebt ze straks nodig in BitBrokerTrade. Klik vervolgens op **"Understood"**.
+  </Step>
+</Steps>
+
+## Deel 3: Exchange toevoegen in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigeer naar Beurzen">
+    Log in bij BitBrokerTrade. Klik in de linkerkolom op **Instellingen**, dan op **Beurzen** en vervolgens op **Beurs toevoegen**.
+  </Step>
+  <Step title="Selecteer ByBit">
+    Klik op het **ByBit-logo** om Bybit als exchange te selecteren.
+  </Step>
+  <Step title="API-sleutels invullen">
+    Plak de gekopieerde **API key** en **API secret** in de bijbehorende velden. Klik op **Toevoegen**.
+  </Step>
+  <Step title="Verbinding controleren">
+    De API-verbinding wordt direct getest. De status verandert naar **"actief"** zodra de koppeling is geslaagd.
+  </Step>
+</Steps>
+
+Nu de exchange actief is, koppel je een trader aan je Bybit-account. Volg daarvoor de handleiding op [Trader instellingen](/traders/trader-instellingen).

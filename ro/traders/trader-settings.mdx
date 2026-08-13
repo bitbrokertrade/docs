@@ -1,0 +1,142 @@
+---
+title: "Adaugă și configurează un trader în BitBrokerTrade"
+sidebarTitle: "Setări trader"
+description: "Adaugă un trader nou prin Setări → Traderi și configurează numele, exchange-ul, moneda, strategia și toți parametrii de tranzacționare pentru rezultate optime."
+---
+
+Prin meniul de setări adaugi cu ușurință un trader nou și configurezi fiecare parametru după preferințele tale. Un trader bine configurat este baza unor rezultate consistente, așa că acordă timp citirii fiecărei setări înainte de a-l activa.
+
+## Adaugă un trader
+
+Navighează în meniu la **Setări → Traderi** și apasă pe **Adaugă trader**. Se deschide un formular cu toate setările de mai jos.
+
+---
+
+## Setări de bază
+
+<Accordion title="Nume">
+  Dă traderului tău un nume recognoscibil și descriptiv. Panoul de control folosește acest nume în toate prezentările tale.
+
+  **Recomandare:** folosește o combinație între exchange și monedă, de exemplu **"Bitvavo BTC"** sau **"Binance ETH"**. Astfel vezi dintr-o privire ce exchange și ce monedă administrează traderul.
+</Accordion>
+
+<Accordion title="Exchange">
+  Alege exchange-ul la care vrei să conectezi acest trader. Asigură-te că ai creat deja o conexiune API activă pentru acel exchange. Vezi paginile exchange-urilor pentru instrucțiuni:
+
+  - [Bitvavo](/ro/exchanges/bitvavo)
+  - [Binance](/ro/exchanges/binance)
+  - [Bybit](/ro/exchanges/bybit)
+  - [Bitstamp](/ro/exchanges/bitstamp)
+  - [Coinbase](/ro/exchanges/coinbase)
+  - [KuCoin](/ro/exchanges/kucoin)
+  - [Simulator](/ro/exchanges/simulator)
+</Accordion>
+
+<Accordion title="Piață">
+  Alege criptomoneda cu care trebuie să tranzacționeze traderul, de exemplu **BTC/EUR** sau **ETH/EUR**. Oferta disponibilă depinde de exchange-ul ales. Vezi toate perechile acceptate pe pagina [Monede acceptate](/ro/traders/supported-coins).
+</Accordion>
+
+<Accordion title="Strategie de tranzacționare">
+  Alege ce strategie urmează traderul. Există două opțiuni:
+
+  | Strategie | Lumânări | Metodă |
+  | --- | --- | --- |
+  | **BitBrokerTrade** | 15 minute | Calcul de tendință MACD |
+  | **Updown** | 1 minut | Comparație directă a prețului |
+
+  Citește comparația detaliată pe pagina [Strategie de tranzacționare](/ro/traders/trading-strategy) pentru a face cea mai bună alegere pentru situația ta.
+</Accordion>
+
+---
+
+## Setări de cumpărare
+
+<Accordion title="Procent minim între tranzacții (implicit: 6%)">
+  Această setare determină cât de mare trebuie să fie diferența de preț dintre cumpărări succesive. Astfel eviți ca traderul să deschidă prea multe poziții una după alta pe o piață în scădere.
+
+  **De ce 6%?** Simulările arată că un prag mai ridicat te împiedică să acumulezi inutil multe poziții pe o piață în scădere. Pe o piață laterală sau în creștere, acest procent ridicat nu are efecte negative.
+</Accordion>
+
+<Accordion title="Oprește cumpărarea peste (plafon de preț)">
+  Introdu un preț în euro peste care traderul nu mai efectuează cumpărări noi. Lasă câmpul gol dacă nu vrei să setezi un plafon.
+
+  **Cum stabilești un plafon bun?**
+
+  1. Uită-te la prețul curent și la evoluția istorică a prețului monedei.
+  2. Dacă te aștepți ca prețul peste un anumit nivel să fie doar un vârf punctual, setează un plafon de preț cu **3% sub acel nivel**.
+  3. Dacă procentul minim de profit este mai mic de 3%, traderul își vinde totuși ultima poziție la acel preț de vârf, așa că obții un randament maxim în momentul vârfului.
+</Accordion>
+
+<Accordion title="Sumă medie de cumpărare">
+  În mod implicit, traderul cumpără o poziție echivalentă cu **18% din soldul tău disponibil în euro**. Cu un sold disponibil de 1.000 €, asta înseamnă 180 € per cumpărare.
+
+  Preferi să setezi o sumă fixă? Introdu aici suma de cumpărare dorită, de exemplu **200 €**. Traderul va cumpăra atunci întotdeauna poziții exact de această valoare, indiferent de soldul tău total.
+
+  <Note>
+    Suma minimă a unei tranzacții este de **25 €**. Sumele sub această valoare nu se execută.
+  </Note>
+</Accordion>
+
+<Accordion title="Cumpărări deschise maxime">
+  Setează aici câte poziții pot fi deschise simultan pentru acest trader. Combină această valoare cu suma medie de cumpărare pentru a obține o limită exactă a investiției tale totale per monedă.
+
+  **Funcție specială — golirea traderului:** Ai introdus **0** la această setare? Atunci traderul nu mai face cumpărări noi, dar continuă să vândă pozițiile existente imediat ce semnalul de vânzare și procentul minim de profit permit acest lucru. Folosește această opțiune dacă vrei să încheiezi liniștit o monedă, fără a deschide poziții noi.
+</Accordion>
+
+---
+
+## Setări de vânzare
+
+<Accordion title="Procent minim de profit">
+  Traderul vinde o poziție doar dacă randamentul din acel moment este **mai mare decât acest procent**. Este cea mai importantă setare pentru profitabilitatea ta.
+
+  **Ghid:**
+
+  - Aproape toate exchange-urile percep **0,25% comision de cumpărare \+ 0,25% comision de vânzare = 0,5% în total**.
+  - Așadar, setează procentul minim de profit la cel puțin **0,5%** pentru a ieși pe zero.
+  - O valoare recomandată este între **0,7% și 0,9%** pentru un echilibru bun între volumul de tranzacții și profitul net.
+  - La un procent mai mare (de exemplu 5%), traderul face mai puține tranzacții, dar câștigă mai mult per tranzacție.
+  - La un procent mai mic (de exemplu 1%), beneficiezi de mai multe tranzacții și, potențial, de un randament total mai bun.
+</Accordion>
+
+<Accordion title="Strategie de profit">
+  Alege cum gestionează traderul câștigurile după o vânzare:
+
+  <CardGroup cols={2}>
+    <Card title="Reinvestire" icon="arrows-rotate">
+      Suma totală de vânzare (suma de cumpărare \+ profitul) se întoarce în soldul tău în euro și este imediat refolosită pentru poziții noi. Alege această opțiune dacă vrei ca al tău capital să lucreze la maximum în continuare.
+    </Card>
+
+    <Card title="HODL" icon="vault">
+      Doar suma inițială de cumpărare este convertită înapoi în euro. Profitul rămâne în criptomonedă. Alege această opțiune dacă vrei să construiești treptat o rezervă de cripto.
+    </Card>
+  </CardGroup>
+</Accordion>
+
+<Accordion title="Procent stop loss">
+  Stop loss-ul este o frână de urgență: imediat ce pierderea pe o poziție atinge acest procent, traderul vinde automat poziția pentru a preveni o pierdere suplimentară.
+
+  <Warning>
+    BitBrokerTrade oferă această funcție pentru că utilizatorii o cer, dar **îți recomandăm insistent să nu o folosești**. În toate testele pe date istorice (până la 12 luni în urmă), funcția stop loss duce la o **profitabilitate semnificativ mai scăzută** și, în multe cazuri, chiar la o pierdere pe investiția totală. Lasă câmpul gol în caz de îndoială.
+  </Warning>
+</Accordion>
+
+---
+
+## Activează traderul
+
+Ai completat toate setările după preferințele tale? Atunci bifează **caseta de activare** din partea de jos a formularului și salvează.
+
+<Note>
+  Felicitări, traderul tău este acum activ! Începe imediat să colecteze date de preț și generează primele semnale imediat ce condițiile de piață permit. Urmărește **Tranzacțiile de cumpărare** pentru primele ordine.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Cum funcționează traderul?" icon="robot" href="/ro/traders/what-is-a-trader">
+    Află mai multe despre metoda MACD și despre cum ia deciziile traderul.
+  </Card>
+
+  <Card title="Alege o strategie" icon="map" href="/ro/traders/trading-strategy">
+    Compară strategiile BitBrokerTrade și Updown una lângă alta.
+  </Card>
+</CardGroup>

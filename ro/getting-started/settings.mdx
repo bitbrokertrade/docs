@@ -1,0 +1,112 @@
+---
+title: "Setări: gestionează bursele și traderii în BitBrokerTrade"
+sidebarTitle: "Setări"
+description: "Prin meniul Setări adaugi burse în BitBrokerTrade, configurezi traderii și gestionezi toate conexiunile API și parametrii."
+---
+
+Prin meniul **Setări** din bara laterală din stânga gestionezi cele două părți esențiale ale configurării tale BitBrokerTrade: bursele la care este conectat contul tău și traderii care tranzacționează în numele tău. Ai libertatea de a fi activ la mai multe burse simultan și de a configura mai mulți traderi pentru fiecare bursă, fiecare cu propria strategie de tranzacționare.
+
+## Ce se află în meniul Setări?
+
+Meniul **Setări** este format din două secțiuni: **Burse** și **Traderi**. Împreună formează configurarea completă a strategiei tale de tranzacționare automată.
+
+<CardGroup cols={2}>
+  <Card title="Burse" icon="building-columns" href="/ro/exchanges/what-is-an-exchange">
+    Adaugă una sau mai multe burse în contul tău și gestionează conexiunile API. O bursă este platforma de schimb digital unde are loc efectiv cumpărarea și vânzarea.
+  </Card>
+
+  <Card title="Traderi" icon="robot" href="/ro/traders/trader-settings">
+    Activează traderi per bursă și setează parametrii lor individuali, cum ar fi monedele pe care le tranzacționează, suma investită pe tranzacție și ținta de profit.
+  </Card>
+</CardGroup>
+
+## Gestionarea burselor
+
+BitBrokerTrade acceptă mai multe burse simultan. Poți conecta, de exemplu, atât un cont Bitvavo, cât și un cont Binance, și poți tranzacționa la ambele burse în același timp.
+
+<Steps>
+  <Step title="Accesează Setări → Burse">
+    Apasă pe **Setări** în meniul principal și apoi pe **Burse**.
+  </Step>
+  <Step title="Adaugă o bursă">
+    Apasă butonul pentru a adăuga o bursă nouă. Alege bursa dorită din lista platformelor acceptate.
+  </Step>
+  <Step title="Introdu cheile tale API">
+    Fiecare bursă necesită o cheie API și un secret API pe care le creezi în meniul de setări al bursei respective. Copiază aceste detalii și lipește-le în câmpurile corespunzătoare din BitBrokerTrade.
+  </Step>
+  <Step title="Salvează conexiunea">
+    Apasă pe **Salvează**. BitBrokerTrade testează conexiunea și confirmă dacă a reușit. Bursa ta apare acum în bara verde de pe dashboard.
+  </Step>
+</Steps>
+
+<CardGroup cols={2}>
+  <Card title="Bitvavo" icon="b" href="/ro/exchanges/bitvavo">
+    Instrucțiuni pas cu pas pentru conectarea Bitvavo.
+  </Card>
+
+  <Card title="Binance" icon="b" href="/ro/exchanges/binance">
+    Instrucțiuni pas cu pas pentru conectarea Binance.
+  </Card>
+
+  <Card title="Bybit" icon="b" href="/ro/exchanges/bybit">
+    Instrucțiuni pas cu pas pentru conectarea Bybit.
+  </Card>
+
+  <Card title="Toate bursele" icon="list" href="/ro/exchanges/what-is-an-exchange">
+    Vezi toate bursele acceptate și compară-le.
+  </Card>
+</CardGroup>
+
+## Gestionarea traderilor
+
+Pentru fiecare bursă poți activa unul sau mai mulți traderi. Fiecare trader are propriile setări și urmează propria strategie, independent de ceilalți.
+
+<Note>
+  Fiecare trader poate urma o strategie complet separată, cu monede diferite, sume de intrare diferite și ținte de profit diferite. Acest lucru îți oferă flexibilitatea de a diversifica, chiar și în cadrul unei singure burse.
+</Note>
+
+<Steps>
+  <Step title="Accesează Setări → Traderi">
+    Apasă pe **Setări** în meniul principal și apoi pe **Traderi**.
+  </Step>
+  <Step title="Adaugă un trader">
+    Apasă butonul pentru a crea un trader nou. Asociază traderul cu una dintre bursele adăugate deja.
+  </Step>
+  <Step title="Configurează traderul">
+    Setează următorii parametri:
+
+    - **Monede** — ce criptomonede tranzacționează traderul
+    - **Sumă de investit** — câți euro sunt investiți la fiecare cumpărare
+    - **Țintă de profit** — la ce procent vinde traderul
+    - **Strategie de tranzacționare** — abordarea pe care o urmează traderul la recunoașterea semnalelor de cumpărare și vânzare
+  </Step>
+  <Step title="Activează traderul">
+    Setează traderul pe activ. Traderul începe acum să analizeze piața și plasează prima cumpărare imediat ce recunoaște un moment potrivit.
+  </Step>
+</Steps>
+
+<Tip>
+  Începe cu un singur trader pe o singură bursă pentru a te familiariza cu sistemul. Odată ce vezi cum funcționează și performează traderul, poți adăuga traderi suplimentari sau poți experimenta cu diferite strategii.
+</Tip>
+
+## Pașii următori
+
+Cu bursele și traderii configurați corect, ești pregătit să tranzacționezi complet automat. Aprofundează apoi setările fine ale traderului sau află mai multe despre bursele acceptate.
+
+<CardGroup cols={2}>
+  <Card title="Setările traderului" icon="sliders" href="/ro/traders/trader-settings">
+    Explicație detaliată a tuturor parametrilor traderului și a modului de optimizare.
+  </Card>
+
+  <Card title="Strategia de tranzacționare" icon="chess-knight" href="/ro/traders/trading-strategy">
+    Citește cum recunoaște traderul semnalele de cumpărare și când vinde.
+  </Card>
+
+  <Card title="Monede acceptate" icon="circle-dollar-to-slot" href="/ro/traders/supported-coins">
+    Vezi ce criptomonede sunt disponibile pentru trader.
+  </Card>
+
+  <Card title="Ce este o bursă?" icon="building-columns" href="/ro/exchanges/what-is-an-exchange">
+    Tot ce trebuie să știi despre burse și cum să o alegi pe cea potrivită.
+  </Card>
+</CardGroup>

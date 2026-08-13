@@ -1,0 +1,74 @@
+---
+title: "Setările trader-ului și toate funcționalitățile explicate"
+sidebarTitle: "Setări explicate"
+description: "Explicație detaliată a setărilor trader-ului: dimensiunea tranzacției, plafonul de preț, numărul maxim de cumpărări deschise, strategia de profit și stop loss."
+---
+
+Trader-ul are o serie de setări care îți permit să determini precis modul în care tranzacționează. Pe această pagină găsești o explicație detaliată a celor mai importante opțiuni, astfel încât să poți ajusta trader-ul optim conform propriei strategii și apetit pentru risc.
+
+<Accordion title="Cum se determină dimensiunea unei tranzacții?">
+  În mod implicit, tranzacțiile acoperă întotdeauna **18% din soldul în euro disponibil** la bursa ta. Cea mai mică dimensiune de tranzacție folosită de BBT este de **25 €**.
+
+  La nivel de trader poți ajusta acest lucru cu setarea **"Suma medie de cumpărare"**. Dacă introduci aici o sumă fixă, trader-ul cumpără întotdeauna exact acea sumă per tranzacție, indiferent de soldul total disponibil.
+
+  **Combinație cu "Numărul maxim de cumpărări deschise":** folosind ambele setări împreună, determini exact, la euro, câți bani vrei să investești per monedă.
+</Accordion>
+
+<Accordion title="Numărul maxim de cumpărări deschise: ce face exact această setare?">
+  Cu această setare specifici per trader câte poziții de cumpărare pot fi **deschise simultan** pentru moneda respectivă.
+
+  Utilizări practice:
+
+  - **Stabilirea unei limite:** dacă o setezi la, de exemplu, 5, trader-ul cumpără maximum 5 poziții simultan pentru acea monedă.
+  - **Lichidarea monedei:** dacă introduci **0**, trader-ul nu mai face cumpărături noi, dar continuă să vândă pozițiile existente. Util dacă vrei să închizi treptat o poziție fără a dezactiva complet trader-ul.
+
+  În combinație cu suma medie de cumpărare, poți astfel stabili o limită precisă a investiției tale per monedă.
+</Accordion>
+
+<Accordion title="Cum setez un plafon de preț și când îl folosesc?">
+  Plafonul de preț este o limită superioară pentru preț: trader-ul **nu cumpără** dacă prețul monedei este peste plafonul setat.
+
+  **Cum îl setezi?** Ca pregătire, uită-te la prețul curent și la evoluția istorică a prețului monedei respective. Dacă te aștepți ca prețul peste un anumit nivel să fie un vârf punctual, nu vrei ca trader-ul să cumpere poziții la acel nivel. Atunci introduci un plafon de preț cu, de exemplu, 3% sub acel preț de vârf așteptat.
+
+  **Exemplu:** te aștepți ca Bitcoin să atingă un vârf punctual peste 55.000 €. Setezi plafonul de preț cu 3% sub acel nivel. Dacă procentul tău de randament este mai mic de 3%, trader-ul își va vinde totuși ultima cumpărătură la un asemenea preț de vârf și ai randament maxim. Aceasta este teoria din spatele setării plafonului de preț.
+
+  <Tip>
+    Folosește plafonul de preț ca protecție la niveluri de preț istoric ridicate. Într-un mediu de piață normal, fără vârfuri extreme, poți lăsa plafonul de preț dezactivat.
+  </Tip>
+</Accordion>
+
+<Accordion title="Care este diferența dintre Reinvest și HODL?">
+  Cu strategia BBT poți alege ce face trader-ul cu veniturile dintr-o vânzare:
+
+  - **Reinvest:** profitul este readus în soldul liber și reutilizat pentru cumpărături noi. Soldul tău crește treptat.
+  - **HODL:** trader-ul acumulează monedele cripto și nu le vinde automat. Îți construiești o poziție pe termen lung.
+
+  Ce opțiune ți se potrivește cel mai bine depinde de obiectivul tău de investiție: randament activ sau acumulare pe termen lung.
+</Accordion>
+
+<Accordion title="Ce face setarea stop loss?">
+  Cu stop loss setezi un procent maxim de pierdere per poziție deschisă. De îndată ce valoarea unei cumpărări scade sub acest procent, trader-ul vinde automat poziția, chiar dacă ținta de randament nu a fost încă atinsă.
+
+  Aceasta limitează riscul unor pierderi mari în scăderi prelungite de preț. Nu seta stop loss-ul prea jos, deoarece, în volatilitatea normală a pieței, o poziție poate fi temporar pe minus înainte de a-și reveni.
+
+  <Warning>
+    Activarea unui stop loss la o setare joasă poate duce la multe vânzări în pierdere pe piețe volatile. Setează stop loss-ul la un nivel la care te simți confortabil cu posibila pierdere.
+  </Warning>
+</Accordion>
+
+<Accordion title="Care este diferența dintre strategia BBT și strategia Updown?">
+  Ambele strategii determină când trader-ul cumpără și vinde, dar într-un mod fundamental diferit:
+
+  - **Strategia BBT:** cumpără doar la începutul unei tendințe ascendente și vinde doar când tendința crescătoare se rupe. Funcționează cu lumânări de 15 minute.
+  - **Strategia Updown:** cumpără poziții într-un interval de preț și vinde de îndată ce randamentul minim a fost atins **și** ultima lumânare este fundamental mai joasă decât cea precedentă. Funcționează cu lumânări de 1 minut.
+
+  Pentru o comparație extinsă și o explicație detaliată, mergi la [Strategie de tranzacționare](/ro/traders/trading-strategy).
+</Accordion>
+
+<Accordion title="Actualizarea Binance API Management: ce trebuie să știu?">
+  Binance invalidează periodic setarea **"Enable spot & margin trading"** pentru utilizatorii API dacă nicio adresă IP nu se află pe lista albă de IP-uri a aceluiași utilizator. Acest lucru se întâmplă la fiecare 30 de zile.
+
+  Dacă acest lucru se întâmplă, sistemul BBT dezactivează automat conexiunea API și primești un e-mail cu explicații. Restabilește API-ul autentificându-te la Binance și reactivând setările.
+
+  Pentru pașii exacți, consultă [pagina de conectare Binance](/ro/exchanges/binance).
+</Accordion>

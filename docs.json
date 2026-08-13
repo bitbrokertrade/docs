@@ -28,80 +28,160 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Handleiding",
-        "groups": [
+        "language": "nl",
+        "tabs": [
           {
-            "group": "Introductie",
-            "pages": [
-              "nl/introduction/what-is-bitbrokertrade",
-              "nl/introduction/how-it-works",
-              "nl/introduction/pricing-and-credits"
+            "tab": "Handleiding",
+            "groups": [
+              {
+                "group": "Introductie",
+                "pages": [
+                  "nl/introduction/what-is-bitbrokertrade",
+                  "nl/introduction/how-it-works",
+                  "nl/introduction/pricing-and-credits"
+                ]
+              },
+              {
+                "group": "Aan de slag",
+                "pages": [
+                  "nl/getting-started/sign-up",
+                  "nl/getting-started/first-login-and-menu",
+                  "nl/getting-started/dashboard",
+                  "nl/getting-started/buy-transactions",
+                  "nl/getting-started/sell-transactions",
+                  "nl/getting-started/settings"
+                ]
+              },
+              {
+                "group": "Exchanges koppelen",
+                "pages": [
+                  "nl/exchanges/what-is-an-exchange",
+                  "nl/exchanges/bitvavo",
+                  "nl/exchanges/binance",
+                  "nl/exchanges/bybit",
+                  "nl/exchanges/bitstamp",
+                  "nl/exchanges/coinbase",
+                  "nl/exchanges/kucoin",
+                  "nl/exchanges/simulator"
+                ]
+              },
+              {
+                "group": "Traders instellen",
+                "pages": [
+                  "nl/traders/what-is-a-trader",
+                  "nl/traders/trader-settings",
+                  "nl/traders/trading-strategy",
+                  "nl/traders/supported-coins"
+                ]
+              },
+              {
+                "group": "Overig",
+                "pages": [
+                  "nl/other/export-to-excel",
+                  "nl/other/referral-program",
+                  "nl/other/crypto-glossary"
+                ]
+              }
             ]
           },
           {
-            "group": "Aan de slag",
-            "pages": [
-              "nl/getting-started/sign-up",
-              "nl/getting-started/first-login-and-menu",
-              "nl/getting-started/dashboard",
-              "nl/getting-started/buy-transactions",
-              "nl/getting-started/sell-transactions",
-              "nl/getting-started/settings"
-            ]
-          },
-          {
-            "group": "Exchanges koppelen",
-            "pages": [
-              "nl/exchanges/what-is-an-exchange",
-              "nl/exchanges/bitvavo",
-              "nl/exchanges/binance",
-              "nl/exchanges/bybit",
-              "nl/exchanges/bitstamp",
-              "nl/exchanges/coinbase",
-              "nl/exchanges/kucoin",
-              "nl/exchanges/simulator"
-            ]
-          },
-          {
-            "group": "Traders instellen",
-            "pages": [
-              "nl/traders/what-is-a-trader",
-              "nl/traders/trader-settings",
-              "nl/traders/trading-strategy",
-              "nl/traders/supported-coins"
-            ]
-          },
-          {
-            "group": "Overig",
-            "pages": [
-              "nl/other/export-to-excel",
-              "nl/other/referral-program",
-              "nl/other/crypto-glossary"
+            "tab": "FAQ & Problemen",
+            "groups": [
+              {
+                "group": "Veelgestelde vragen",
+                "pages": [
+                  "nl/faq/general",
+                  "nl/faq/deposits-and-balance",
+                  "nl/faq/returns-and-profit",
+                  "nl/faq/trader-settings-explained"
+                ]
+              },
+              {
+                "group": "Foutmeldingen",
+                "pages": [
+                  "nl/errors/trader-not-buying",
+                  "nl/errors/sell-problems",
+                  "nl/errors/api-key-problems",
+                  "nl/errors/dashboard-and-balance"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "FAQ & Problemen",
-        "groups": [
+        "language": "ro",
+        "tabs": [
           {
-            "group": "Veelgestelde vragen",
-            "pages": [
-              "nl/faq/general",
-              "nl/faq/deposits-and-balance",
-              "nl/faq/returns-and-profit",
-              "nl/faq/trader-settings-explained"
+            "tab": "Ghid",
+            "groups": [
+              {
+                "group": "Introducere",
+                "pages": [
+                  "ro/introduction/what-is-bitbrokertrade",
+                  "ro/introduction/how-it-works",
+                  "ro/introduction/pricing-and-credits"
+                ]
+              },
+              {
+                "group": "Primii pași",
+                "pages": [
+                  "ro/getting-started/sign-up",
+                  "ro/getting-started/first-login-and-menu",
+                  "ro/getting-started/dashboard",
+                  "ro/getting-started/buy-transactions",
+                  "ro/getting-started/sell-transactions",
+                  "ro/getting-started/settings"
+                ]
+              },
+              {
+                "group": "Conectare exchange-uri",
+                "pages": [
+                  "ro/exchanges/what-is-an-exchange"
+                ]
+              },
+              {
+                "group": "Configurarea traderelor",
+                "pages": [
+                  "ro/traders/what-is-a-trader",
+                  "ro/traders/trader-settings",
+                  "ro/traders/trading-strategy",
+                  "ro/traders/supported-coins"
+                ]
+              },
+              {
+                "group": "Altele",
+                "pages": [
+                  "ro/other/export-to-excel",
+                  "ro/other/referral-program",
+                  "ro/other/crypto-glossary"
+                ]
+              }
             ]
           },
           {
-            "group": "Foutmeldingen",
-            "pages": [
-              "nl/errors/trader-not-buying",
-              "nl/errors/sell-problems",
-              "nl/errors/api-key-problems",
-              "nl/errors/dashboard-and-balance"
+            "tab": "FAQ și probleme",
+            "groups": [
+              {
+                "group": "Întrebări frecvente",
+                "pages": [
+                  "ro/faq/general",
+                  "ro/faq/deposits-and-balance",
+                  "ro/faq/returns-and-profit",
+                  "ro/faq/trader-settings-explained"
+                ]
+              },
+              {
+                "group": "Mesaje de eroare",
+                "pages": [
+                  "ro/errors/trader-not-buying",
+                  "ro/errors/sell-problems",
+                  "ro/errors/api-key-problems",
+                  "ro/errors/dashboard-and-balance"
+                ]
+              }
             ]
           }
         ]

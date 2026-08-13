@@ -1,0 +1,65 @@
+---
+title: "Tranzacția nu este vândută — cauze și soluții"
+sidebarTitle: "Probleme la vânzare"
+description: "Rezolvă problemele la vânzare: de ce o poziție nu este vândută chiar dacă se atinge procentul de randament și cum vinde strategia Updown."
+---
+
+Se poate întâmpla ca o poziție să nu fie vândută chiar dacă ținta de randament pare să fi fost atinsă. Aproape întotdeauna acest lucru se explică prin modul în care funcționează logica de vânzare a strategiilor BBT și Updown. Mai jos găsești cele mai frecvente cauze și soluțiile lor.
+
+<Note>
+  Trader-ul vinde numai atunci când **ambele** condiții sunt îndeplinite simultan: (1) randamentul este peste procentul minim **și** (2) există un semnal de vânzare din partea strategiei. Doar atingerea randamentului nu este suficientă.
+</Note>
+
+## Probleme la vânzare pe situații
+
+<Accordion title="Randament atins, dar poziția tot nu este vândută (strategia BBT)">
+  Cu **strategia BBT**, trader-ul vinde doar atunci când **tendința ascendentă se rupe**. Acest semnal de vânzare nu apare niciodată la punctul cel mai înalt al prețului, ci abia după ce tendința s-a schimbat din ascendentă în descendentă.
+
+  Asta înseamnă: dacă randamentul a fost la un moment dat peste valoarea setată, dar tendința din acel moment era încă ascendentă, trader-ul nu vinde. Așteaptă ruperea tendinței. După aceea, prețul poate să fi scăzut deja puțin, iar randamentul poate fi mai mic decât vârful momentan.
+
+  Acesta este un comportament normal și corect al strategiei BBT.
+</Accordion>
+
+<Accordion title="Randament atins, dar poziția tot nu este vândută (strategia Updown)">
+  Cu **strategia Updown**, semnalul de vânzare funcționează astfel: trader-ul vinde doar atunci când **prețul de închidere al ultimei lumânări este fundamental mai mic decât cel al lumânării anterioare** (atât ca preț, cât și ca volum). Updown lucrează cu lumânări de 1 minut.
+
+  Dacă prețul urcă peste prețul-țintă în interiorul unui minut, dar **închide sub prețul-țintă** la sfârșitul acelui minut, trader-ul nu întreprinde nicio acțiune. Prețul de închidere al lumânării este decisiv, nu vârful intra-lumânare.
+
+  Asta explică de ce prețul depășește uneori vizibil procentul-țintă, fără ca vreo vânzare să fie efectuată.
+</Accordion>
+
+<Accordion title="Updown: prețul urcă peste procentul-țintă, dar trader-ul nu vinde">
+  Cu strategia Updown se aplică următoarele: prețul de cumpărare \+ procentul de randament = prețul-țintă. **Prețul de închidere al lumânării** (stabilit la fiecare minut) trebuie să închidă peste prețul-țintă **și** prețul trebuie să fie în scădere.
+
+  Dacă prețul are un vârf peste prețul-țintă în cadrul acelui minut, dar închide sub prețul-țintă, trader-ul nu întreprinde nicio acțiune. Așteaptă o lumânare care să închidă complet peste prețul-țintă, urmată de un semnal descendent.
+</Accordion>
+
+<Accordion title="Tranzacția BNB dă eroare la vânzare">
+  Această problemă apare dacă la **Binance** ai setat că taxele de tranzacționare pot fi decontate în **BNB** (ceea ce oferă o reducere). Binance îți modifică atunci negativ soldul BNB pentru taxele de tranzacționare.
+
+  Dacă nu cumperi BNB suplimentar pentru a acoperi aceste taxe, soldul BNB scade. Trader-ul nu mai are atunci suficient sold BNB pentru a vinde poziția și dă o eroare.
+
+  **Soluție:** autentifică-te pe Binance și cumpără suficient BNB pentru a acoperi taxele de tranzacționare.
+</Accordion>
+
+<Accordion title="Taxe de tranzacționare extrem de mari la tranzacțiile de vânzare (Binance)">
+  Această problemă apare dacă ai indicat la Binance că taxele de tranzacționare pot fi decontate în BNB. Totuși, Binance nu comunică către BBT că a fost folosit BNB pentru decontare. Software-ul BBT primește un număr de monede cripto percepute drept taxe de tranzacționare și crede că este vorba de moneda care a fost tranzacționată. Dacă este vorba despre BNB, software-ul calculează cu o cantitate greșită, ceea ce duce la taxe de tranzacționare absurd de mari sau absurd de mici în ecran.
+
+  **Important:** taxele efectiv percepute sunt corecte. Suma din trader este doar o eroare de afișare.
+</Accordion>
+
+<Accordion title="Tranzacția a devenit prea mică după o vânzare parțială (strategia BBT)">
+  După o vânzare parțială, poate rămâne o tranzacție reziduală care este **mai mică decât valoarea minimă de ordin de pe exchange**. Exchange-ul nu acceptă ordine sub o anumită mărime minimă, așa că această tranzacție nu mai poate fi vândută.
+
+  **Soluție:** setează linia de tranzacție respectivă pe **Pauză** (butonul „II” din ecranul de cumpărare). Trader-ul ignoră atunci poziția și istoricul este păstrat.
+</Accordion>
+
+<Accordion title="Poziție cu o cruciuliță roșie în tranzacțiile de cumpărare: ce înseamnă?">
+  O cruciuliță roșie lângă o linie de tranzacție are două cauze posibile:
+
+  **Cauza 1 — Ordinul de vânzare nu a fost executat complet:** Trader-ul a plasat un ordin de vânzare, dar prețul a scăzut atât de repede încât exchange-ul nu a putut deconta complet ordinul. Exchange-ul poate vinde un ordin în bucăți. Ordinul rămas stă deschis până când prețul atinge din nou nivelul de vânzare.
+
+  Nu vrei să aștepți? Fă clic pe **cruciulița roșie** pentru a deconta ordinul rămas. Ordinul este atunci împărțit în două părți: partea deja vândută (apare în tranzacțiile de vânzare) și partea nevândută (rămâne în tranzacțiile de cumpărare). Ambele ordine au același număr de ordin.
+
+  **Cauza 2 — Ordinul de cumpărare nu a fost umplut complet:** Trader-ul a plasat un ordin de cumpărare, dar din cauza creșterii rapide a prețului, exchange-ul nu a putut umple complet ordinul. Trader-ul așteaptă decontarea. Apasă **cruciulița roșie** pentru a instrui trader-ul să deconteze ordinul. Partea cumpărată rămâne în tranzacțiile de cumpărare; partea necumpărată apare ca o tranzacție zero în ecranul de vânzare.
+</Accordion>

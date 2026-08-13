@@ -1,0 +1,92 @@
+---
+title: "Exportă datele de vânzare în Excel din BitBrokerTrade"
+sidebarTitle: "Export în Excel"
+description: "Exportă tranzacțiile de vânzare și istoricul creditelor în Excel în două moduri: expertul clasic pentru text sau funcția modernă de import CSV."
+---
+
+Din BitBrokerTrade poți exporta tranzacțiile de vânzare și istoricul creditelor sub forma unui fișier CSV. Deoarece Excel nu citește întotdeauna automat corect fișierele CSV, în special atunci când separatorii zecimali și delimitatorii intră în conflict, sunt disponibile două metode în funcție de versiunea ta de Excel.
+
+## Metoda 1: Excel clasic (versiuni mai vechi)
+
+Folosește această metodă dacă ai o versiune mai veche de Excel în care expertul pentru text este încă disponibil prin "Legacy Wizards".
+
+<Steps>
+  <Step title="Exportă fișierul și salvează-l">
+    Descarcă fișierul de export din BBT și salvează-l pe calculator **fără să îl deschizi**.
+  </Step>
+  <Step title="Pornește Excel">
+    Deschide Microsoft Excel.
+  </Step>
+  <Step title="Deschide o foaie de lucru nouă">
+    Creează o foaie de lucru nouă și goală.
+  </Step>
+  <Step title="Alege expertul de import text">
+    Mergi la fila **Data** → **Get Data** → **Legacy Wizards** → alege **From Text (Legacy)**.
+  </Step>
+  <Step title="Selectează fișierul">
+    Navighează la fișierul de export salvat și dă clic pe **Import**.
+  </Step>
+  <Step title="Alege tipul de delimitator">
+    Selectează **Delimited** și dă clic pe **Next**.
+  </Step>
+  <Step title="Setează delimitatorul">
+    Bifează **Comma** ca delimitator și dă clic pe **Next**.
+  </Step>
+  <Step title="Selectează coloanele cu numere">
+    Selectează toate coloanele care conțin numere și dă clic pe **Advanced**.
+  </Step>
+  <Step title="Ajustează separatorul zecimal și de mii">
+    Schimbă **separatorul zecimal** într-un **punct (.)** și **separatorul de mii** într-o **virgulă (,)**. Dă clic pe **OK**.
+  </Step>
+  <Step title="Finalizează importul">
+    Dă clic pe **Finish** și apoi pe **OK** pentru a plasa datele în foaia de lucru.
+  </Step>
+  <Step title="Setează formatul numerelor">
+    Selectează toate coloanele cu sume în euro și alege formatul **Number** (pictograma "000" din bara de instrumente) pentru afișare corectă.
+  </Step>
+  <Step title="Gata">
+    Foaia ta de lucru este acum pregătită pentru utilizare.
+  </Step>
+</Steps>
+
+---
+
+## Metoda 2: Versiune de Excel mai nouă
+
+Folosește această metodă dacă ai o versiune recentă de Excel cu funcția integrată de import CSV Power Query.
+
+<Steps>
+  <Step title="Deschide Excel">
+    Pornește Microsoft Excel.
+  </Step>
+  <Step title="Navighează la Get Data">
+    Mergi la **Data** → **Get Data** → **From File** → **From CSV**.
+  </Step>
+  <Step title="Selectează fișierul de export">
+    Navighează la fișierul CSV de export salvat și selectează-l.
+  </Step>
+  <Step title="Alege 'Transform Data'">
+    În fereastra de previzualizare care apare, dă clic pe **Transform Data** (nu încărca direct).
+  </Step>
+  <Step title="Schimbă tipul coloanei în Text">
+    În Power Query Editor, selectează **toate coloanele cu format numeric**. Dă clic dreapta și alege **Change Type** → **Text**.
+  </Step>
+  <Step title="Confirmă înlocuirea">
+    Apare un pop-up. Alege **Replace current**.
+  </Step>
+  <Step title="Închide și încarcă">
+    Dă clic pe **Close & Load** din stânga sus. Foaia ta de lucru se deschide acum cu datele importate.
+  </Step>
+  <Step title="Înlocuiește punctele cu virgule">
+    Selectează toate coloanele cu numere. Apasă **Ctrl \+ H** (căutare și înlocuire). Completează un punct (`.`) la **Find what** și o virgulă (`,`) la **Replace with**. Dă clic pe **Replace All**.
+  </Step>
+  <Step title="Gata">
+    Foaia ta de lucru este acum complet pregătită pentru utilizare.
+  </Step>
+</Steps>
+
+---
+
+<Tip>
+  **Ce metodă ar trebui să alegi?** Mergi la **Data** în Excel. Vezi opțiunea **Legacy Wizards**? Atunci folosește Metoda 1. Vezi doar **From File** → **From CSV**? Atunci folosește Metoda 2. Când ai dubii, Metoda 2 funcționează cu toate versiunile moderne de Excel (Office 2016 și mai noi).
+</Tip>

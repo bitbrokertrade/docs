@@ -1,0 +1,114 @@
+---
+title: "Cum funcționează BitBrokerTrade? Începe în cinci pași"
+sidebarTitle: "Cum funcționează"
+description: "De la înregistrare până la prima tranzacție automată: descoperă cum lucrează BitBrokerTrade pentru tine în cinci pași, folosind propriul cont de criptomonede."
+---
+
+BitBrokerTrade preia complet tranzacționarea criptomonedelor pentru tine. Software-ul analizează piața zi și noapte și plasează automat ordine de cumpărare și de vânzare prin propriul tău cont de exchange. În cinci pași concreți ești complet operațional.
+
+## De la zero la tranzacționare automată în cinci pași
+
+<Steps>
+  <Step title="Înregistrează-te la BitBrokerTrade">
+    Creează un cont gratuit pe platforma BitBrokerTrade. Înregistrarea durează doar câteva minute. Ai nevoie doar de o adresă de e-mail validă.
+
+    Odată autentificat, vezi tabloul de bord și secțiunile de meniu care te ghidează prin pașii următori. Vrei să știi ce vei vedea după autentificare? Citește [Prima autentificare și meniul](/ro/getting-started/first-login-and-menu).
+
+    <Tip>
+      Nu ai încă un cont? Mergi la [pagina de înregistrare](/ro/getting-started/sign-up) și înregistrează-te în cinci minute.
+    </Tip>
+  </Step>
+  <Step title="Creează un cont la un exchange">
+    Pentru a putea tranzacționa, ai nevoie de un cont la un **exchange**, o bursă de criptomonede unde poți schimba euro în criptomonede și invers. Gândește-te la el ca la un cont bancar, dar special pentru cripto.
+
+    BitBrokerTrade funcționează cu următoarele exchange-uri:
+
+    <CardGroup cols={3}>
+      <Card title="Bitvavo" icon="building-columns" href="/ro/exchanges/bitvavo">
+      </Card>
+
+      <Card title="Binance" icon="building-columns" href="/ro/exchanges/binance">
+      </Card>
+
+      <Card title="Bybit" icon="building-columns" href="/ro/exchanges/bybit">
+      </Card>
+
+      <Card title="Bitstamp" icon="building-columns" href="/ro/exchanges/bitstamp">
+      </Card>
+
+      <Card title="Coinbase" icon="building-columns" href="/ro/exchanges/coinbase">
+      </Card>
+
+      <Card title="KuCoin" icon="building-columns" href="/ro/exchanges/kucoin">
+      </Card>
+    </CardGroup>
+
+    Creează un cont la exchange-ul ales, verifică-ți identitatea și depune euro în cont. Paginile despre exchange-uri din această documentație te ghidează pas cu pas prin acest proces.
+  </Step>
+  <Step title="Conectează BitBrokerTrade la exchange">
+    Odată ce contul tău de exchange este activ și conține un sold, conectezi BitBrokerTrade printr-o **cheie API**. API înseamnă _Application Programming Interface_, puntea tehnică prin care două sisteme software pot comunica între ele.
+
+    <Accordion title="Ce este mai exact o conexiune API?">
+      Imaginează-ți o lampă și un prelungitor. Lampa funcționează doar când o conectezi la prelungitor, care apoi îi furnizează curent electric. O conexiune API funcționează în același mod: în loc de curent, se schimbă date între două sisteme software. Prin cheia API de la exchange-ul tău, BitBrokerTrade poate comunica cu contul tău și poate trimite instrucțiuni de cumpărare și de vânzare.
+    </Accordion>
+
+    Soliciți o cheie API din setările contului tău de exchange și apoi o introduci în BitBrokerTrade la **Setări → Exchange-uri → Adaugă exchange**. Instrucțiuni detaliate pentru fiecare exchange găsești în capitolul [Exchange-uri](/ro/exchanges/what-is-an-exchange).
+
+    <Note>
+      Prin conexiunea API, traderul nu poate **niciodată** transfera bani către un cont terț. Software-ul poate doar să ajusteze componența contului tău de exchange: să schimbe euro în cripto sau invers. Retragi bani către contul tău bancar întotdeauna singur, prin exchange.
+    </Note>
+  </Step>
+  <Step title="Configurează traderul">
+    Setează parametrii pentru trader în meniul **Traderi**. Aceștia includ, de exemplu, procentul minim de randament pe care o poziție trebuie să îl atingă înainte ca traderul să vândă. Mai multe explicații despre toate setările găsești pe pagina [Setări trader](/ro/traders/trader-settings).
+
+    Odată ce traderul este activ, software-ul începe să colecteze date de tranzacționare și să analizeze mișcările prețurilor pe baza **metodei MACD**.
+
+    <Accordion title="Cum funcționează metoda MACD?">
+      MACD înseamnă **Moving Average Convergence Divergence**, un indicator tehnic care recunoaște tendințele ascendente și descendente ale prețului. Indicatorul este format din două linii:
+
+      - **Linia MACD**: diferența dintre media mobilă a ultimelor 26 de zile și cea a ultimelor 12 zile.
+      - **Linia de semnal**: media măsurată exponențial a ultimelor 12 zile.
+
+      Când linia MACD traversează linia de semnal **în sus**, avem un semnal de cumpărare. Când linia MACD traversează linia de semnal **în jos**, avem un semnal de vânzare. Cu cât distanța dintre cele două linii este mai mare, cu atât tendința este mai puternică.
+
+      Citește mai multe pe pagina [Strategie de tranzacționare](/ro/traders/trading-strategy).
+    </Accordion>
+
+    **Cât de mare este o tranzacție?** În mod implicit, traderul investește **18% din soldul tău disponibil în euro** din contul de exchange pentru fiecare cumpărare. Cu un sold de 1.000 €, traderul tranzacționează cu aproximativ 180 € per tranzacție. Astfel se asigură distribuirea pe mai multe poziții. Dimensiunea minimă a unei tranzacții este de **25 €**.
+  </Step>
+  <Step title="Începe să câștigi">
+    Ești pregătit. Traderul rulează acum 24/7 pentru tine: cumpără în timpul unei tendințe ascendente a prețului și vinde imediat ce randamentul unei poziții depășește procentul țintă setat de tine și se observă o tendință descendentă.
+
+    Urmărește rezultatele în timp real prin **Tabloul de bord**. Aici vezi, printre altele, profitul brut total, pozițiile deschise și tranzacțiile de vânzare finalizate.
+
+    <CardGroup cols={2}>
+      <Card title="Vezi tabloul de bord" icon="chart-line" href="/ro/getting-started/dashboard">
+        Înțelege toate cifrele și statisticile din tabloul tău de bord personal.
+      </Card>
+
+      <Card title="Tranzacții de cumpărare" icon="arrow-down" href="/ro/getting-started/buy-transactions">
+        Vezi toate pozițiile active pe care traderul le-a deschis pentru tine.
+      </Card>
+    </CardGroup>
+  </Step>
+</Steps>
+
+## Întrebări frecvente despre modul de funcționare
+
+<CardGroup cols={2}>
+  <Card title="Ce este un exchange?" icon="circle-question" href="/ro/exchanges/what-is-an-exchange">
+    Mai multe explicații despre bursele de cripto și despre care ți se potrivește.
+  </Card>
+
+  <Card title="Ce este un trader?" icon="circle-question" href="/ro/traders/what-is-a-trader">
+    Tot ce trebuie să știi despre modul în care funcționează software-ul de tip trader și la ce să te aștepți.
+  </Card>
+
+  <Card title="Prețuri și credite" icon="circle-question" href="/ro/introduction/pricing-and-credits">
+    Cum funcționează sistemul no-cure-no-pay și de câte credite ai nevoie?
+  </Card>
+
+  <Card title="FAQ general" icon="circle-question" href="/ro/faq/general">
+    Răspunsuri la cele mai frecvente întrebări ale utilizatorilor.
+  </Card>
+</CardGroup>

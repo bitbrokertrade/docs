@@ -1,0 +1,49 @@
+---
+title: "Dashboard incorect sau sold diferit — cauze BBT"
+sidebarTitle: "Dashboard și sold"
+description: "De ce dashboard-ul tău arată brusc un profit mai mic, ce înseamnă simbolul asterisc (*) de lângă soldul de la exchange și cum îl corectezi."
+---
+
+Uneori, cifrele din dashboard-ul tău BBT par să nu corespundă cu ce te aștepți: profitul afișat scade brusc, soldul diferă de istoricul tranzacțiilor sau apare un asterisc (\*) lângă soldul tău de la exchange. Pe această pagină îți explicăm cum se poate întâmpla asta și ce poți face în legătură cu ea.
+
+<Warning>
+  **Niciodată** nu tranzacționa manual criptomonede pe exchange în afara trader-ului BBT, decât dacă înțelegi consecințele. Trader-ul își ține propria contabilitate și nu știe despre tranzacțiile externe. Acest lucru duce la diferențe de sold și poate cauza probleme la vânzare.
+</Warning>
+
+## Probleme comune de dashboard și sold
+
+<Accordion title="Dashboard-ul meu afișează brusc un profit mai mic — ce se întâmplă?">
+  Dashboard-ul afișează **doar rezultatele trader-elor active**. Dacă faci un trader inactiv sau îl ștergi, contribuția lui la soldul de profit din dashboard nu mai este contabilizată. Acest lucru provoacă o scădere vizibilă a profitului afișat.
+
+  **Tranzacțiile de vânzare** rămân întotdeauna vizibile complet în ecranul Tranzacții de vânzare. Nu le poți șterge și nu dispar din istoric.
+
+  <Note>
+    Șterge definitiv un trader doar dacă nu mai ai nevoie de el. La dezactivare, istoricul este păstrat și poți reactiva trader-ul mai târziu, fără pierdere de date.
+  </Note>
+</Accordion>
+
+<Accordion title="Datele din dashboard nu corespund cu istoricul tranzacțiilor">
+  Dashboard-ul afișează doar rezultatele **trader-elor active**. Dacă ai șters un trader, rezultatul lui iese și el din dashboard, dar tranzacțiile de vânzare asociate rămân vizibile în ecranul Tranzacții de vânzare.
+
+  Această diferență dintre totalul din dashboard și istoricul complet al tranzacțiilor este așadar explicabilă: istoricul tranzacțiilor arată totul, iar dashboard-ul doar trader-ele active.
+</Accordion>
+
+<Accordion title="Diferență de sold (*) la exchange în dashboard">
+  Un asterisc (\*) lângă soldul exchange-ului în BBT indică faptul că există o **diferență** între cantitatea de cripto pe care BBT o așteaptă pe baza pozițiilor sale de cumpărare și cantitatea reală de pe exchange.
+
+  Aceasta apare dacă ai **vândut manual poziții pe exchange** în afara trader-ului. Trader-ul nu știe despre acele vânzări externe și încă ia în considerare acele poziții în contabilitatea sa.
+
+  **Soluție:** cumpără manual diferența pe exchange, astfel încât trader-ul să poată vinde totuși pozițiile sale deschise și contabilitatea să fie corectă.
+</Accordion>
+
+<Accordion title="Poziție deschisă în BBT, dar sold de cripto insuficient pe exchange">
+  Această problemă apare dacă ai vândut poziții pe exchange în afara trader-ului, fără să informezi BBT. Trader-ul crede că poziția este încă deschisă, dar soldul de cripto asociat lipsește de pe exchange.
+
+  Ai trei opțiuni:
+
+  1. **Cumpără pe exchange:** cumpără o singură dată criptomoneda lipsă pe exchange. Trader-ul gestionează apoi toate tranzacțiile și istoricul este păstrat.
+  2. **Setează poziția pe pauză:** setează linia de ordin respectivă la **pauză** (butonul „II” din ecranul de cumpărare). Trader-ul ignoră tranzacția, iar istoricul este păstrat.
+  3. **Resetează trader-ul:** șterge trader-ul respectiv și adaugă-l din nou. Toate intrările sunt atunci resetate, iar trader-ul o ia de la capăt. **Atenție: istoricul trader-ului este șters în acest caz.**
+
+  Alege opțiunea care se potrivește cel mai bine situației tale.
+</Accordion>

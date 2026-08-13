@@ -1,0 +1,91 @@
+---
+title: "Vizualizează tranzacțiile de vânzare și profitul realizat în BBT"
+sidebarTitle: "Tranzacții de vânzare"
+description: "Ecranul cu tranzacții de vânzare arată toate pozițiile închise, cu randamentul brut, comisioanele de tranzacționare ale bursei și comisionul de 20% al platformei."
+---
+
+Ecranul **Tranzacții de vânzare** îți oferă o imagine istorică completă a tuturor pozițiilor care au fost vândute de traderii tăi activi. Pentru fiecare tranzacție vezi nu doar randamentul brut, ci și comisioanele de tranzacționare ale bursei și comisionul platformei BitBrokerTrade. Astfel, ai mereu o imagine clară asupra a ceea ce ai câștigat efectiv net.
+
+## Ce vezi pe acest ecran?
+
+Prezentarea generală arată toate pozițiile închise ale tuturor traderilor tăi activi. Pentru fiecare tranzacție sunt disponibile următoarele coloane:
+
+<CardGroup cols={2}>
+  <Card title="Poziție / Monedă" icon="coins">
+    Identificarea poziției și criptomoneda tranzacționată, cum ar fi BTC (Bitcoin) sau ETH (Ethereum).
+  </Card>
+
+  <Card title="Sumă cumpărare" icon="arrow-down-to-line">
+    Suma investită inițial în această poziție la momentul cumpărării.
+  </Card>
+
+  <Card title="Sumă vânzare" icon="arrow-up-from-line">
+    Suma primită la vânzare, pe baza prețului de piață din momentul vânzării.
+  </Card>
+
+  <Card title="Randament brut" icon="chart-line">
+    Diferența dintre suma de vânzare și cea de cumpărare, exprimată în euro și ca procent. Este randamentul **înainte** de deducerea comisioanelor.
+  </Card>
+</CardGroup>
+
+## Defalcarea costurilor pe tranzacție
+
+Pe lângă randamentul brut, ecranul arată două elemente de cost care sunt importante pentru calcularea profitului tău net:
+
+<Accordion title="Comisioane de tranzacționare (bursă)">
+  Acestea sunt taxele de tranzacționare pe care le percepe bursa pentru executarea ordinului de cumpărare și de vânzare. Comisioanele exacte diferă de la o bursă la alta, dar de obicei se aplică următoarele cote:
+
+  - **Ordin de cumpărare:** ~0,25% din valoarea tranzacției
+  - **Ordin de vânzare:** ~0,25% din valoarea tranzacției
+
+  Consultă documentația bursei tale pentru cotele exacte. Vezi paginile pentru [Bitvavo](/ro/exchanges/bitvavo), [Binance](/ro/exchanges/binance) sau [Bybit](/ro/exchanges/bybit) pentru mai multe informații.
+</Accordion>
+
+<Accordion title="Taxa de platformă (BitBrokerTrade)">
+  Comisionul platformei BitBrokerTrade este **20% din randamentul brut obținut** pe tranzacție. Acest comision este decontat automat din soldul tău de credite în momentul vânzării.
+
+  **Exemplu:** la un randament brut de 50 €, se deduc 10 € din creditele tale drept comision al platformei. Rămâi cu 40 € brut, minus comisioanele de tranzacționare ale bursei.
+</Accordion>
+
+## Calcularea profitului brut vs. net
+
+Vrei să știi ce ai câștigat net dintr-o tranzacție? Folosește următorul calcul:
+
+```text
+Profit net = Randament brut − Comisioane de tranzacționare bursă − Comision platformă (20%)
+```
+
+**Exemplu concret:**
+
+- Sumă cumpărare: 1.000 €
+- Sumă vânzare: 1.050 €
+- Randament brut: 50 €
+- Comisioane de tranzacționare bursă (± 0,50% total): 5 €
+- Comision platformă (20% din 50 €): 10 €
+- **Profit net: 35 €**
+
+<Note>
+  Dashboardul arată întotdeauna profitul **brut**. Ține cont că încasările nete efective sunt mai mici din cauza comisioanelor de tranzacționare și a comisionului platformei. Folosește formula de mai sus pentru un calcul precis al rezultatului tău net.
+</Note>
+
+## Export în Excel sau CSV
+
+Vrei să analizezi tranzacțiile de vânzare într-o foaie de calcul sau să le păstrezi pentru propria evidență? Poți exporta întreaga imagine într-un fișier CSV pe care îl poți deschide în Excel sau Google Sheets.
+
+<Card title="Export în Excel" icon="file-export" href="/ro/other/export-to-excel">
+  Citește cum să exporți istoricul tranzacțiilor și să îl prelucrezi într-o foaie de calcul.
+</Card>
+
+## Pasul următor
+
+Acum că știi să citești și să interpretezi rezultatele, este momentul să optimizezi mai departe setările burselor și ale traderilor tăi.
+
+<CardGroup cols={2}>
+  <Card title="Setări" icon="gear" href="/ro/getting-started/settings">
+    Adaugă burse și gestionează setările traderilor tăi.
+  </Card>
+
+  <Card title="Setările traderului" icon="sliders" href="/ro/traders/trader-settings">
+    Reglează fin strategia traderului pentru rezultate mai bune.
+  </Card>
+</CardGroup>

@@ -1,0 +1,92 @@
+---
+title: "BitBrokerTrade vs. Updown: alege strategia potrivită"
+sidebarTitle: "Strategie de tranzacționare"
+description: "Compară strategia MACD BitBrokerTrade (lumânări de 15 min.) cu strategia Updown (lumânări de 1 min.) și alege cea mai bună abordare pentru obiectivul tău."
+---
+
+Atunci când creezi un trader, alegi ce strategie de tranzacționare urmează. BitBrokerTrade oferă două strategii: **strategia BitBrokerTrade** (bazată pe indicatorul MACD) și **strategia Updown** (bazată pe prețurile de la minut la minut). Cele două strategii funcționează fundamental diferit, iar alegerea corectă depinde de preferințele tale de tranzacționare și de condițiile de piață.
+
+## Strategia BitBrokerTrade
+
+Strategia BitBrokerTrade se bazează pe **indicatorul MACD** (Moving Average Convergence Divergence) și lucrează cu **lumânări de 15 minute**. Strategia urmărește tendința generală a prețului și tranzacționează doar în momentele-cheie.
+
+<CardGroup cols={2}>
+  <Card title="Cumpărare" icon="cart-plus">
+    Traderul cumpără **doar** în momentul în care începe o tendință de creștere a prețului, adică atunci când linia albastră MACD taie linia roșie de semnal în sus.
+  </Card>
+
+  <Card title="Vânzare" icon="circle-dollar-to-slot">
+    Traderul vinde **doar** în momentul în care tendința prețului trece de la creștere la scădere, adică atunci când linia albastră taie linia roșie în jos.
+  </Card>
+</CardGroup>
+
+Deoarece strategia lucrează cu lumânări de 15 minute, se poate genera **cel mult un moment de cumpărare sau de vânzare la fiecare 15 minute**. Acest lucru asigură un profil de tranzacționare mai calm, cu mai puține tranzacții, dar cu o greutate mai mare per semnal.
+
+<Tip>
+  Strategia BitBrokerTrade este potrivită în special dacă preferi un sistem stabil, orientat spre tendință, cu mai puține tranzacții și un orizont de timp mai lung per poziție.
+</Tip>
+
+---
+
+## Strategia Updown
+
+Strategia Updown **nu** urmărește un calcul de tendință MACD, ci verifică pur și simplu dacă prețul din minutul curent este mai mare sau mai mic decât cel din minutul anterior. Strategia lucrează cu **lumânări de 1 minut**.
+
+<CardGroup cols={2}>
+  <Card title="Cumpărare" icon="cart-plus">
+    În fiecare minut se determină prețul mediu. Este **mai mare decât în minutul anterior**? Atunci strategia Updown generează un semnal de cumpărare. Prima cumpărare are loc imediat după activarea traderului, cu condiția ca prețul să fie în creștere în acel moment.
+  </Card>
+
+  <Card title="Vânzare" icon="circle-dollar-to-slot">
+    Este prețul mediu al ultimei lumânări **semnificativ mai mic** decât al lumânării anterioare? Atunci strategia generează un semnal de vânzare. Atâta timp cât prețul crește, Updown nu vinde. Așteaptă o mișcare reală de scădere.
+  </Card>
+</CardGroup>
+
+Suma de cumpărare este **18% din soldul tău liber în euro** (sau suma fixă pe care ai setat-o), cu un **minim de 50 €** per tranzacție. Se poate genera **cel mult un moment de cumpărare sau de vânzare pe minut**.
+
+<Tip>
+  Strategia Updown este potrivită în special dacă vrei să beneficiezi de o activitate mai mare și de mai multe tranzacții într-o piață volatilă.
+</Tip>
+
+---
+
+## Comparație
+
+| Caracteristică | Strategia BitBrokerTrade | Strategia Updown |
+| --- | --- | --- |
+| **Metodă** | Calcul de tendință MACD | Preț de la minut la minut |
+| **Interval lumânări** | 15 minute | 1 minut |
+| **Max. semnale** | 1 la 15 minute | 1 pe minut |
+| **Prima cumpărare** | La prima intersecție de cumpărare după activare | Imediat după activare (dacă prețul crește) |
+| **Sumă minimă de cumpărare** | 25 € | 50 € |
+| **Volum de tranzacții** | Mai scăzut | Mai ridicat |
+| **Condiție de piață** | Piețe cu tendință, mai calme | Piețe volatile, active |
+| **MACD folosit** | Da | Nu |
+
+---
+
+## Comportament comun
+
+Indiferent de strategia pe care o alegi, se aplică întotdeauna următoarele: un semnal de cumpărare sau de vânzare este **executat doar dacă sunt îndeplinite toate setările tale individuale ale traderului**. Strategia stabilește momentul semnalului, dar setările decid dacă semnalul conduce efectiv la un ordin.
+
+<Accordion title="Ce setări verifică traderul la fiecare semnal?">
+  La fiecare semnal, traderul verifică următoarele setări:
+
+  - **Procent minim de profit**: este randamentul curent suficient de mare pentru a permite vânzarea?
+  - **Cumpărări deschise maxime**: nu s-a atins încă numărul maxim de poziții deschise?
+  - **Plafon de preț (oprește cumpărarea peste)**: prețul curent este sub plafonul setat?
+  - **Procent minim între tranzacții**: diferența de preț față de cumpărarea anterioară este suficientă?
+  - **Sumă medie de cumpărare**: există suficient sold în euro disponibil pentru o poziție nouă?
+
+  Doar dacă sunt îndeplinite toate condițiile relevante, traderul trimite un ordin către exchange.
+</Accordion>
+
+<CardGroup cols={2}>
+  <Card title="Configurează un trader" icon="sliders" href="/ro/traders/trader-settings">
+    Adaugă un trader și configurează pas cu pas toate setările.
+  </Card>
+
+  <Card title="Cum funcționează traderul?" icon="robot" href="/ro/traders/what-is-a-trader">
+    Citește mai multe despre metoda MACD și despre procesul decizional al traderului.
+  </Card>
+</CardGroup>

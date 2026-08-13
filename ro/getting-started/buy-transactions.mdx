@@ -1,0 +1,94 @@
+---
+title: "Vizualizează și gestionează tranzacțiile de cumpărare în BitBrokerTrade"
+sidebarTitle: "Tranzacții de cumpărare"
+description: "Vizualizează toate pozițiile deschise în cripto și randamentul brut curent și gestionează pozițiile cu butonul de pauză sau cu funcția de vânzare manuală."
+---
+
+Ecranul **Tranzacții de cumpărare** îți oferă o imagine completă a tuturor pozițiilor deschise pe care traderii tăi activi le dețin în prezent. Pentru fiecare poziție vezi moneda cumpărată, suma investită și randamentul brut curent în timp real. Din acest ecran poți și interveni: să blochezi temporar o poziție sau să o vinzi manual pe loc.
+
+## Ce vezi pe acest ecran?
+
+Prezentarea generală arată toate pozițiile deschise ale tuturor traderilor tăi activi la un loc. Pentru fiecare poziție sunt vizibile, printre altele, următoarele detalii:
+
+- **Monedă** — ce criptomonedă a fost cumpărată
+- **Sumă cumpărare** — suma investită în această poziție
+- **Randament** — randamentul **brut** curent al poziției în acel moment
+- **Stare** — dacă poziția este activă sau în pauză (Hold)
+
+<Note>
+  Randamentul afișat este întotdeauna randamentul **brut**. Comisioanele de tranzacționare ale bursei (~0,25% la cumpărare și 0,25% la vânzare) și comisionul de 20% al platformei sunt decontate abia în momentul vânzării. Găsești detaliile nete în ecranul [Tranzacții de vânzare](/ro/getting-started/sell-transactions).
+</Note>
+
+## Punerea unei poziții în pauză
+
+Vrei să împiedici vânzarea unei anumite poziții de către trader, de exemplu pentru că te aștepți ca prețul să crească în continuare? Folosește **butonul de pauză**.
+
+<Steps>
+  <Step title="Localizează poziția">
+    Navighează la **Tranzacții de cumpărare** și localizează poziția pe care vrei să o pui în pauză.
+  </Step>
+  <Step title="Apasă butonul de pauză (II)">
+    Apasă pe butonul de pauză (simbolul cu două bare verticale, **II**) din dreptul poziției respective.
+  </Step>
+  <Step title="Verifică starea">
+    Starea poziției se schimbă în **Hold**. Traderul ignoră această poziție în analiza sa de vânzare și nu o atinge indiferent de preț.
+  </Step>
+  <Step title="Reactivează poziția">
+    Vrei să eliberezi din nou poziția pentru tranzacționare automată? Apasă din nou același buton. Starea revine la activ, iar traderul include din nou poziția în deciziile sale.
+  </Step>
+</Steps>
+
+<Tip>
+  Folosește funcția de pauză când te aștepți să treci peste o scădere temporară de preț sau când vrei să păstrezi strategic o poziție până la un anumit nivel de preț. Nu uita să anulezi pauza după aceea.
+</Tip>
+
+## Vinderea manuală a unei poziții
+
+Vrei să vinzi o poziție imediat, independent de strategia traderului? Atunci folosește **funcția de vânzare manuală**.
+
+<Steps>
+  <Step title="Localizează poziția">
+    Navighează la **Tranzacții de cumpărare** și localizează poziția pe care vrei să o vinzi.
+  </Step>
+  <Step title="Apasă butonul cu săgeata verde">
+    Apasă pe butonul din mijloc cu pictograma săgeții verzi, situat lângă poziție.
+  </Step>
+  <Step title="Confirmă ordinul de vânzare">
+    Traderul îți cere să confirmi ordinul. Citește mesajul cu atenție și confirmă vânzarea.
+  </Step>
+  <Step title="Vânzarea este executată">
+    Traderul vinde imediat poziția la prețul curent al pieței. Tranzacția apare apoi în ecranul [Tranzacții de vânzare](/ro/getting-started/sell-transactions).
+  </Step>
+</Steps>
+
+<Warning>
+  În cazul unei vânzări manuale, poziția este vândută la **prețul curent**, chiar dacă acesta este mai mic decât prețul de achiziție. Poți realiza o pierdere. Traderul îți cere întotdeauna confirmarea, ca să nu vinzi din greșeală.
+</Warning>
+
+## Marcaj roșu pe o poziție
+
+Uneori vezi un marcaj roșu sau o cruce roșie pe o poziție. Acest lucru indică faptul că ceva a mers prost la cumpărarea acelei poziții, de exemplu o execuție parțială sau o eroare de comunicare cu bursa.
+
+<Accordion title="Ce înseamnă un marcaj roșu?">
+  Un marcaj roșu pe o tranzacție de cumpărare înseamnă că achiziția nu a fost executată integral sau nu a fost executată corect. Acest lucru poate fi cauzat de:
+
+  - O problemă temporară cu conexiunea dintre BitBrokerTrade și bursă
+  - Sold insuficient la bursă în momentul cumpărării
+  - O eroare în comunicarea API
+
+  Verifică soldul la bursă și setările tale API. În cazul unor probleme persistente, consultă pagina [Probleme cu cheia API](/ro/errors/api-key-problems).
+</Accordion>
+
+## Pasul următor
+
+După o vânzare reușită, tranzacția apare în ecranul cu tranzacții de vânzare, unde poți vedea defalcarea completă a costurilor și rezultatul net.
+
+<CardGroup cols={2}>
+  <Card title="Tranzacții de vânzare" icon="receipt" href="/ro/getting-started/sell-transactions">
+    Vezi pozițiile închise, comisioanele de tranzacționare și comisionul platformei.
+  </Card>
+
+  <Card title="Dashboard" icon="gauge" href="/ro/getting-started/dashboard">
+    Înapoi la imaginea generală a performanței și soldului tău.
+  </Card>
+</CardGroup>

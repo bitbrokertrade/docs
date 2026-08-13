@@ -1,0 +1,81 @@
+---
+title: "Ce este un trader BitBrokerTrade și cum funcționează?"
+sidebarTitle: "Traderul"
+description: "Un trader este un program software care cumpără și vinde automat cripto pe baza indicatorului MACD. Află cum funcționează și cum ia decizii."
+---
+
+Un trader este un program software care administrează și gestionează contul tău la un exchange. Pe baza parametrilor pe care îi setezi, traderul determină automat momentele ideale de cumpărare și de vânzare pentru criptomonede, fără să fie nevoie să monitorizezi tu însuți prețul în permanență.
+
+## Teoria din spatele traderului
+
+Traderul funcționează după așa-numita **metodă MACD**: Moving Average Convergence Divergence. Este un indicator de moment care calculează direcția și forța unei tendințe de preț folosind mai multe medii mobile.
+
+Indicatorul MACD este format din două linii:
+
+<CardGroup cols={2}>
+  <Card title="Linia MACD" icon="chart-line">
+    Se calculează scăzând media mobilă din **ultimele 26 de zile** din media din **ultimele 12 zile**. Această linie indică direcția tendinței: în creștere = tendință pozitivă, în scădere = tendință negativă.
+  </Card>
+
+  <Card title="Linia de semnal" icon="wave-sine">
+    Media măsurată exponențial din **ultimele 9 zile**. Împreună cu linia MACD, formează indicatorul MACD complet.
+  </Card>
+</CardGroup>
+
+### Semnale de cumpărare și de vânzare
+
+Nu doar direcția liniilor oferă un semnal, ci și momentul în care liniile se intersectează:
+
+- **Semnal de cumpărare**: linia MACD (linia albastră) taie linia de semnal (linia roșie) **în sus** → începe o tendință de creștere a prețului.
+- **Semnal de vânzare**: linia MACD taie linia de semnal **în jos** → tendința prețului trece de la creștere la scădere.
+- **Forța tendinței**: cu cât distanța dintre cele două linii este mai mare, cu atât este mai puternică tendința dominantă.
+
+<Tip>
+  MACD este un sistem orientat spre tendință. Funcționează cel mai bine pe o piață volatilă, unde alternează mișcări clare de creștere și de scădere, exact mediul în care Bitcoin și multe alte criptomonede se descurcă foarte bine.
+</Tip>
+
+## Cum funcționează traderul în practică
+
+După ce ai un cont la un exchange acceptat și ai depus un sold, conectezi traderul la exchange printr-o **conexiune API**.
+
+### Ce este o conexiune API?
+
+Imaginează-ți o lampă și un prelungitor: dacă ștecherul se potrivește, lampa se aprinde și cele două obiecte fac schimb de electricitate. Exact în acest fel funcționează un API (Application Programming Interface): face schimb de date între două sisteme software. Prin conexiunea API, traderul poate comunica cu contul tău de la exchange și poate plasa ordine.
+
+<Note>
+  Traderul **nu poate niciodată** să transfere valută către terți. Traderul gestionează doar componența contului tău de exchange (de exemplu raportul Bitcoin/Euro). Retragerea de bani către propriul cont bancar sau portofel cripto o faci întotdeauna tu, direct pe exchange.
+</Note>
+
+### De la semnal la tranzacție
+
+<Steps>
+  <Step title="Traderul colectează date de tranzacționare">
+    După ce conexiunea și activarea sunt gata, traderul începe să colecteze continuu date de preț și să calculeze indicatorul MACD.
+  </Step>
+  <Step title="Semnal de cumpărare → ordin de cumpărare">
+    Pe o tendință pozitivă a prețului, traderul plasează un ordin de cumpărare de **18% din soldul tău disponibil în euro** pe exchange, cu un minim de **25 €**. Exemplu: cu un sold de 1.000 €, prima poziție este de 180 €.
+  </Step>
+  <Step title="Monitorizează poziția">
+    Traderul reține fiecare tranzacție și compară continuu prețul curent cu prețul de cumpărare. Randamentul curent este vizibil în ecranul **Tranzacții de cumpărare**.
+  </Step>
+  <Step title="Semnal de vânzare → ordin de vânzare">
+    Imediat ce traderul semnalează o tendință negativă a prețului, iar randamentul unei poziții este mai mare decât procentul minim pe care l-ai setat, acesta trimite un ordin de vânzare către exchange. Profitul este securizat în euro, iar comisionul pentru BitBrokerTrade este dedus din soldul tău de credite.
+  </Step>
+  <Step title="Rezultat vizibil">
+    Poziția vândută apare în **Tranzacții de vânzare** împreună cu randamentul obținut. Prezentarea generală o găsești pe **Panoul de control**.
+  </Step>
+</Steps>
+
+## Puterea traderului
+
+Traderul are cea mai bună performanță pe o **piață volatilă**. Bitcoin și multe altcoin-uri prezintă în mod regulat mișcări puternice de preț, atât în sus, cât și în jos, exact situațiile în care metoda MACD își dovedește valoarea. Pe o piață stabilă, laterală, cu puțină mișcare, traderul generează mai puține tranzacții.
+
+<CardGroup cols={2}>
+  <Card title="Vrei să afli mai multe despre setări?" icon="sliders" href="/ro/traders/trader-settings">
+    Află cum să adaugi un trader și cum să setezi optim toți parametrii.
+  </Card>
+
+  <Card title="Ce strategie ți se potrivește?" icon="map" href="/ro/traders/trading-strategy">
+    Compară strategia MACD BitBrokerTrade cu strategia Updown.
+  </Card>
+</CardGroup>

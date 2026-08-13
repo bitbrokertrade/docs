@@ -1,0 +1,55 @@
+---
+title: "Trader-ul nu cumpără — toate cauzele posibile"
+sidebarTitle: "Fără cumpărări"
+description: "Descoperă de ce trader-ul tău nu cumpără poziții noi: sold insuficient, fără credite, API neconectat sau o sumă rezervată prea mare."
+---
+
+Dacă trader-ul tău nu cumpără poziții noi, înseamnă întotdeauna că unul sau mai multe dintre criteriile necesare nu sunt îndeplinite. Mai jos găsești toate cauzele posibile dintr-o privire, ca să afli rapid ce se întâmplă în situația ta.
+
+<Note>
+  Cu **strategia BBT**, trader-ul cumpără doar la **începutul unei tendințe ascendente**, nu în timpul unei creșteri deja în desfășurare. Este așadar posibil ca prețul să urce, iar trader-ul să nu facă nimic: acesta este un comportament intenționat și corect. **Strategia Updown** are alte momente de cumpărare, pe baza intervalelor de preț.
+</Note>
+
+## Cauze posibile
+
+<Accordion title="1. Momentele de cumpărare ale strategiei BBT">
+  Strategia BBT funcționează după un format fix: trader-ul **cumpără doar la începutul unei tendințe ascendente**, cu condiția ca în cadrul lățimii de bandă setate (setarea trader-ului **„Procent minim între cumpărări”**) să nu existe altă tranzacție comparabilă deschisă **și** să fie disponibil suficient sold în euro pe exchange.
+
+  **În timpul unei creșteri de preț, strategia BBT nu face cumpărări noi.** Așteaptă un nou moment de cumpărare la începutul următoarei tendințe.
+</Accordion>
+
+<Accordion title="2. Sold insuficient în euro pe exchange">
+  Trader-ul are nevoie de cel puțin **25 €** sold liber în euro în contul tău de exchange pentru a plasa o tranzacție.
+
+  Verifică-ți soldul pe exchange. Dacă soldul tău este mai mic de 25 €, trader-ul nu poate cumpăra până când nu alimentezi contul sau până când o poziție existentă este vândută și soldul se eliberează.
+</Accordion>
+
+<Accordion title="3. Fără credite disponibile în BBT">
+  BBT folosește credite pentru a acoperi serviciile platformei. Dacă soldul tău de credite este epuizat, trader-ul se oprește din tranzacționat.
+
+  Accesează **Setări → Credite** în contul tău BBT și adaugă credite. De îndată ce soldul este alimentat, trader-ul își reia automat activitatea.
+</Accordion>
+
+<Accordion title="4. API neconectat sau conectat incorect">
+  Dacă cheia API nu este conectată corect sau este inactivă, trader-ul nu are conexiune cu exchange-ul și nu poate plasa ordine.
+
+  Verifică starea conexiunii tale API prin **Setări → Exchange-uri**. Exchange-ul este inactiv? Atunci consultă pagina [Probleme legate de cheia API](/ro/errors/api-key-problems) pentru soluție.
+</Accordion>
+
+<Accordion title="5. Sumă rezervată setată prea mare">
+  Dacă ai introdus în setarea exchange-ului o sumă rezervată mai mare sau egală cu soldul tău liber în euro, **nu este disponibil niciun sold liber** pentru cumpărări noi.
+
+  Accesează **Setări → Exchange-uri** și micșorează suma rezervată sau așteaptă până se eliberează suficient sold în urma unei vânzări.
+</Accordion>
+
+<Accordion title="6. Plafon de preț atins">
+  Dacă prețul actual al monedei este **peste plafonul de preț setat**, trader-ul nu face cumpărări noi. Aceasta este o protecție intenționată, pentru a preveni cumpărările la prețuri istoric ridicate.
+
+  Verifică setarea plafonului de preț în trader-ul tău. Ajustează-l dacă situația o justifică.
+</Accordion>
+
+<Accordion title="7. Numărul maxim de cumpărări deschise a fost atins">
+  Dacă maximul setat pentru cumpărări deschise simultan a fost deja atins, trader-ul nu face cumpărări noi, nici măcar la un nou moment de cumpărare.
+
+  Mărește maximul prin setarea trader-ului **„Cumpărări maxime deschise”** sau așteaptă până când pozițiile existente sunt vândute.
+</Accordion>

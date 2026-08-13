@@ -1,0 +1,113 @@
+---
+title: "Înțelegerea și utilizarea dashboardului BitBrokerTrade"
+sidebarTitle: "Dashboard"
+description: "Dashboardul îți arată profitul brut, volumul de tranzacționare, soldul de credite și soldurile de la burse într-o singură imagine. Citește ce înseamnă fiecare secțiune."
+---
+
+Dashboardul este primul ecran pe care îl vezi după ce te autentifici în BitBrokerTrade. Îți oferă dintr-o privire o imagine asupra modului în care performează traderii tăi: de la graficul cu rezultatele lunare până la soldul de credite disponibil și soldurile de la bursele conectate. Ia-ți timp să cunoști fiecare secțiune, acest ecran este punctul central al experienței tale de tranzacționare.
+
+## Graficul
+
+Graficul din partea de sus a dashboardului arată **rezultatele brute ale tranzacțiilor pe lună**. Astfel poți vedea dintr-o privire cum se descurcă traderii tăi în această lună. Ca punct de comparație sunt afișate și rezultatele aceleiași luni din anul precedent, ca să poți identifica tendințele pe o perioadă mai lungă.
+
+<Note>
+  Toate sumele din grafic sunt profituri **brute**. Comisionul de 20% al platformei și comisioanele de tranzacționare ale bursei nu au fost încă deduse. Vezi [Tranzacții de vânzare](/ro/getting-started/sell-transactions) pentru calculul net.
+</Note>
+
+## Blocurile de sinteză
+
+Sub grafic se află patru blocuri de sinteză cu cifrele-cheie ale contului tău.
+
+<CardGroup cols={2}>
+  <Card title="Volumul total de tranzacționare" icon="chart-bar">
+    Totalul cumulat al tuturor pozițiilor vândute, totalul istoric al capitalului investit. Atenție: această cifră include doar rezultatele **traderilor activi**. Traderii șterși nu sunt luați în calcul.
+  </Card>
+
+  <Card title="Profit" icon="sack-dollar">
+    Totalul istoric al profitului tău **brut**. Această sumă include comisionul de 20% al platformei. Și aici sunt luați în calcul doar traderii activi.
+  </Card>
+
+  <Card title="Profit mediu pe tranzacție" icon="percent">
+    Randamentul brut mediu și procentul mediu de profit brut pe ordin de vânzare, pentru toți traderii tăi activi la un loc.
+  </Card>
+
+  <Card title="Sold / Credite" icon="coins">
+    Soldul de credite disponibil în contul tău BitBrokerTrade. 1 credit = 1 €. Folosești acest sold pentru a plăti comisionul platformei.
+  </Card>
+</CardGroup>
+
+## Soldul de credite și cum funcționează
+
+BitBrokerTrade funcționează pe bază de comision: la fiecare tranzacție de vânzare profitabilă, **20% din randamentul brut** sunt reținute drept taxă de platformă. Acest comision este decontat automat din soldul tău de credite.
+
+Cumperi credite prin butonul **"Cumpără credite"** din colțul din dreapta sus al ecranului dashboard. Un credit costă 1 €.
+
+<Warning>
+  Dacă soldul de credite este insuficient pentru a acoperi comisionul, traderul **nu** execută tranzacția de vânzare. Primești atunci un e-mail prin care ești anunțat că traderul nu poate tranzacționa pentru tine. Așadar, asigură-te întotdeauna că ai suficient sold.
+</Warning>
+
+### De câte credite ai nevoie?
+
+Poți calcula ușor de câte credite ai nevoie, în funcție de soldul de la bursă și de randamentul așteptat:
+
+```text
+Sold cont × randament% × 20% = credite necesare
+```
+
+**Exemplu:** cu un sold de 5.000 € și un randament așteptat de 14% pe an:
+
+```text
+5.000 € × 14% × 20% = 140 € credite pe an
+```
+
+<Tip>
+  Este de preferat să cumperi puțin mai multe credite decât crezi că ai nevoie. Astfel eviți ca traderul să rateze o oportunitate de vânzare profitabilă pentru că soldul tocmai s-a epuizat.
+</Tip>
+
+## Soldurile de la burse
+
+În partea de jos a dashboardului găsești secțiunea **Solduri burse**. În bara orizontală verde apar toate bursele pe care le-ai conectat. Apasă pe o bursă pentru a extinde prezentarea soldului acelei burse.
+
+Prezentarea generală arată cinci coloane:
+
+<Accordion title="Monedă">
+  Descrierea monedei din portofel. De exemplu, **EUR** pentru euro sau **BTC** pentru Bitcoin.
+</Accordion>
+
+<Accordion title="Disponibil">
+  Soldul care este direct disponibil la bursă, liber pentru investiții sau retrageri.
+</Accordion>
+
+<Accordion title="Total">
+  Soldul total al monedei respective din portofelul tău de la bursă, inclusiv partea aflată deja în poziții deschise.
+</Accordion>
+
+<Accordion title="În tranzacții de cumpărare">
+  Suma totală pe care BitBrokerTrade o are investită în prezent în poziții de cumpărare deschise pentru acea monedă.
+</Accordion>
+
+<Accordion title="Diferență (*)">
+  Dacă soldul de la bursă este **mai mic** decât totalul pozițiilor de cumpărare deschise în BitBrokerTrade, aici apare un asterisc (\*).
+
+  Acest lucru înseamnă că ai vândut manual poziții la bursă, fără să faci acest lucru prin BitBrokerTrade. Traderul nu poate reconcilia acele vânzări externe cu propriile poziții și pierde sincronizarea.
+
+  **Sfat:** cumpără diferența la bursa respectivă. Astfel se restabilește echilibrul și traderul funcționează din nou corect.
+</Accordion>
+
+<Warning>
+  Vinde întotdeauna pozițiile prin BitBrokerTrade și nu direct la bursă. Dacă totuși faci acest lucru manual, apare o diferență (\*) și traderul nu mai poate urmări cu exactitate ce poziții sunt deschise.
+</Warning>
+
+## Pasul următor
+
+Acum că înțelegi dashboardul, poți vizualiza și gestiona pozițiile deschise prin ecranul cu tranzacții de cumpărare.
+
+<CardGroup cols={2}>
+  <Card title="Tranzacții de cumpărare" icon="basket-shopping" href="/ro/getting-started/buy-transactions">
+    Vezi pozițiile deschise și folosește funcția de pauză sau vânzare manuală.
+  </Card>
+
+  <Card title="Tranzacții de vânzare" icon="receipt" href="/ro/getting-started/sell-transactions">
+    Vezi toate pozițiile închise și profitul realizat pe tranzacție.
+  </Card>
+</CardGroup>

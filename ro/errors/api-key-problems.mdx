@@ -1,0 +1,90 @@
+---
+title: "Rezolvarea erorilor de cheie API în BitBrokerTrade explicată"
+sidebarTitle: "Probleme API"
+description: "Rezolvă erorile comune legate de cheia API: cheie inactivă, permisiuni greșite, e-mail de confirmare neaccesat sau 2FA neconfigurat."
+---
+
+Cheia API este conexiunea dintre BitBrokerTrade și exchange-ul tău. Dacă această conexiune se întrerupe sau devine inactivă, trader-ul nu mai poate executa ordine. Pe această pagină citești care sunt cele mai frecvente cauze și cum le rezolvi.
+
+<Tip>
+  Verifică întotdeauna mai întâi starea cheii tale API **în panoul de control al exchange-ului** înainte de a contacta suportul BBT. În multe cazuri, cheia este dezactivată de partea exchange-ului și poate fi restabilită ușor de tine.
+</Tip>
+
+## Cauzele unui API inactiv
+
+<Accordion title="Mesajul 'Eroare la cheia API' sau API-ul este inactiv">
+  După ce utilizatorul a activat cheia API, există câteva cauze posibile pentru care API-ul devine din nou inactiv:
+
+  1. **Ai dezactivat tu însuți cheia** în panoul de control al exchange-ului.
+  2. **Exchange-ul a invalidat cheia sau o funcție din cadrul ei** din motive proprii. Binance, de exemplu, invalidează setarea „Enable spot & margin trading” la fiecare 30 de zile pentru utilizatorii care nu au o adresă IP pe lista albă de IP-uri.
+  3. **Există o eroare în conexiunea** dintre BBT și exchange.
+
+  În toate cele trei cazuri, sistemul BBT dezactivează conexiunea API. Nu mai există nicio conexiune cu exchange-ul până când cheia API nu este restabilită.
+
+  Primești un e-mail de la BBT cu motivul blocării și o prezentare a trader-elor care nu mai sunt active.
+</Accordion>
+
+<Accordion title="Cum restabilesc o cheie API inactivă?">
+  <Steps>
+    <Step title="Autentifică-te pe exchange">
+      Accesează panoul de control al exchange-ului respectiv și autentifică-te cu datele contului tău.
+    </Step>
+    <Step title="Verifică și restabilește setările API">
+      Accesează setările API ale exchange-ului și reactivează cheia. Verifică dacă toate permisiunile necesare sunt setate corect (vezi mai jos, per exchange).
+    </Step>
+    <Step title="Salvează în BBT">
+      În BitBrokerTrade, accesează **Setări → Exchange-uri** și fă clic pe exchange-ul inactiv. În ecranul nou care se deschide, introdu noile chei API și fă clic pe **Salvează**.
+    </Step>
+    <Step title="Așteaptă testul de conexiune">
+      BBT testează acum automat conexiunea. Dacă setările API sunt corecte, conexiunea revine la **Activă**.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Chei API cu prea multe permisiuni (retragerile sunt permise)">
+  BBT are nevoie doar de permisiuni pentru **citire** și **tranzacționare (spot trading)**. Permisiunile pentru retrageri nu sunt necesare și reprezintă un risc de securitate.
+
+  Dacă ai activat din greșeală retragerile pe cheia API, șterge cheia de pe exchange și creează una nouă, cu doar permisiunile necesare. Apoi introdu noua cheie prin **Setări → Exchange-uri** în BBT.
+</Accordion>
+
+<Accordion title="E-mailul de confirmare de la exchange nu a fost accesat">
+  La unele exchange-uri (inclusiv Bitvavo, Bitstamp și Binance fără 2FA prin Google Authenticator), exchange-ul trimite un **e-mail de confirmare** după ce creezi o cheie API nouă. Trebuie mai întâi să accesezi linkul din acel e-mail pentru a activa cheia.
+
+  Dacă ai introdus cheia API în BBT înainte să deschizi e-mailul de confirmare, BBT va considera conexiunea ca inactivă. Verifică-ți inboxul și accesează linkul de confirmare. Apoi repetă pașii 3 și 4 din procesul de restabilire de mai sus.
+</Accordion>
+
+<Accordion title="2FA neconfigurat, în timp ce exchange-ul îl impune">
+  Unele exchange-uri îți cer să ai autentificarea în doi pași (2FA) configurată înainte de a putea activa o cheie API. Dacă lipsește 2FA, cheia rămâne inactivă sau nu poate fi creată.
+
+  Configurează 2FA prin setările de securitate ale contului tău de exchange (de exemplu, prin Google Authenticator). Apoi poți crea sau reactiva cheia API.
+</Accordion>
+
+## Ghiduri specifice per exchange
+
+Urmează ghidul de conectare al propriului tău exchange pentru pașii exacți:
+
+<CardGroup cols={2}>
+  <Card title="Binance" icon="link" href="/ro/exchanges/binance">
+    Setări API pentru Binance, inclusiv lista albă de IP-uri și permisiunile pentru spot trading.
+  </Card>
+
+  <Card title="Bitvavo" icon="link" href="/ro/exchanges/bitvavo">
+    Creează și conectează o cheie API la Bitvavo.
+  </Card>
+
+  <Card title="Bitstamp" icon="link" href="/ro/exchanges/bitstamp">
+    Configurarea API pentru Bitstamp.
+  </Card>
+
+  <Card title="Coinbase" icon="link" href="/ro/exchanges/coinbase">
+    Configurează o cheie API la Coinbase.
+  </Card>
+
+  <Card title="KuCoin" icon="link" href="/ro/exchanges/kucoin">
+    Conexiunea API pentru KuCoin.
+  </Card>
+
+  <Card title="Bybit" icon="link" href="/ro/exchanges/bybit">
+    Creează și conectează o cheie API la Bybit.
+  </Card>
+</CardGroup>

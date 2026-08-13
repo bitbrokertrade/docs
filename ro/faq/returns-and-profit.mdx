@@ -1,0 +1,69 @@
+---
+title: "Randament și profit: brut, net și comision la BBT"
+sidebarTitle: "Randament și profit"
+description: "Înțelege cum se calculează profitul brut și net, care procent de randament este optim și cum se decontează comisionul de 20% al platformei."
+---
+
+Înțelegerea modului în care BBT calculează profitul este esențială pentru a configura corect trader-ul și pentru a estima randamentul real al tranzacțiilor tale. Pe această pagină găsești tot ce ai nevoie despre diferența dintre profitul brut și cel net, procentul optim de randament și modul în care se decontează comisionul platformei.
+
+<Accordion title="Cum se calculează profitul?">
+  Determinarea profitului funcționează astfel:
+
+  Să presupunem: ai setat ca trader-ul să vândă la **1,5% profit** și că suma medie de cumpărare este de **100 €** per tranzacție. Trader-ul identifică un moment de cumpărare și plasează un ordin de 100 €. Bursa, însă, percepe 0,25% comisioane de tranzacționare și le deduce din soldul tău liber. În ecranul de tranzacții vezi că ai cumpărat de 100 € (în timp ce costul real este de 100,25 €).
+
+  **Când vede trader-ul un profit de 1,5%?** De îndată ce valoarea tranzacției este de **101,50 €** (100 × 1,015).
+
+  Profitul obținut aici este **profit brut**, deoarece trebuie să scazi încă totalul comisioanelor de tranzacționare (în medie 0,5%). Prin urmare, procentul tău de randament trebuie să fie **mai mare de 0,5%** pentru a obține efectiv un profit net.
+</Accordion>
+
+<Accordion title="Dashboard-ul afișează profitul brut - cum calculez profitul net?">
+  Dashboard-ul afișează profitul brut. Folosește formula următoare pentru a calcula profitul tău net:
+
+  ```text
+  Profit brut (= profit în dashboard)
+  − Total comisioane de tranzacționare
+       ((capital investit în dashboard − suma tranzacțiilor deschise) × 0,5%)
+  − Comision BBT (profit brut × 20%)
+  = Profit net
+  ```
+
+  **Exemplu:**
+
+  - Profit brut: 200 €
+  - Comisioane de tranzacționare (la 5.000 € investiți, 500 € deschise): 4.500 € × 0,5% = 22,50 €
+  - Comision BBT: 200 € × 20% = 40 €
+  - **Profit net: 200 € − 22,50 € − 40 € = 137,50 €**
+</Accordion>
+
+<Accordion title="Ce procent de randament ar trebui să introduc?">
+  Trader-ul folosește acest procent pentru a decide când poate vinde o tranzacție. Procentul trebuie să fie suficient de mare pentru a genera profit, dar și suficient de realist pentru a permite vânzări regulate.
+
+  Câteva îndrumări:
+
+  - **5%**: trader-ul face relativ puține tranzacții. Fluctuațiile de preț de 5% sunt mai rare.
+  - **2%**: volum mai mare de tranzacții și, posibil, un randament total mai bun.
+  - **Sub 0,5%**: comisioanele de tranzacționare depășesc profitul, ieși în pierdere.
+
+  <Tip>
+    Calculele noastre pe date istorice (24 de luni și mai mult) indică faptul că între **0,7% și 0,9%** se obține randamentul net maxim, ținând cont de comisioane medii de tranzacționare de 0,25% la cumpărare și 0,25% la vânzare la majoritatea burselor.
+  </Tip>
+</Accordion>
+
+<Accordion title="Câtă influență are procentul de randament asupra profitului final?">
+  Un procent de randament mai mare sau mai mic influențează în principal **numărul de tranzacții** efectuate și, prin urmare, totalul comisioanelor de tranzacționare.
+
+  - **Procent scăzut**: tranzacțiile sunt vândute mai repede și se iau și noi poziții mai repede. Mai multe tranzacții = comisioane totale mai mari.
+  - **Procent ridicat**: mai puține tranzacții, dar fiecare tranzacție individuală generează un profit brut mai mare.
+
+  Per total, observăm că la un procent de randament între **0,7% și 0,9%** se obține cel mai mare profit net.
+</Accordion>
+
+<Accordion title="Dashboard-ul meu afișează dintr-odată un profit mai mic - ce se întâmplă?">
+  Dashboard-ul afișează **doar rezultatele trader-elor active**. Dacă dezactivezi sau ștergi un trader, soldul de profit din dashboard este ajustat negativ, deoarece contribuția acelui trader este eliminată.
+
+  Tranzacțiile de vânzare în sine sunt afișate întotdeauna integral în ecranul Tranzacții de vânzare. Nu le poți șterge și rămân în istoric.
+
+  <Note>
+    Șterge un trader doar dacă nu mai ai nevoie de el. La dezactivare, istoricul se păstrează și poți reactiva trader-ul mai târziu.
+  </Note>
+</Accordion>

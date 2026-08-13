@@ -48,6 +48,12 @@ Het kan voorkomen dat een positie niet wordt verkocht, ook al lijkt het rendemen
   **Belangrijk:** de werkelijk in rekening gebrachte kosten zijn correct. Het bedrag in de trader is alleen een weergavefout.
 </Accordion>
 
+<Accordion title="Transactie te klein geworden door deelverkoop (BBT-strategie)">
+  Na een gedeeltelijke verkoop (deelverkoop) kan er een resterende transactie overblijven die **kleiner is dan de minimale opdrachtwaarde bij de exchange**. De exchange accepteert orders onder een bepaalde minimumgrootte niet, waardoor deze transactie niet meer verkocht kan worden.
+
+  **Oplossing:** zet de betreffende transactieregel op **Hold** (knop "II" in het aankoopscherm). De trader negeert de positie dan en de historiek blijft bewaard.
+</Accordion>
+
 <Accordion title="Positie met rood kruis in aankooptransacties: wat betekent dit?">
   Een rood kruis bij een transactieregel heeft twee mogelijke oorzaken:
 

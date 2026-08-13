@@ -1,5 +1,5 @@
 ---
-title: "API-sleutel fouten oplossen in BitBrokerTrade"
+title: "API-sleutelfouten oplossen in BitBrokerTrade uitgelegd"
 sidebarTitle: "API Problemen"
 description: "Los veelvoorkomende API-sleutel fouten op: inactieve sleutel, verkeerde rechten, bevestigingsmail niet geklikt of 2FA niet ingesteld."
 ---
@@ -45,6 +45,12 @@ De API-sleutel is de verbinding tussen BitBrokerTrade en je exchange. Als deze v
   BBT heeft alleen rechten nodig voor **lezen** en **handelen (spot trading)**. Rechten voor opnames zijn niet nodig en vormen een veiligheidsrisico.
 
   Als je per ongeluk opnames hebt ingeschakeld op de API-sleutel, verwijder dan de sleutel bij de exchange en maak een nieuwe aan met alleen de vereiste rechten. Voer daarna de nieuwe sleutel in via **Instellingen → Beurzen** in BBT.
+</Accordion>
+
+<Accordion title="Bevestigingsmail van de exchange niet geklikt">
+  Bij sommige exchanges (waaronder Bitvavo, Bitstamp en Binance zonder 2FA via Google Authenticator) stuur de exchange een **bevestigingsmail** nadat je een nieuwe API-sleutel aanmaakt. Je moet eerst op de link in die e-mail klikken om de sleutel te activeren.
+
+  Als je de API-sleutel in BBT al hebt ingevoerd vóórdat je de bevestigingsmail hebt geopend, zal BBT de verbinding als inactief zien. Controleer je inbox en klik op de bevestigingslink. Herhaal daarna stap 3 en 4 van het herstelproces hierboven.
 </Accordion>
 
 <Accordion title="2FA niet ingesteld terwijl de exchange dit vereist">

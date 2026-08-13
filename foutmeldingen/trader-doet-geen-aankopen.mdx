@@ -1,5 +1,5 @@
 ---
-title: "Trader doet geen aankopen — mogelijke oorzaken"
+title: "Trader doet geen aankopen — alle mogelijke oorzaken"
 sidebarTitle: "Geen Aankopen"
 description: "Ontdek waarom je trader geen nieuwe posities inkoopt: te weinig saldo, geen credits, ongekoppelde API of een te groot gereserveerd bedrag."
 ---
@@ -13,7 +13,7 @@ Als je trader geen nieuwe posities inkoopt, betekent dit altijd dat aan één of
 ## Mogelijke oorzaken
 
 <Accordion title="1. Aankoopmomenten van de BBT-strategie">
-  De BBT-strategie werkt volgens een vast format: de trader koopt **alleen aan bij de aanvang van een opwaartse trend**, mits binnen een bepaalde bandbreedte er geen andere vergelijkbare transactie openstaat.
+  De BBT-strategie werkt volgens een vast format: de trader koopt **alleen aan bij de aanvang van een opwaartse trend**, mits binnen de ingestelde bandbreedte (trader-instelling **"Min. percentage tussen aankopen"**) er geen andere vergelijkbare transactie openstaat én er voldoende eurosaldo op de exchange beschikbaar is.
 
   **Gedurende een koersstijging doet de BBT-strategie geen nieuwe aankopen.** Wacht op een nieuw aankoopmoment aan het begin van de volgende trend.
 </Accordion>

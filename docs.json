@@ -30,6 +30,52 @@
   "navigation": {
     "languages": [
       {
+        "language": "en",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Guide",
+            "groups": [
+              {
+                "group": "Introduction",
+                "pages": [
+                  "introduction/what-is-bitbrokertrade"
+                ]
+              },
+              {
+                "group": "Getting started",
+                "pages": []
+              },
+              {
+                "group": "Connect exchanges",
+                "pages": []
+              },
+              {
+                "group": "Set up traders",
+                "pages": []
+              },
+              {
+                "group": "Other",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "tab": "FAQ & Troubleshooting",
+            "groups": [
+              {
+                "group": "Frequently asked questions",
+                "pages": []
+              },
+              {
+                "group": "Errors",
+                "pages": []
+              }
+            ]
+          }
+        ]
+      },
+      {
         "language": "nl",
         "tabs": [
           {

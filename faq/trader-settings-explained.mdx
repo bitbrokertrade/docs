@@ -1,0 +1,74 @@
+---
+title: "Trader settings and all functionalities explained"
+sidebarTitle: "Settings explained"
+description: "Detailed explanation of the trader settings: transaction size, price ceiling, maximum open buys, profit strategy and stop loss."
+---
+
+The trader has a number of settings that let you precisely determine how it trades. On this page you find a detailed explanation of the most important options, so you can optimally tune the trader to your own strategy and risk appetite.
+
+<Accordion title="How is the size of a transaction determined?">
+  By default, transactions always cover **18% of the outstanding euro balance** at your exchange. The smallest transaction size BBT uses is **€ 25**.
+
+  At trader level you can adjust this with the **"Average buy amount"** setting. If you enter a fixed amount here, the trader always buys exactly that amount per transaction, regardless of the total available balance.
+
+  **Combination with "Maximum open buys":** by using both settings together, you determine to the euro exactly how much money you want to invest per coin.
+</Accordion>
+
+<Accordion title="Maximum open buys: what does this setting do exactly?">
+  With this setting you specify per trader how many buy positions may **be open at the same time** for that specific coin.
+
+  Practical uses:
+
+  - **Setting a limit:** if you set it to e.g. 5, the trader buys a maximum of 5 positions simultaneously for that coin.
+  - **Selling the coin empty:** if you enter **0**, the trader no longer makes new purchases but does still sell existing positions. Useful if you want to wind down a position without deactivating the trader completely.
+
+  In combination with the average buy amount, you can set a precise limit on your investment per coin this way.
+</Accordion>
+
+<Accordion title="How do I set a price ceiling and when do I use it?">
+  The price ceiling is an upper limit for the price: the trader **does not buy** if the price of the coin is above the set ceiling.
+
+  **How do you set it?** As preparation, look at the current price and the historical price development of the coin in question. If your expectation is that the price above a certain level is a one-off peak, you don't want the trader to buy positions at that level. You then enter a price ceiling of, for example, 3% below that expected peak price.
+
+  **Example:** you expect Bitcoin above € 55,000 to be a one-off peak. You set the price ceiling to 3% below that. If your return percentage is lower than 3%, the trader will still sell its last purchase at such a peak price and you have maximum return. That is the theory behind the price ceiling setting.
+
+  <Tip>
+    Use the price ceiling as protection at historically high price levels. In a normal market environment without extreme peaks, you can leave the price ceiling disabled.
+  </Tip>
+</Accordion>
+
+<Accordion title="What is the difference between Reinvest and HODL?">
+  With the BBT strategy you can choose what the trader does with the proceeds of a sale:
+
+  - **Reinvest:** the profit is fed back into the free balance and reused for new purchases. Your balance grows gradually.
+  - **HODL:** the trader accumulates the crypto coins and does not sell them automatically. You build a position for the long term.
+
+  Which option suits you best depends on your investment goal: active return or long-term accumulation.
+</Accordion>
+
+<Accordion title="What does the stop loss setting do?">
+  With the stop loss you set a maximum loss percentage per open position. As soon as the value of a purchase falls below this percentage, the trader automatically sells the position, even if the return target has not yet been reached.
+
+  This limits the risk of large losses in prolonged price drops. Don't set the stop loss too low, because in normal market volatility a position can temporarily be in the red before recovering.
+
+  <Warning>
+    Activating a stop loss at a low setting can lead to many losing sales in volatile markets. Set the stop loss at a level where you are comfortable with the possible loss.
+  </Warning>
+</Accordion>
+
+<Accordion title="What is the difference between the BBT strategy and the Updown strategy?">
+  Both strategies determine when the trader buys and sells, but in a fundamentally different way:
+
+  - **BBT strategy:** buys only at the start of an upward trend and only sells when the rising trend breaks. Works with 15-minute candles.
+  - **Updown strategy:** buys positions within a price range and sells as soon as the minimum return has been achieved **and** the last candle is fundamentally lower than the previous one. Works with 1-minute candles.
+
+  For an extensive comparison and explanation, go to [Trading strategy](/en/traders/trading-strategy).
+</Accordion>
+
+<Accordion title="Binance API Management update: what do I need to know?">
+  Binance periodically invalidates the **"Enable spot & margin trading"** setting for API users if no IP address is on the IP whitelist of the same user. This happens every 30 days.
+
+  If this occurs, the BBT system automatically deactivates the API connection and you receive an email with explanation. Restore the API by logging in to Binance and reactivating the settings.
+
+  For the exact steps, consult the [Binance connection page](/en/exchanges/binance).
+</Accordion>

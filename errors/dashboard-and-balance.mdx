@@ -1,0 +1,49 @@
+---
+title: "Dashboard incorrect or balance differs — causes BBT"
+sidebarTitle: "Dashboard & Balance"
+description: "Why your dashboard suddenly shows less profit, what the asterisk symbol (*) next to the exchange balance means and how to correct it."
+---
+
+Sometimes the figures in your BBT dashboard don't seem to match what you expect: the shown profit suddenly drops, the balance differs from the transaction history, or there is an asterisk (\*) next to your exchange balance. On this page we explain how this can happen and what you can do about it.
+
+<Warning>
+  **Never** trade cryptocurrencies manually on the exchange outside the BBT trader unless you understand the consequences. The trader keeps its own bookkeeping and does not know about external transactions. This leads to balance differences and can cause sell problems.
+</Warning>
+
+## Common dashboard and balance issues
+
+<Accordion title="My dashboard suddenly shows a lower profit — what's going on?">
+  The dashboard shows **only the results of active traders**. If you make a trader inactive or delete it, its contribution to the profit balance in the dashboard is no longer counted. This causes a visible drop in the shown profit.
+
+  The **sell transactions** always remain fully visible in the Sell transactions screen. You cannot delete them and they do not disappear from the history.
+
+  <Note>
+    Only permanently delete a trader if you no longer need it. When deactivating, the history is preserved and you can reactivate the trader later without data loss.
+  </Note>
+</Accordion>
+
+<Accordion title="Dashboard data does not match the transaction history">
+  The dashboard shows only the results of **active traders**. If you have deleted a trader, its result also drops out of the dashboard, but the associated sell transactions do remain visible in the Sell transactions screen.
+
+  This difference between the dashboard total and the full transaction history is therefore explainable: the transaction history shows everything, the dashboard only the active traders.
+</Accordion>
+
+<Accordion title="Balance difference (*) at exchange in the dashboard">
+  An asterisk (\*) next to the exchange balance in BBT indicates that there is a **difference** between the crypto quantity BBT expects based on its buy positions and the actual quantity on the exchange.
+
+  This arises if you have **manually sold positions on the exchange** outside the trader. The trader does not know about those external sales and still takes those positions into account in its bookkeeping.
+
+  **Solution:** manually buy the difference on the exchange, so the trader can still sell its open positions and the bookkeeping is correct.
+</Accordion>
+
+<Accordion title="Open position in BBT but not enough crypto balance on the exchange">
+  This problem arises if you have sold positions on the exchange outside the trader, without informing BBT. The trader thinks the position is still open, but the associated crypto balance is missing on the exchange.
+
+  You have three options:
+
+  1. **Buy on the exchange:** buy the missing crypto once on the exchange. The trader then handles all transactions and the history is preserved.
+  2. **Set position on hold:** set the relevant order line to **on hold** (button "II" in the buy screen). The trader ignores the transaction and the history is preserved.
+  3. **Reset the trader:** delete the relevant trader and add it again. All entries are then reset and the trader starts over. **Note: the trader history is erased with this.**
+
+  Choose the option that best fits your situation.
+</Accordion>

@@ -1,0 +1,94 @@
+---
+title: "View and manage buy transactions in BitBrokerTrade"
+sidebarTitle: "Buy transactions"
+description: "View all your open crypto positions and their current gross return, and manage positions with the pause button or manual sell function."
+---
+
+The **Buy transactions** screen gives you a complete overview of all open positions your active traders currently hold. For each position you see the purchased coin, the invested amount and the current gross return in real time. From this screen you can also intervene: temporarily block a position or sell it manually right away.
+
+## What do you see on this screen?
+
+The overview shows all open positions of all your active traders combined. For each position, the following details are visible, among others:
+
+- **Coin** — which cryptocurrency has been purchased
+- **Buy amount** — the amount invested in this position
+- **Return** — the current **gross** return of the position at that moment
+- **Status** — whether the position is active or on pause (Hold)
+
+<Note>
+  The displayed return is always the **gross** return. The exchange trading fees (~0.25% on the buy and 0.25% on the sell side) and the 20% platform commission are only settled at the moment of sale. You find the net details in the [Sell transactions](/en/getting-started/sell-transactions) screen.
+</Note>
+
+## Pause a position
+
+Want to prevent a specific position from being sold by the trader, for example because you expect the price to rise further? Use the **pause button**.
+
+<Steps>
+  <Step title="Locate the position">
+    Navigate to **Buy transactions** and locate the position you want to pause.
+  </Step>
+  <Step title="Press the pause button (II)">
+    Click on the pause button (the symbol with two vertical bars, **II**) next to the relevant position.
+  </Step>
+  <Step title="Check the status">
+    The status of the position changes to **Hold**. The trader skips this position in its sell analysis and does not touch it regardless of the price.
+  </Step>
+  <Step title="Reactivate the position">
+    Want to release the position for automatic trading again? Press the same button again. The status returns to active and the trader includes the position in its decisions again.
+  </Step>
+</Steps>
+
+<Tip>
+  Use the pause function when you expect to bridge a temporary price dip, or when you want to strategically hold a position until a certain price level. Don't forget to lift the pause afterwards.
+</Tip>
+
+## Sell a position manually
+
+Want to sell a position immediately, independent of the trader's strategy? Then use the **manual sell function**.
+
+<Steps>
+  <Step title="Locate the position">
+    Navigate to **Buy transactions** and locate the position you want to sell.
+  </Step>
+  <Step title="Press the green arrow button">
+    Click on the middle button with the green arrow icon next to the position.
+  </Step>
+  <Step title="Confirm the sell order">
+    The trader asks you to confirm the order. Read the message carefully and confirm the sale.
+  </Step>
+  <Step title="Sell is executed">
+    The trader immediately sells the position at the current market price. The transaction then appears in the [Sell transactions](/en/getting-started/sell-transactions) screen.
+  </Step>
+</Steps>
+
+<Warning>
+  With a manual sale, the position is sold at the **current price**, even if it is lower than the purchase price. You may realize a loss. The trader always asks for confirmation so you never sell by accident.
+</Warning>
+
+## Red marking on a position
+
+Sometimes you see a red marking or a red cross on a position. This indicates that something went wrong during the purchase of that position, for example a partial fill or a communication error with the exchange.
+
+<Accordion title="What does a red marking mean?">
+  A red marking on a buy transaction means that the purchase was not fully or not correctly executed. This can be caused by:
+
+  - A temporary problem with the connection between BitBrokerTrade and the exchange
+  - Insufficient balance on the exchange at the time of purchase
+  - An error in the API communication
+
+  Check your balance on the exchange and your API settings. In case of persistent problems, consult the [API key problems](/en/errors/api-key-problems) page.
+</Accordion>
+
+## Next step
+
+After a successful sale, the transaction appears in the sell transactions screen, where you can view the full cost breakdown and the net result.
+
+<CardGroup cols={2}>
+  <Card title="Sell transactions" icon="receipt" href="/en/getting-started/sell-transactions">
+    View closed positions, trading fees and platform commission.
+  </Card>
+
+  <Card title="Dashboard" icon="gauge" href="/en/getting-started/dashboard">
+    Back to the total overview of your performance and balance.
+  </Card>
+</CardGroup>

@@ -1,0 +1,112 @@
+---
+title: "Settings: manage exchanges and traders in BitBrokerTrade"
+sidebarTitle: "Settings"
+description: "Through the Settings menu you add exchanges to BitBrokerTrade, configure traders and manage all your API connections and parameters."
+---
+
+Through the **Settings** menu in the left sidebar you manage the two core parts of your BitBrokerTrade setup: the exchanges to which your account is connected, and the traders that trade on your behalf. You have the freedom to be active at several exchanges at once, and to configure multiple traders per exchange, each with its own trading strategy.
+
+## What is in the Settings menu?
+
+The **Settings** menu consists of two sections: **Exchanges** and **Traders**. Together they form the complete configuration of your automated trading strategy.
+
+<CardGroup cols={2}>
+  <Card title="Exchanges" icon="building-columns" href="/en/exchanges/what-is-an-exchange">
+    Add one or more exchanges to your account and manage the API connections. An exchange is the digital currency exchange where the actual buying and selling takes place.
+  </Card>
+
+  <Card title="Traders" icon="robot" href="/en/traders/trader-settings">
+    Activate traders per exchange and set their individual parameters, such as the coins they trade, the investment amount per transaction and the profit target.
+  </Card>
+</CardGroup>
+
+## Managing exchanges
+
+BitBrokerTrade supports multiple exchanges simultaneously. You can, for example, connect both a Bitvavo and a Binance account and trade on both exchanges at the same time.
+
+<Steps>
+  <Step title="Go to Settings → Exchanges">
+    Click on **Settings** in the main menu and then on **Exchanges**.
+  </Step>
+  <Step title="Add an exchange">
+    Click the button to add a new exchange. Choose the desired exchange from the list of supported platforms.
+  </Step>
+  <Step title="Enter your API keys">
+    Each exchange requires an API key and API secret that you create in the settings menu of the exchange itself. Copy these details and paste them in the corresponding fields in BitBrokerTrade.
+  </Step>
+  <Step title="Save the connection">
+    Click on **Save**. BitBrokerTrade tests the connection and confirms whether the connection succeeded. Your exchange now appears in the green bar overview on the dashboard.
+  </Step>
+</Steps>
+
+<CardGroup cols={2}>
+  <Card title="Bitvavo" icon="b" href="/en/exchanges/bitvavo">
+    Step-by-step instructions for connecting Bitvavo.
+  </Card>
+
+  <Card title="Binance" icon="b" href="/en/exchanges/binance">
+    Step-by-step instructions for connecting Binance.
+  </Card>
+
+  <Card title="Bybit" icon="b" href="/en/exchanges/bybit">
+    Step-by-step instructions for connecting Bybit.
+  </Card>
+
+  <Card title="All exchanges" icon="list" href="/en/exchanges/what-is-an-exchange">
+    View all supported exchanges and compare them.
+  </Card>
+</CardGroup>
+
+## Managing traders
+
+Per exchange you can activate one or more traders. Each trader has its own settings and follows its own strategy independently of the others.
+
+<Note>
+  Every trader can follow a completely separate strategy, with different coins, different entry amounts and different profit targets. This gives you the flexibility to diversify, even within one exchange.
+</Note>
+
+<Steps>
+  <Step title="Go to Settings → Traders">
+    Click on **Settings** in the main menu and then on **Traders**.
+  </Step>
+  <Step title="Add a trader">
+    Click the button to create a new trader. Link the trader to one of your already added exchanges.
+  </Step>
+  <Step title="Configure the trader">
+    Set the following parameters:
+
+    - **Coins** — which cryptocurrencies the trader trades
+    - **Investment amount** — how many euros are invested per purchase
+    - **Profit target** — at which percentage the trader sells
+    - **Trading strategy** — the approach the trader follows when recognizing buy and sell signals
+  </Step>
+  <Step title="Activate the trader">
+    Set the trader to active. The trader now starts analyzing the market and places its first purchase as soon as it recognizes a suitable moment.
+  </Step>
+</Steps>
+
+<Tip>
+  Start with one trader on one exchange to get familiar with the system. Once you see how the trader works and performs, you can add extra traders or experiment with different strategies.
+</Tip>
+
+## Next steps
+
+With your exchanges and traders correctly configured, you are ready to trade fully automatically. Then dive deeper into the finer settings of the trader or learn more about the supported exchanges.
+
+<CardGroup cols={2}>
+  <Card title="Trader settings" icon="sliders" href="/en/traders/trader-settings">
+    Detailed explanation of all trader parameters and how to optimize them.
+  </Card>
+
+  <Card title="Trading strategy" icon="chess-knight" href="/en/traders/trading-strategy">
+    Read how the trader recognizes buy signals and when it sells.
+  </Card>
+
+  <Card title="Supported coins" icon="circle-dollar-to-slot" href="/en/traders/supported-coins">
+    View which cryptocurrencies are available for the trader.
+  </Card>
+
+  <Card title="What is an exchange?" icon="building-columns" href="/en/exchanges/what-is-an-exchange">
+    Everything you need to know about exchanges and how to choose the right one.
+  </Card>
+</CardGroup>

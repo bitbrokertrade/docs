@@ -1,0 +1,91 @@
+---
+title: "View sell transactions and realized profit in BBT"
+sidebarTitle: "Sell transactions"
+description: "The sell transactions screen shows all closed positions with gross return, exchange trading fees and the 20% platform commission."
+---
+
+The **Sell transactions** screen gives you a complete historical overview of all positions that have been sold by your active traders. For each transaction you see not only the gross return, but also the exchange trading fees and the platform commission from BitBrokerTrade. This way you always have a clear picture of what you have actually earned net.
+
+## What do you see on this screen?
+
+The overview shows all closed positions of all your active traders. Per transaction, the following columns are available:
+
+<CardGroup cols={2}>
+  <Card title="Position / Coin" icon="coins">
+    The identification of the position and the traded cryptocurrency, such as BTC (Bitcoin) or ETH (Ethereum).
+  </Card>
+
+  <Card title="Buy amount" icon="arrow-down-to-line">
+    The amount originally invested in this position at purchase.
+  </Card>
+
+  <Card title="Sell amount" icon="arrow-up-from-line">
+    The amount received at the sale based on the market price at the moment of sale.
+  </Card>
+
+  <Card title="Gross return" icon="chart-line">
+    The difference between sell and buy amount, expressed in euros and as a percentage. This is the return **before** deduction of fees.
+  </Card>
+</CardGroup>
+
+## Cost breakdown per transaction
+
+Besides the gross return, the screen shows two cost items that are important for calculating your net profit:
+
+<Accordion title="Trading fees (exchange)">
+  These are the transaction fees the exchange charges for executing the buy and sell order. The exact fees differ per exchange, but typically the following rates apply:
+
+  - **Buy order:** ~0.25% of the transaction amount
+  - **Sell order:** ~0.25% of the transaction amount
+
+  Consult the documentation of your exchange for the exact rates. See the pages for [Bitvavo](/en/exchanges/bitvavo), [Binance](/en/exchanges/binance) or [Bybit](/en/exchanges/bybit) for more information.
+</Accordion>
+
+<Accordion title="Platform fees (BitBrokerTrade)">
+  The BitBrokerTrade platform commission is **20% of the gross return achieved** per transaction. This commission is automatically settled with your credits balance at the moment of sale.
+
+  **Example:** with a gross return of € 50, € 10 is deducted from your credits as platform commission. You keep € 40 gross, minus the exchange trading fees.
+</Accordion>
+
+## Calculating gross vs. net profit
+
+Want to know what you have net earned on a transaction? Use the following calculation:
+
+```text
+Net profit = Gross return − Exchange trading fees − Platform commission (20%)
+```
+
+**Concrete example:**
+
+- Buy amount: € 1,000
+- Sell amount: € 1,050
+- Gross return: € 50
+- Exchange trading fees (± 0.50% total): € 5
+- Platform commission (20% of € 50): € 10
+- **Net profit: € 35**
+
+<Note>
+  The dashboard always shows the **gross** profit. Keep in mind that the actual net proceeds are lower due to trading fees and platform commission. Use the formula above for an accurate calculation of your net result.
+</Note>
+
+## Export to Excel or CSV
+
+Want to analyze your sell transactions in a spreadsheet or keep them for your own records? You can export the full overview to a CSV file that you can open in Excel or Google Sheets.
+
+<Card title="Export to Excel" icon="file-export" href="/en/other/export-to-excel">
+  Read how to export your transaction history and process it in a spreadsheet.
+</Card>
+
+## Next step
+
+Now that you know how to read and interpret your results, it is time to further optimize the settings of your exchanges and traders.
+
+<CardGroup cols={2}>
+  <Card title="Settings" icon="gear" href="/en/getting-started/settings">
+    Add exchanges and manage the settings of your traders.
+  </Card>
+
+  <Card title="Trader settings" icon="sliders" href="/en/traders/trader-settings">
+    Fine-tune the strategy of your trader for better results.
+  </Card>
+</CardGroup>

@@ -1,0 +1,90 @@
+---
+title: "Fix API key errors in BitBrokerTrade explained"
+sidebarTitle: "API problems"
+description: "Solve common API key errors: inactive key, wrong permissions, unclicked confirmation email or 2FA not set up."
+---
+
+The API key is the connection between BitBrokerTrade and your exchange. If this connection breaks or becomes inactive, the trader can no longer execute orders. On this page you read what the most common causes are and how to solve them.
+
+<Tip>
+  Always first check the status of your API key **in the dashboard of the exchange itself** before contacting BBT support. In many cases the key is disabled on the exchange side and can easily be restored yourself.
+</Tip>
+
+## Causes of an inactive API
+
+<Accordion title="Message 'Error in API key' or API is inactive">
+  After the user has activated the API key, there are a number of possible causes why the API becomes inactive again:
+
+  1. **You disabled the key yourself** in the dashboard of the exchange.
+  2. **The exchange invalidated the key or a function within it** for its own reasons. Binance, for example, invalidates the "Enable spot & margin trading" setting every 30 days for users who do not have an IP address on the IP whitelist.
+  3. **There is an error in the connection** between BBT and the exchange.
+
+  In all three cases the BBT system deactivates the API connection. There is now no connection with the exchange until the API key has been restored.
+
+  You receive an email from BBT with the reason for the block and an overview of which traders are no longer active.
+</Accordion>
+
+<Accordion title="How do I restore an inactive API key?">
+  <Steps>
+    <Step title="Log in to the exchange">
+      Go to the dashboard of the exchange in question and log in with your account details.
+    </Step>
+    <Step title="Check and restore the API settings">
+      Go to the API settings of the exchange and reactivate the key. Check that all required permissions are correctly set (see below per exchange).
+    </Step>
+    <Step title="Save in BBT">
+      In BitBrokerTrade, go to **Settings → Exchanges** and click on the inactive exchange. In the new screen that opens, enter the new API keys and click on **Save**.
+    </Step>
+    <Step title="Wait for the connection test">
+      BBT now automatically tests the connection. If the API settings are correct, the connection is back to **Active**.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="API key given too many permissions (withdrawals allowed)">
+  BBT only needs permissions for **reading** and **trading (spot trading)**. Permissions for withdrawals are not needed and form a security risk.
+
+  If you have accidentally enabled withdrawals on the API key, remove the key at the exchange and create a new one with only the required permissions. Then enter the new key through **Settings → Exchanges** in BBT.
+</Accordion>
+
+<Accordion title="Confirmation email from the exchange not clicked">
+  At some exchanges (including Bitvavo, Bitstamp and Binance without 2FA via Google Authenticator) the exchange sends a **confirmation email** after you create a new API key. You must first click the link in that email to activate the key.
+
+  If you entered the API key in BBT before opening the confirmation email, BBT will see the connection as inactive. Check your inbox and click the confirmation link. Then repeat steps 3 and 4 of the restore process above.
+</Accordion>
+
+<Accordion title="2FA not set up while the exchange requires it">
+  Some exchanges require you to have two-factor authentication (2FA) set up before you can activate an API key. If 2FA is missing, the key will remain inactive or cannot be created.
+
+  Set up 2FA through the security settings of your exchange account (e.g. through Google Authenticator). Then you can create or reactivate the API key.
+</Accordion>
+
+## Exchange-specific guides
+
+Follow the connection guide of your own exchange for the exact steps:
+
+<CardGroup cols={2}>
+  <Card title="Binance" icon="link" href="/en/exchanges/binance">
+    API settings for Binance, including IP whitelist and spot trading permissions.
+  </Card>
+
+  <Card title="Bitvavo" icon="link" href="/en/exchanges/bitvavo">
+    Create and connect an API key at Bitvavo.
+  </Card>
+
+  <Card title="Bitstamp" icon="link" href="/en/exchanges/bitstamp">
+    API configuration for Bitstamp.
+  </Card>
+
+  <Card title="Coinbase" icon="link" href="/en/exchanges/coinbase">
+    Set up an API key at Coinbase.
+  </Card>
+
+  <Card title="KuCoin" icon="link" href="/en/exchanges/kucoin">
+    API connection for KuCoin.
+  </Card>
+
+  <Card title="Bybit" icon="link" href="/en/exchanges/bybit">
+    Create and connect an API key at Bybit.
+  </Card>
+</CardGroup>

@@ -1,0 +1,81 @@
+---
+title: "What is a BitBrokerTrade trader and how does it work?"
+sidebarTitle: "The Trader"
+description: "A trader is a software program that automatically buys and sells crypto based on the MACD indicator. Learn how it works and makes decisions."
+---
+
+A trader is a software program that administers and manages your account at an exchange. Based on parameters you set, the trader automatically determines the ideal buy and sell moments for cryptocurrencies, without you having to continuously monitor the price yourself.
+
+## The theory behind the trader
+
+The trader operates according to the so-called **MACD method**: Moving Average Convergence Divergence. This is a momentum indicator that calculates the direction and strength of a price trend using multiple moving averages.
+
+The MACD indicator consists of two lines:
+
+<CardGroup cols={2}>
+  <Card title="MACD line" icon="chart-line">
+    Calculated by subtracting the moving average of the **past 26 days** from the average of the **past 12 days**. This line indicates the direction of the trend: rising = positive trend, falling = negative trend.
+  </Card>
+
+  <Card title="Signal line" icon="wave-sine">
+    The exponentially measured average of the **past 9 days**. Together with the MACD line, this forms the complete MACD indicator.
+  </Card>
+</CardGroup>
+
+### Buy and sell signals
+
+Not only the direction of the lines gives a signal, but also the moment when the lines cross each other:
+
+- **Buy signal**: the MACD line (blue line) crosses the signal line (red line) **upward** → upward price trend begins.
+- **Sell signal**: the MACD line crosses the signal line **downward** → price trend switches from rising to falling.
+- **Trend strength**: the greater the distance between the two lines, the stronger the prevailing trend.
+
+<Tip>
+  The MACD is a trend-following system. It works best in a volatile market where clear upward and downward movements alternate, exactly the environment in which Bitcoin and many other cryptocurrencies score well.
+</Tip>
+
+## How the trader works in practice
+
+Once you have an account at a supported exchange and have deposited a balance, you connect the trader to the exchange through an **API connection**.
+
+### What is an API connection?
+
+Imagine a lamp and a power strip: if the plug fits, the lamp turns on and both objects exchange electricity. In exactly the same way, an API (Application Programming Interface) works: it exchanges data between two software systems. Through the API connection, the trader can communicate with your exchange account and place orders.
+
+<Note>
+  The trader can **never** transfer currency to third parties. The trader only manages the composition of your exchange account (for example the ratio Bitcoin/Euro). You always withdraw money to your own bank account or crypto wallet yourself, directly on the exchange.
+</Note>
+
+### From signal to transaction
+
+<Steps>
+  <Step title="Trader collects trading data">
+    Once the connection and activation are ready, the trader starts continuously collecting price data and calculating the MACD indicator.
+  </Step>
+  <Step title="Buy signal → buy order">
+    On a positive price trend, the trader places a buy order sized at **18% of your available euro balance** on the exchange, with a minimum of **€ 25**. Example: with a balance of € 1,000, the first position is € 180.
+  </Step>
+  <Step title="Monitor the position">
+    The trader remembers every transaction and continuously compares the current price with the purchase price. The current return is visible in the **Buy transactions** screen.
+  </Step>
+  <Step title="Sell signal → sell order">
+    As soon as the trader signals a negative price trend and the return on a position is higher than the minimum percentage you set, it sends a sell order to the exchange. The profit is secured in euros and the commission for BitBrokerTrade is deducted from your credits balance.
+  </Step>
+  <Step title="Result visible">
+    The sold position appears in **Sell transactions** with the return achieved. The total overview can be found on the **Dashboard**.
+  </Step>
+</Steps>
+
+## The strength of the trader
+
+The trader performs best in a **volatile market**. Bitcoin and many altcoins regularly show strong price movements up and down, exactly the situations in which the MACD method proves its value. In a stable, sideways market with little movement, the trader generates fewer transactions.
+
+<CardGroup cols={2}>
+  <Card title="Want to know more about settings?" icon="sliders" href="/en/traders/trader-settings">
+    Learn how to add a trader and set all parameters optimally.
+  </Card>
+
+  <Card title="Which strategy suits you?" icon="map" href="/en/traders/trading-strategy">
+    Compare the BitBrokerTrade MACD strategy with the Updown strategy.
+  </Card>
+</CardGroup>

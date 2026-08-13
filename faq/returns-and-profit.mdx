@@ -1,0 +1,69 @@
+---
+title: "Returns and profit: gross, net and commission at BBT"
+sidebarTitle: "Returns & Profit"
+description: "Understand how gross and net profit are calculated, which return percentage is optimal and how the 20% platform commission is settled."
+---
+
+Understanding how BBT calculates profit is essential to configure your trader properly and estimate the actual return of your trades. On this page you find everything about the difference between gross and net profit, the optimal return percentage and how the platform commission is settled.
+
+<Accordion title="How is profit calculated?">
+  Profit determination works as follows:
+
+  Suppose: you have set that the trader may sell at **1.5% profit** and that the average buy amount is **€ 100** per transaction. The trader sees a buy moment and places an order of € 100. The exchange, however, charges 0.25% transaction fees and deducts these from your free balance. In the transaction screen you see that you have bought for € 100 (while the actual cost is € 100.25).
+
+  **When does the trader see 1.5% profit?** As soon as the value of the transaction is **€ 101.50** (100 × 1.015).
+
+  The profit made here is **gross profit**, because the total transaction fees (average 0.5%) still need to come off it. Your return percentage must therefore be **higher than 0.5%** to actually make a net profit.
+</Accordion>
+
+<Accordion title="The dashboard shows gross profit — how do I calculate net profit?">
+  The dashboard shows the gross profit. Use the following formula to calculate your net profit:
+
+  ```text
+  Gross profit (= profit in dashboard)
+  − Total transaction fees
+       ((invested capital in dashboard − sum of open trades) × 0.5%)
+  − Commission BBT (gross profit × 20%)
+  = Net profit
+  ```
+
+  **Example:**
+
+  - Gross profit: € 200
+  - Transaction fees (on € 5,000 invested, € 500 open): € 4,500 × 0.5% = € 22.50
+  - BBT commission: € 200 × 20% = € 40
+  - **Net profit: € 200 − € 22.50 − € 40 = € 137.50**
+</Accordion>
+
+<Accordion title="Which return percentage should I enter?">
+  The trader uses this percentage to judge when it may sell a transaction. The percentage must be high enough to make a profit but also realistic enough to sell regularly.
+
+  A few guidelines:
+
+  - **5%**: the trader does relatively few transactions. Price fluctuations of 5% are less frequent.
+  - **2%**: more transaction volume and possibly better total return.
+  - **Below 0.5%**: transaction fees exceed the profit, you make a loss.
+
+  <Tip>
+    Our calculations on historical data (24 months and longer) indicate that between **0.7% and 0.9%** the maximum net return is achieved, taking into account average transaction fees of 0.25% buy and 0.25% sell at most exchanges.
+  </Tip>
+</Accordion>
+
+<Accordion title="How much influence does the return percentage have on the eventual profit?">
+  A higher or lower return percentage mainly influences the **number of transactions** made, and therefore the total transaction fees.
+
+  - **Low percentage**: transactions are sold sooner and new positions are also taken sooner. More transactions = higher total transaction fees.
+  - **High percentage**: fewer transactions, but each individual transaction yields more gross profit.
+
+  Net-net, we see that at a return percentage of **0.7% to 0.9%** the highest net profit is achieved.
+</Accordion>
+
+<Accordion title="My dashboard suddenly shows a lower profit — what's going on?">
+  The dashboard shows **only the results of active traders**. If you make a trader inactive or delete it, the profit balance in the dashboard is adjusted negatively, because the contribution of that trader is removed.
+
+  The sell transactions themselves are always shown in full in the Sell transactions screen. You cannot delete them and they stay in the history.
+
+  <Note>
+    Only delete a trader if you no longer need it. When deactivating, the history is preserved and you can reactivate the trader later.
+  </Note>
+</Accordion>

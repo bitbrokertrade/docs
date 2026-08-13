@@ -1,0 +1,92 @@
+---
+title: "BitBrokerTrade vs. Updown: choose the right strategy"
+sidebarTitle: "Trading strategy"
+description: "Compare the BitBrokerTrade MACD strategy (15-min candles) with the Updown strategy (1-min candles) and choose the best approach for your goal."
+---
+
+When creating a trader, you choose which trading strategy it should follow. BitBrokerTrade offers two strategies: the **BitBrokerTrade strategy** (based on the MACD indicator) and the **Updown strategy** (based on minute-by-minute prices). Both strategies work fundamentally differently, the right choice depends on your trading preference and the market conditions.
+
+## The BitBrokerTrade strategy
+
+The BitBrokerTrade strategy is based on the **MACD indicator** (Moving Average Convergence Divergence) and works with **15-minute candles**. The strategy follows the broader price trend and only trades at key moments.
+
+<CardGroup cols={2}>
+  <Card title="Buy" icon="cart-plus">
+    The trader buys **only** at the moment a rising price trend begins, that is, when the blue MACD line crosses the red signal line upward.
+  </Card>
+
+  <Card title="Sell" icon="circle-dollar-to-slot">
+    The trader sells **only** at the moment the price trend switches from rising to falling, that is, when the blue line crosses the red line downward.
+  </Card>
+</CardGroup>
+
+Because the strategy works with 15-minute candles, **a maximum of one buy or sell moment per 15 minutes** can be generated. This ensures a quieter trading profile with fewer transactions but more weight per signal.
+
+<Tip>
+  The BitBrokerTrade strategy is especially suitable if you prefer a stable, trend-following system with fewer transactions and a longer time horizon per position.
+</Tip>
+
+---
+
+## The Updown strategy
+
+The Updown strategy does **not** follow a MACD trend calculation, but simply checks whether the current minute's price is higher or lower than the previous minute's. The strategy works with **1-minute candles**.
+
+<CardGroup cols={2}>
+  <Card title="Buy" icon="cart-plus">
+    Every minute the average price is determined. Is it **higher than the previous minute**? Then the Updown strategy generates a buy signal. The first purchase takes place immediately after activation of the trader, provided the price is rising at that moment.
+  </Card>
+
+  <Card title="Sell" icon="circle-dollar-to-slot">
+    Is the average price of the last candle **fundamentally lower** than the previous candle? Then the strategy generates a sell signal. As long as the price is still rising, the Updown does not sell, it waits for a real downward movement.
+  </Card>
+</CardGroup>
+
+The buy amount is **18% of your free euro balance** (or the fixed amount you set), with a **minimum of € 50** per transaction. **A maximum of one buy or sell moment per minute** can be generated.
+
+<Tip>
+  The Updown strategy is especially suitable if you want to benefit from higher activity and more transactions in a volatile market.
+</Tip>
+
+---
+
+## Comparison
+
+| Feature | BitBrokerTrade strategy | Updown strategy |
+| --- | --- | --- |
+| **Method** | MACD trend calculation | Minute-by-minute price |
+| **Candle interval** | 15 minutes | 1 minute |
+| **Max. signals** | 1 per 15 minutes | 1 per minute |
+| **First purchase** | On first buy cross after activation | Immediately after activation (if price is rising) |
+| **Minimum buy amount** | € 25 | € 50 |
+| **Transaction volume** | Lower | Higher |
+| **Market condition** | Trend markets, quieter | Volatile markets, active |
+| **MACD used** | Yes | No |
+
+---
+
+## Common behavior
+
+Regardless of which strategy you choose, the following always applies: a buy or sell signal is **only acted upon if all your individual trader settings are met**. The strategy determines the signal moment, but the settings determine whether the signal actually leads to an order.
+
+<Accordion title="Which settings does the trader check on each signal?">
+  On each signal, the trader checks the following settings:
+
+  - **Minimum profit percentage**: is the current return high enough to allow selling?
+  - **Maximum open buys**: has the maximum number of open positions not yet been reached?
+  - **Price ceiling (stop buying above)**: is the current price below the set ceiling?
+  - **Minimum percentage between transactions**: is the price difference from the previous purchase sufficient?
+  - **Average buy amount**: is there enough euro balance available for a new position?
+
+  Only if all relevant conditions are met does the trader send an order to the exchange.
+</Accordion>
+
+<CardGroup cols={2}>
+  <Card title="Set up a trader" icon="sliders" href="/en/traders/trader-settings">
+    Add a trader and configure all settings step by step.
+  </Card>
+
+  <Card title="How does the trader work?" icon="robot" href="/en/traders/what-is-a-trader">
+    Read more about the MACD method and the trader's decision process.
+  </Card>
+</CardGroup>

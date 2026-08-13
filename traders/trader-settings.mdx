@@ -1,0 +1,142 @@
+---
+title: "Add and configure a trader in BitBrokerTrade"
+sidebarTitle: "Trader settings"
+description: "Add a new trader through Settings → Traders and configure name, exchange, coin, strategy and all trading parameters for optimal results."
+---
+
+Through the settings menu you easily add a new trader and configure each parameter to your wishes. A well-configured trader is the basis for consistent results, so take the time to read through each setting before activating it.
+
+## Add a trader
+
+Navigate in the menu to **Settings → Traders** and click on **Add trader**. A form opens with all the settings below.
+
+---
+
+## Basic settings
+
+<Accordion title="Name">
+  Give your trader a recognizable, descriptive name. The dashboard uses this name in all your overviews.
+
+  **Recommendation:** use a combination of exchange and coin, for example **"Bitvavo BTC"** or **"Binance ETH"**. That way you can see at a glance which exchange and which coin the trader manages.
+</Accordion>
+
+<Accordion title="Exchange">
+  Choose the exchange you want to connect this trader to. Make sure you have already created an active API connection for that exchange. See the exchange pages for instructions:
+
+  - [Bitvavo](/en/exchanges/bitvavo)
+  - [Binance](/en/exchanges/binance)
+  - [Bybit](/en/exchanges/bybit)
+  - [Bitstamp](/en/exchanges/bitstamp)
+  - [Coinbase](/en/exchanges/coinbase)
+  - [KuCoin](/en/exchanges/kucoin)
+  - [Simulator](/en/exchanges/simulator)
+</Accordion>
+
+<Accordion title="Market">
+  Choose the cryptocurrency the trader must trade with, for example **BTC/EUR** or **ETH/EUR**. The available offering depends on the chosen exchange. View all supported pairs on the [Supported coins](/en/traders/supported-coins) page.
+</Accordion>
+
+<Accordion title="Trading strategy">
+  Choose which strategy the trader follows. There are two options:
+
+  | Strategy | Candles | Method |
+  | --- | --- | --- |
+  | **BitBrokerTrade** | 15 minutes | MACD trend calculation |
+  | **Updown** | 1 minute | Direct price comparison |
+
+  Read the detailed comparison on the [Trading strategy](/en/traders/trading-strategy) page to make the best choice for your situation.
+</Accordion>
+
+---
+
+## Buy settings
+
+<Accordion title="Minimum percentage between transactions (default: 6%)">
+  This setting determines how much price difference there must be between successive purchases. This prevents the trader from taking too many positions in quick succession in a falling market.
+
+  **Why 6%?** Simulations show that a higher threshold prevents you from unnecessarily building up many positions in a falling market. In a sideways or rising market, this high percentage has no negative effect.
+</Accordion>
+
+<Accordion title="Stop buying above (price ceiling)">
+  Enter a price in euros above which the trader no longer makes new purchases. Leave this field empty if you don't want to set a ceiling.
+
+  **How do you set a good ceiling?**
+
+  1. Look at the current price and the historical price development of the coin.
+  2. If you expect that the price above a certain level is only a one-off peak, set a price ceiling at **3% below that level**.
+  3. If your minimum profit percentage is lower than 3%, the trader still sells its last position at such a peak price, so you achieve maximum return at the top moment.
+</Accordion>
+
+<Accordion title="Average buy amount">
+  By default, the trader buys **18% of your available euro balance** as a position. With € 1,000 available balance, that is € 180 per purchase.
+
+  Prefer to set a fixed amount? Enter the desired buy amount here, for example **€ 200**. The trader then always buys positions of exactly that amount, regardless of your total balance.
+
+  <Note>
+    The minimum transaction amount is **€ 25**. Amounts below that are not executed.
+  </Note>
+</Accordion>
+
+<Accordion title="Maximum open buys">
+  Set here how many positions may be open at the same time for this trader. Combine this with the average buy amount for an accurate limit on your total investment per coin.
+
+  **Special function — selling the trader empty:** Enter **0** in this setting? Then the trader no longer makes new purchases but does sell existing positions as soon as the sell signal and the minimum profit percentage allow it. Use this if you want to wind down a coin quietly without opening new positions.
+</Accordion>
+
+---
+
+## Sell settings
+
+<Accordion title="Minimum profit percentage">
+  The trader only sells a position if the return at that moment is **higher than this percentage**. This is the most important setting for your profitability.
+
+  **Guideline:**
+
+  - Almost all exchanges charge **0.25% buy fees \+ 0.25% sell fees = 0.5% total**.
+  - So set your minimum profit percentage to at least **0.5%** to break even.
+  - A recommended setting is between **0.7% and 0.9%** for a good balance between transaction volume and net profit.
+  - At a higher percentage (e.g. 5%) the trader makes fewer transactions but earns more per transaction.
+  - At a lower percentage (e.g. 1%) you benefit from more transactions and possibly a better total return.
+</Accordion>
+
+<Accordion title="Profit strategy">
+  Choose how the trader handles the proceeds after a sale:
+
+  <CardGroup cols={2}>
+    <Card title="Reinvest" icon="arrows-rotate">
+      The full sell amount (buy amount \+ profit) flows back to your euro balance and is immediately reused for new positions. Choose this if you want your capital to keep working maximally.
+    </Card>
+
+    <Card title="HODL" icon="vault">
+      Only the original buy amount is converted back to euros. The profit stays in the cryptocurrency. Choose this if you want to gradually build up a crypto stash.
+    </Card>
+  </CardGroup>
+</Accordion>
+
+<Accordion title="Stop loss percentage">
+  The stop loss is an emergency brake: as soon as the loss on a position reaches this percentage, the trader automatically sells the position to prevent further loss.
+
+  <Warning>
+    BitBrokerTrade offers this function because users ask for it, but **we strongly advise against using it**. In all tests on historical data (up to 12 months back), the stop loss function leads to **significantly lower profitability**, and in many cases even to a loss on the total investment. Leave this field empty if in doubt.
+  </Warning>
+</Accordion>
+
+---
+
+## Activate the trader
+
+Have you filled in all the settings to your liking? Then tick the **activate checkbox** at the bottom of the form and save.
+
+<Note>
+  Congratulations, your trader is now active! It immediately starts collecting price data and generates its first signals as soon as market conditions allow. Keep an eye on your **Buy transactions** for the first orders.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="How does the trader work?" icon="robot" href="/en/traders/what-is-a-trader">
+    Learn more about the MACD method and how the trader makes decisions.
+  </Card>
+
+  <Card title="Choose a strategy" icon="map" href="/en/traders/trading-strategy">
+    Compare BitBrokerTrade and Updown strategies side by side.
+  </Card>
+</CardGroup>

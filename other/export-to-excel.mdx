@@ -1,0 +1,92 @@
+---
+title: "Export sell data to Excel from BitBrokerTrade"
+sidebarTitle: "Export to Excel"
+description: "Export your sell transactions and credits history to Excel in two ways: the classic text wizard or the modern CSV import function."
+---
+
+From BitBrokerTrade you can export your sell transactions and credits history as a CSV file. Because Excel does not always automatically read CSV files correctly, especially when decimal separators and delimiters collide, two methods are available depending on your Excel version.
+
+## Method 1: Classic Excel (older versions)
+
+Use this method if you have an older version of Excel where the text wizard is still available through "Legacy Wizards".
+
+<Steps>
+  <Step title="Export the file and save it">
+    Download the export file from BBT and save it to your computer **without opening it**.
+  </Step>
+  <Step title="Start Excel">
+    Open Microsoft Excel.
+  </Step>
+  <Step title="Open a new worksheet">
+    Create a new, empty worksheet.
+  </Step>
+  <Step title="Choose the text import wizard">
+    Go to the **Data** tab → **Get Data** → **Legacy Wizards** → choose **From Text (Legacy)**.
+  </Step>
+  <Step title="Select your file">
+    Browse to the saved export file and click on **Import**.
+  </Step>
+  <Step title="Choose the delimiter type">
+    Select **Delimited** and click on **Next**.
+  </Step>
+  <Step title="Set the delimiter">
+    Check **Comma** as delimiter and click on **Next**.
+  </Step>
+  <Step title="Select the number columns">
+    Select all columns containing numbers and click on **Advanced**.
+  </Step>
+  <Step title="Adjust decimal and thousands separator">
+    Change the **decimal separator** to a **dot (.)** and the **thousands separator** to a **comma (,)**. Click on **OK**.
+  </Step>
+  <Step title="Complete the import">
+    Click on **Finish** and then on **OK** to place the data in the worksheet.
+  </Step>
+  <Step title="Set the number format">
+    Select all columns with euro amounts and choose the **Number** format (the "000" icon in the ribbon) for correct display.
+  </Step>
+  <Step title="Done">
+    Your worksheet is now ready for use.
+  </Step>
+</Steps>
+
+---
+
+## Method 2: Newer Excel version
+
+Use this method if you have a recent version of Excel with the built-in Power Query CSV import function.
+
+<Steps>
+  <Step title="Open Excel">
+    Start Microsoft Excel.
+  </Step>
+  <Step title="Navigate to Get Data">
+    Go to **Data** → **Get Data** → **From File** → **From CSV**.
+  </Step>
+  <Step title="Select the export file">
+    Browse to the saved CSV export file and select it.
+  </Step>
+  <Step title="Choose 'Transform Data'">
+    In the preview window that appears, click on **Transform Data** (not load directly).
+  </Step>
+  <Step title="Change the column type to Text">
+    In the Power Query Editor, select **all columns with a number format**. Right-click and choose **Change Type** → **Text**.
+  </Step>
+  <Step title="Confirm the replacement">
+    A pop-up appears. Choose **Replace current**.
+  </Step>
+  <Step title="Close and load">
+    Click on **Close & Load** in the top left. Your worksheet now opens with the imported data.
+  </Step>
+  <Step title="Replace dots with commas">
+    Select all columns with numbers. Press **Ctrl \+ H** (find and replace). Fill in a dot (`.`) at **Find what** and a comma (`,`) at **Replace with**. Click on **Replace All**.
+  </Step>
+  <Step title="Done">
+    Your worksheet is now completely ready for use.
+  </Step>
+</Steps>
+
+---
+
+<Tip>
+  **Which method should you choose?** Go to **Data** in Excel. Do you see the **Legacy Wizards** option? Then use Method 1. Do you only see **From File** → **From CSV**? Then use Method 2. When in doubt, Method 2 works with all modern Excel versions (Office 2016 and newer).
+</Tip>

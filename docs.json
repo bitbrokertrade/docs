@@ -8,9 +8,9 @@
   },
   "favicon": "https://media.brand.dev/d1042968-fb50-48ea-a787-1d8cc0a54442.png",
   "colors": {
-    "primary": "#F27100",
-    "light": "#008A78",
-    "dark": "#008A78"
+    "primary": "#fc951d",
+    "light": "#363c43",
+    "dark": "#c9cbcd"
   },
   "font": {
     "headings": {
@@ -35,50 +35,50 @@
           {
             "group": "Introductie",
             "pages": [
-              "introductie/wat-is-bitbrokertrade",
-              "introductie/hoe-werkt-het",
-              "introductie/kosten-en-credits"
+              "nl/introduction/what-is-bitbrokertrade",
+              "nl/introduction/how-it-works",
+              "nl/introduction/pricing-and-credits"
             ]
           },
           {
             "group": "Aan de slag",
             "pages": [
-              "aan-de-slag/aanmelden",
-              "aan-de-slag/eerste-inlog-en-menu",
-              "aan-de-slag/dashboard",
-              "aan-de-slag/aankooptransacties",
-              "aan-de-slag/verkooptransacties",
-              "aan-de-slag/instellingen"
+              "nl/getting-started/sign-up",
+              "nl/getting-started/first-login-and-menu",
+              "nl/getting-started/dashboard",
+              "nl/getting-started/buy-transactions",
+              "nl/getting-started/sell-transactions",
+              "nl/getting-started/settings"
             ]
           },
           {
             "group": "Exchanges koppelen",
             "pages": [
-              "exchanges/wat-is-een-exchange",
-              "exchanges/bitvavo",
-              "exchanges/binance",
-              "exchanges/bybit",
-              "exchanges/bitstamp",
-              "exchanges/coinbase",
-              "exchanges/kucoin",
-              "exchanges/simulator"
+              "nl/exchanges/what-is-an-exchange",
+              "nl/exchanges/bitvavo",
+              "nl/exchanges/binance",
+              "nl/exchanges/bybit",
+              "nl/exchanges/bitstamp",
+              "nl/exchanges/coinbase",
+              "nl/exchanges/kucoin",
+              "nl/exchanges/simulator"
             ]
           },
           {
             "group": "Traders instellen",
             "pages": [
-              "traders/wat-is-een-trader",
-              "traders/trader-instellingen",
-              "traders/handelsstrategie",
-              "traders/ondersteunde-coins"
+              "nl/traders/what-is-a-trader",
+              "nl/traders/trader-settings",
+              "nl/traders/trading-strategy",
+              "nl/traders/supported-coins"
             ]
           },
           {
             "group": "Overig",
             "pages": [
-              "overig/exporteren-naar-excel",
-              "overig/referral-programma",
-              "overig/cryptowoordenboek"
+              "nl/other/export-to-excel",
+              "nl/other/referral-program",
+              "nl/other/crypto-glossary"
             ]
           }
         ]
@@ -89,19 +89,19 @@
           {
             "group": "Veelgestelde vragen",
             "pages": [
-              "faq/algemeen",
-              "faq/inleg-en-saldo",
-              "faq/rendement-en-winst",
-              "faq/trader-instellingen-uitleg"
+              "nl/faq/general",
+              "nl/faq/deposits-and-balance",
+              "nl/faq/returns-and-profit",
+              "nl/faq/trader-settings-explained"
             ]
           },
           {
             "group": "Foutmeldingen",
             "pages": [
-              "foutmeldingen/trader-doet-geen-aankopen",
-              "foutmeldingen/verkoop-problemen",
-              "foutmeldingen/api-sleutel-problemen",
-              "foutmeldingen/dashboard-en-saldo"
+              "nl/errors/trader-not-buying",
+              "nl/errors/sell-problems",
+              "nl/errors/api-key-problems",
+              "nl/errors/dashboard-and-balance"
             ]
           }
         ]

@@ -1,0 +1,55 @@
+---
+title: "Trader is not buying — all possible causes"
+sidebarTitle: "No purchases"
+description: "Discover why your trader is not buying new positions: insufficient balance, no credits, unconnected API or a reserved amount that is too large."
+---
+
+If your trader is not buying new positions, it always means that one or more of the required criteria are not met. Below you find all possible causes at a glance, so you can quickly find out what is happening in your situation.
+
+<Note>
+  With the **BBT strategy**, the trader only buys at the **start of an upward trend**, not during an already ongoing rise. So it is possible for the price to rise while the trader does nothing: that is intentional and correct behavior. The **Updown strategy** has different buy moments based on price ranges.
+</Note>
+
+## Possible causes
+
+<Accordion title="1. Buy moments of the BBT strategy">
+  The BBT strategy works according to a fixed format: the trader **only buys at the start of an upward trend**, provided that within the set bandwidth (trader setting **"Min. percentage between buys"**) no other comparable transaction is open **and** enough euro balance is available at the exchange.
+
+  **During a price rise, the BBT strategy does not make new purchases.** Wait for a new buy moment at the start of the next trend.
+</Accordion>
+
+<Accordion title="2. Insufficient euro balance at the exchange">
+  The trader needs at least **€ 25** of free euro balance on your exchange account to place a transaction.
+
+  Check your balance at the exchange. If your balance is lower than € 25, the trader cannot buy until you top up or an existing position is sold and the balance frees up.
+</Accordion>
+
+<Accordion title="3. No credits available in BBT">
+  BBT uses credits to cover the platform services. If your credits balance is depleted, the trader stops trading.
+
+  Go to **Settings → Credits** in your BBT account and add credits. As soon as the balance is topped up, the trader automatically resumes its work.
+</Accordion>
+
+<Accordion title="4. API not connected or incorrectly connected">
+  If the API key is not correctly connected or is inactive, the trader has no connection with the exchange and cannot place orders.
+
+  Check the status of your API connection through **Settings → Exchanges**. Is the exchange inactive? Then consult the [API key problems](/en/errors/api-key-problems) page for the solution.
+</Accordion>
+
+<Accordion title="5. Reserved amount set too large">
+  If you have entered a reserved amount in the exchange setting that is greater than or equal to your free euro balance, **no free balance** is available for new purchases.
+
+  Go to **Settings → Exchanges** and lower the reserved amount, or wait until enough balance frees up from a sale.
+</Accordion>
+
+<Accordion title="6. Price ceiling reached">
+  If the current price of the coin is **above the set price ceiling**, the trader does not make new purchases. This is a deliberate protection to prevent purchases at historically high prices.
+
+  Check the price ceiling setting in your trader. Adjust it if the situation justifies it.
+</Accordion>
+
+<Accordion title="7. Maximum number of open buys reached">
+  If the set maximum for simultaneously open buys has already been reached, the trader does not make new purchases, not even at a new buy moment.
+
+  Increase the maximum through the trader setting **"Maximum open buys"**, or wait until existing positions are sold.
+</Accordion>

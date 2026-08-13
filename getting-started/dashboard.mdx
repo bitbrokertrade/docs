@@ -1,0 +1,113 @@
+---
+title: "Understanding and using the BitBrokerTrade dashboard"
+sidebarTitle: "Dashboard"
+description: "The dashboard shows your gross profit, trading volume, credits balance and exchange balances in one overview. Read what each section means."
+---
+
+The dashboard is the first screen you see after logging in to BitBrokerTrade. It gives you insight at a glance into how your traders are performing: from the chart with monthly results to your outstanding credits balance and the balances at your connected exchanges. Take the time to get to know each section, this screen is the central point of your trading experience.
+
+## The chart
+
+The chart at the top of the dashboard shows the **gross transaction results per month**. This lets you see at a glance how your traders are doing this month. As a comparison, the results of the same month in the previous year are also shown, so you can identify trends over a longer period.
+
+<Note>
+  All amounts in the chart are **gross** profits. The 20% platform commission and the trading fees from the exchange have not yet been deducted. See [Sell transactions](/en/getting-started/sell-transactions) for the net calculation.
+</Note>
+
+## The summary blocks
+
+Below the chart are four summary blocks with the key figures of your account.
+
+<CardGroup cols={2}>
+  <Card title="Total trading volume" icon="chart-bar">
+    The cumulative total of all sold positions, the historical total of invested capital. Note: this figure only includes results from **active traders**. Deleted traders are not counted.
+  </Card>
+
+  <Card title="Profit" icon="sack-dollar">
+    The historical total of your **gross** profit. This amount includes the 20% platform commission. Here too, only active traders count.
+  </Card>
+
+  <Card title="Average profit per transaction" icon="percent">
+    The average gross return and the average gross profit percentage per sell order across all your active traders combined.
+  </Card>
+
+  <Card title="Balance / Credits" icon="coins">
+    The outstanding credits balance on your BitBrokerTrade account. 1 credit = € 1. You use this balance to pay the platform commission.
+  </Card>
+</CardGroup>
+
+## Credits balance and how it works
+
+BitBrokerTrade works on a commission basis: with every profitable sell transaction, **20% of the gross return** is withheld as a platform fee. This commission is automatically settled with your credits balance.
+
+You buy credits through the **"Buy credits"** button in the top right of the dashboard screen. One credit costs € 1.
+
+<Warning>
+  If your credits balance is insufficient to settle the commission, the trader does **not** execute the sell transaction. You then receive an email notifying you that the trader cannot trade for you. So always make sure there is enough balance.
+</Warning>
+
+### How many credits do you need?
+
+You can easily calculate how many credits you need based on your balance at the exchange and the expected return:
+
+```text
+Account balance × return% × 20% = credits needed
+```
+
+**Example:** with a balance of € 5,000 and an expected return of 14% per year:
+
+```text
+€ 5,000 × 14% × 20% = € 140 in credits per year
+```
+
+<Tip>
+  Prefer to buy slightly more credits than you think you need. This prevents the trader from missing a profitable sell opportunity because the balance has just run out.
+</Tip>
+
+## Exchange balances
+
+At the bottom of the dashboard you find the **Exchange balances** section. In the green horizontal bar are all the exchanges you have connected. Click on an exchange to expand the balance overview of that exchange.
+
+The overview shows five columns:
+
+<Accordion title="Coin">
+  The description of the coin in the wallet. For example, **EUR** for Euro or **BTC** for Bitcoin.
+</Accordion>
+
+<Accordion title="Available">
+  The balance that is directly available at the exchange, free to invest or withdraw.
+</Accordion>
+
+<Accordion title="Total">
+  The total balance of that coin in your exchange wallet, including the portion already in open positions.
+</Accordion>
+
+<Accordion title="In buy transactions">
+  The total amount that BitBrokerTrade currently has invested in open buy positions for that coin.
+</Accordion>
+
+<Accordion title="Difference (*)">
+  If the balance at the exchange is **lower** than the total of the open buy positions in BitBrokerTrade, an asterisk (\*) appears here.
+
+  This means you have manually sold positions on the exchange without doing that through BitBrokerTrade. The trader cannot reconcile those external sales with its own positions and loses alignment.
+
+  **Advice:** buy the difference on the exchange in question. This restores balance and the trader works accurately again.
+</Accordion>
+
+<Warning>
+  Always sell positions through BitBrokerTrade and not directly on the exchange. If you do so manually anyway, a difference (\*) arises and the trader can no longer accurately track which positions are open.
+</Warning>
+
+## Next step
+
+Now that you understand the dashboard, you can view and manage your open positions through the buy transactions screen.
+
+<CardGroup cols={2}>
+  <Card title="Buy transactions" icon="basket-shopping" href="/en/getting-started/buy-transactions">
+    View your open positions and use the pause or manual sell function.
+  </Card>
+
+  <Card title="Sell transactions" icon="receipt" href="/en/getting-started/sell-transactions">
+    See all closed positions and the realized profit per transaction.
+  </Card>
+</CardGroup>

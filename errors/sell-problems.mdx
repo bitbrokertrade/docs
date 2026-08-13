@@ -1,0 +1,65 @@
+---
+title: "Transaction is not being sold — causes and solutions"
+sidebarTitle: "Sell problems"
+description: "Solve sell problems: why a position is not sold despite reaching the return percentage, and how the Updown strategy sells."
+---
+
+It can happen that a position is not sold even though the return target seems to have been reached. This is almost always explained by the way the sell logic of the BBT and Updown strategies works. Below you find the most common causes and their solutions.
+
+<Note>
+  The trader only sells when **both** conditions are met simultaneously: (1) the return is above the minimum percentage **and** (2) there is a sell signal from the strategy. Reaching the return alone is not enough.
+</Note>
+
+## Sell problems by situation
+
+<Accordion title="Return reached but position still not sold (BBT strategy)">
+  With the **BBT strategy**, the trader only sells when the **rising trend breaks**. This sell signal never occurs at the highest point of the price, but only after the trend has flipped from rising to falling.
+
+  This means: if the return at some moment was above the set value but the trend at that moment was still rising, the trader does not sell. It waits for the trend break. After that, the price may already have fallen a bit and the return may be lower than the momentary peak.
+
+  This is normal and correct behavior of the BBT strategy.
+</Accordion>
+
+<Accordion title="Return reached but position still not sold (Updown strategy)">
+  With the **Updown strategy** the sell signal works as follows: the trader only sells when the **closing price of the last candle is fundamentally lower than that of the previous candle** (both in price and volume). Updown works with 1-minute candles.
+
+  If the price rises above the target price within a minute but **closes below the target price** at the end of that minute, the trader takes no action. The closing price of the candle is decisive, not the intracandle peak.
+
+  This explains why the price sometimes visibly exceeds the target percentage without a sale being made.
+</Accordion>
+
+<Accordion title="Updown: price rises above target percentage but trader does not sell">
+  With the Updown strategy the following applies: buy price \+ return percentage = target price. The **closing price of the candle** (set every minute) must close above the target price **and** the price must be falling.
+
+  If the price peaks above the target price within that minute but closes below the target price, the trader takes no action. Wait for a candle that fully closes above the target price with a falling signal afterwards.
+</Accordion>
+
+<Accordion title="BNB transaction gives error on sale">
+  This problem plays a role if you have set at **Binance** that transaction fees may be settled in **BNB** (which gives a discount). Binance then mutates your BNB balance negatively for the transaction fees.
+
+  If you don't buy extra BNB to cover these fees, the BNB balance drops. The trader then no longer has enough BNB balance to sell the position and gives an error.
+
+  **Solution:** log in to Binance and buy enough BNB to cover the transaction fees.
+</Accordion>
+
+<Accordion title="Extremely high trading fees on sell transactions (Binance)">
+  This problem occurs if you have indicated at Binance that transaction fees may be settled in BNB. However, Binance does not communicate to BBT that BNB was used for settlement. The BBT software receives a number of charged crypto coins as transaction fees and thinks this is the coin that was traded. If it concerns BNB, the software calculates with a wrong quantity, which leads to absurdly high or absurdly low transaction fees in the screen.
+
+  **Important:** the actually charged fees are correct. The amount in the trader is only a display error.
+</Accordion>
+
+<Accordion title="Transaction became too small due to partial sale (BBT strategy)">
+  After a partial sale, a remaining transaction may be left that is **smaller than the minimum order value at the exchange**. The exchange does not accept orders below a certain minimum size, so this transaction can no longer be sold.
+
+  **Solution:** set the relevant transaction line to **Hold** (button "II" in the buy screen). The trader then ignores the position and the history is preserved.
+</Accordion>
+
+<Accordion title="Position with a red cross in buy transactions: what does this mean?">
+  A red cross next to a transaction line has two possible causes:
+
+  **Cause 1 — Sell order not fully executed:** The trader placed a sell order, but the price dropped so quickly that the exchange could not fully settle the order. The exchange may sell an order in pieces. The remaining order stays open until the price reaches the sell level again.
+
+  Don't want to wait? Click on the **red cross** to settle the remaining order. The order is then split into two parts: the already sold part (appears in sell transactions) and the unsold part (stays in buy transactions). Both orders have the same order number.
+
+  **Cause 2 — Buy order not fully filled:** The trader placed a buy order, but due to the rapid rise of the price, the exchange could not fully fill the order. The trader waits for settlement. Press the **red cross** to instruct the trader to settle the order. The purchased part stays in buy transactions; the not-purchased part appears as a zero transaction in the sell screen.
+</Accordion>

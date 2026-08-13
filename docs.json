@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "BitBrokerTrade",
-  "theme": "almond",
+  "theme": "aspen",
   "logo": {
     "light": "https://media.brand.dev/3363195f-06d4-4153-a5f2-19ac14268d45.svg",
     "dark": "https://media.brand.dev/3363195f-06d4-4153-a5f2-19ac14268d45.svg"
@@ -107,5 +107,8 @@
         ]
       }
     ]
+  },
+  "icons": {
+    "library": "fontawesome"
   }
 }

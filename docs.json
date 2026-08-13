@@ -9,8 +9,8 @@
   "favicon": "https://media.brand.dev/d1042968-fb50-48ea-a787-1d8cc0a54442.png",
   "colors": {
     "primary": "#F27100",
-    "light": "#F27100",
-    "dark": "#F27100"
+    "light": "#008A78",
+    "dark": "#008A78"
   },
   "font": {
     "headings": {

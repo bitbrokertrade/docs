@@ -1,0 +1,56 @@
+---
+title: "Connect Coinbase Advanced Trade to BitBrokerTrade"
+sidebarTitle: "Coinbase"
+description: "Generate an API key in Coinbase Advanced Trade and connect your Coinbase account to BitBrokerTrade. Follow this guide step by step."
+---
+
+BitBrokerTrade works with the **Coinbase Advanced Trade** API. This is Coinbase's professional trading environment. Create a key through the Advanced API menu and then add it to BitBrokerTrade. Follow the steps below.
+
+## Part 1: Create an API key in Coinbase
+
+<Steps>
+  <Step title="Open Advanced API">
+    Log in to [coinbase.com](https://coinbase.com) and click **"More"** in the left menu bar. On the same screen, choose the **"Advanced API"** option.
+  </Step>
+  <Step title="Start the new key flow">
+    Click **"Create your API key"** and then **"Create API key"** on the next screen.
+  </Step>
+  <Step title="Configure the key in the pop-up">
+    In the pop-up window, set the following:
+
+    - **Name**: give the key a recognizable name
+    - **Portfolio**: choose `default`
+    - **Permissions**: check **View** and **Trade**
+    - **IP Whitelist**: leave the field empty, the pre-filled address is a placeholder IP and does not need to be removed
+
+    Click **"Create and download"**.
+  </Step>
+  <Step title="Save the keys">
+    A pop-up appears with your two keys: the **API Key** and the **API Secret Key**. Copy both to your notepad. You do not need to do anything with the downloaded `.json` file.
+  </Step>
+  <Step title="Confirm">
+    Click **"I have saved my key"** to close the pop-up.
+  </Step>
+</Steps>
+
+## Part 2: Add the exchange in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigate to Exchanges">
+    Log in to BitBrokerTrade. In the left column, click **Settings**, then **Exchanges**, and then **Add exchange**.
+  </Step>
+  <Step title="Select Coinbase Advanced">
+    Click the **Coinbase Advanced** logo to select this exchange.
+  </Step>
+  <Step title="Fill in the details and add">
+    Enter the copied **API Key** and **API Secret Key** in the matching fields. Click **Add**. The connection to Coinbase Advanced is now active.
+  </Step>
+</Steps>
+
+<Note>
+  Coinbase does not require a confirmation email. The connection is active immediately after clicking **Add**, as long as the keys are entered correctly.
+</Note>
+
+## Part 3: Connect a trader
+
+Now that the exchange has been added, connect a trader to your Coinbase account. Follow the full guide on [Trader settings](/traders/trader-settings).

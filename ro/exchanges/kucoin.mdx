@@ -1,0 +1,65 @@
+---
+title: "Conectează KuCoin la BitBrokerTrade printr-o cheie API"
+sidebarTitle: "KuCoin"
+description: "Creează un cont KuCoin, finalizează KYC și generează o cheie API cu permisiuni de tranzacționare spot pentru a conecta BitBrokerTrade la contul tău KuCoin."
+---
+
+KuCoin este un exchange internațional cu o gamă largă de criptomonede. Pentru a conecta BitBrokerTrade la KuCoin, ai nevoie de un cont KuCoin verificat și o cheie API cu permisiuni de tranzacționare spot. Urmează cele trei părți de mai jos.
+
+<Note>
+  La crearea unei chei API, KuCoin cere și o **parolă API** pe care o alegi tu însuți. Vei avea nevoie de această parolă mai târziu la adăugarea exchange-ului în BitBrokerTrade, deci salvează-o cu grijă alături de cheile API. Acest lucru este diferit față de alte exchange-uri.
+</Note>
+
+## Partea 1: Creează un cont KuCoin
+
+Ai deja un cont KuCoin verificat? Sari peste această parte și mergi direct la [Partea 2](#partea-2-creează-o-cheie-api-în-kucoin).
+
+**De ce ai nevoie:** o adresă de e-mail validă, un pașaport sau carte de identitate, un telefon mobil, un număr de telefon și aplicația Google Authenticator.
+
+<Steps>
+  <Step title="Înregistrează un cont">
+    Mergi la [www.kucoin.com](https://www.kucoin.com) și creează un cont.
+  </Step>
+  <Step title="Finalizează KYC">
+    Parcurge procesul **KYC** (Know Your Client) pentru a-ți verifica identitatea. Ai nevoie de pașaport sau carte de identitate, numărul de telefon și aplicația Google Authenticator.
+  </Step>
+  <Step title="Depune un sold în euro">
+    Depune euro în spot wallet-ul tău la KuCoin. BitBrokerTrade tranzacționează din soldul tău disponibil în euro.
+  </Step>
+</Steps>
+
+## Partea 2: Creează o cheie API în KuCoin
+
+<Steps>
+  <Step title="Deschide setările API">
+    Apasă pe **pictograma personală** din dreapta sus și alege **"API"** din meniul derulant. Apoi apasă pe **"Creează API"**.
+  </Step>
+  <Step title="Setează un nume și o parolă">
+    Dă cheii API un nume și alege o **parolă API**. Ține minte bine această parolă, vei avea nevoie de ea mai târziu în BitBrokerTrade.
+  </Step>
+  <Step title="Setează permisiunile">
+    Bifează opțiunile **"Tranzacționare spot"** și **"Fără limită"**. Apoi apasă pe **Următorul**.
+  </Step>
+  <Step title="Copiază cheile">
+    În pop-up vei vedea **cheia API**, **API secret** și **parola API** aleasă. Copiază toate trei într-un notepad, vei avea nevoie de toate trei în BitBrokerTrade.
+  </Step>
+</Steps>
+
+## Partea 3: Adaugă exchange-ul în BitBrokerTrade
+
+<Steps>
+  <Step title="Navighează la Exchange-uri">
+    Autentifică-te la BitBrokerTrade. În coloana din stânga, apasă pe **Setări**, apoi pe **Exchange-uri** și apoi pe **Adaugă exchange**.
+  </Step>
+  <Step title="Selectează KuCoin">
+    Apasă pe **logo-ul KuCoin** pentru a selecta KuCoin ca exchange.
+  </Step>
+  <Step title="Completează detaliile">
+    Introdu **cheia API**, **API secret** și **parola API** copiate în câmpurile corespunzătoare. Apasă pe **Adaugă**.
+  </Step>
+  <Step title="Verifică conexiunea">
+    Conexiunea API este testată imediat. Statusul se schimbă în **"activ"** de îndată ce conexiunea reușește.
+  </Step>
+</Steps>
+
+Acum că exchange-ul este activ, conectează un trader la contul tău KuCoin. Urmează ghidul de pe [Setări trader](/ro/traders/trader-settings).

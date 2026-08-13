@@ -1,0 +1,56 @@
+---
+title: "Connect Binance to BitBrokerTrade via an API key"
+sidebarTitle: "Binance"
+description: "Generate an API key in Binance API Management and connect your Binance account to BitBrokerTrade for automated crypto trading."
+---
+
+To let BitBrokerTrade trade through your Binance account, create an API key in Binance API Management and add it to BitBrokerTrade. Work through the three parts below to complete the connection.
+
+<Warning>
+  After you create an API key, Binance sends a confirmation email. **Click the confirmation link in that email before you add the exchange in BitBrokerTrade.** If you use 2FA via Google Authenticator, there is no confirmation email and you can continue right away.
+</Warning>
+
+## Part 1: Create an API key in Binance
+
+<Steps>
+  <Step title="Open API Management">
+    Log in to [binance.com](https://binance.com) and click your **account name** in the top right (shown as your initials). From the dropdown menu, choose **"API Management"**.
+  </Step>
+  <Step title="Create a new label">
+    Under **"Label API key to proceed"**, enter a name for your key, for example `BitBrokerTrade`. Then click **"Create API"**.
+  </Step>
+  <Step title="Set permissions">
+    Set the **API restrictions** so that reading and trading are allowed. Make sure that withdrawals are **not** enabled. Use the **Copy** button to copy the API key to your clipboard. Paste it into a notepad. Do the same with the API secret.
+  </Step>
+  <Step title="Activate the confirmation email">
+    Binance sends a confirmation email. Open the email and click the activation link. Do you use Google Authenticator as 2FA? Then you can skip this step.
+  </Step>
+</Steps>
+
+## Part 2: Add the exchange in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigate to Exchanges">
+    Log in to BitBrokerTrade. In the left column, click **Settings**, then **Exchanges**, and then **Add exchange**.
+  </Step>
+  <Step title="Select Binance">
+    Click the **Binance logo** to select Binance as the exchange.
+  </Step>
+  <Step title="Fill in the details">
+    In the **Name** field, enter `Binance`. Then paste the previously copied **API key** and **API secret** into the matching fields.
+  </Step>
+  <Step title="Set a reserved amount (optional)">
+    Do you want to keep part of your balance out of the trader? Enable **"Reserved amount"** and enter the amount in euros. The trader will never use this amount.
+  </Step>
+  <Step title="Add the exchange">
+    Check that you have completed the confirmation email (or 2FA). Then click **Add**. The connection is now active.
+  </Step>
+</Steps>
+
+<Note>
+  **Reserved amount, how does it work?** Say you have €1,000 on Binance and you reserve €250. The trader will then only work with €750. The €250 always stays available on your euro account at Binance.
+</Note>
+
+## Part 3: Connect a trader
+
+Now that the exchange has been added, the next step is to connect a trader to your Binance account. Follow the full guide on [Trader settings](/traders/trader-settings).

@@ -1,0 +1,62 @@
+---
+title: "Connect Bitvavo to BitBrokerTrade via an API key"
+sidebarTitle: "Bitvavo"
+description: "Create an API key in Bitvavo and connect your account to BitBrokerTrade. Follow this step-by-step guide for a working connection."
+---
+
+To let BitBrokerTrade trade on your Bitvavo account, first create an API key in Bitvavo and then add it to BitBrokerTrade. This process has three parts: creating the API key, adding the exchange, and connecting a trader.
+
+<Warning>
+  After you create an API key, Bitvavo sends a confirmation email. **Click the confirmation link in your inbox first, before adding the exchange in BitBrokerTrade.** If you skip this step, the connection will fail.
+</Warning>
+
+## Part 1: Create an API key in Bitvavo
+
+<Steps>
+  <Step title="Open the API settings">
+    Log in to [bitvavo.com](https://bitvavo.com) and click your **account name** in the top right. From the dropdown menu, choose **"API"**.
+  </Step>
+  <Step title="Add a new key">
+    Click **"Add new API key"**. A form appears for your new key.
+  </Step>
+  <Step title="Set permissions">
+    Give the key a recognizable name, for example **"API BitBrokerTrade"**. Then enable the toggles for **"Read only"** and **"Trade digital assets"** (slide them to the right). Leave the **IP whitelist** field empty.
+  </Step>
+  <Step title="Generate the key">
+    Click **"Generate API key"**. Enter your Bitvavo password and your 2FA authentication code, and click **Confirm**.
+  </Step>
+  <Step title="Copy the keys">
+    Click the copy icon next to the **API key** to copy it to your clipboard. Paste the key in a notepad. Do the same with the **API secret key**. Then click **"I have saved the secret API secret"**.
+  </Step>
+  <Step title="Confirm the confirmation email">
+    Bitvavo now sends an email to your registered address. **Open the email and click the confirmation link.** Only then does the API key become active in Bitvavo.
+  </Step>
+</Steps>
+
+## Part 2: Add the exchange in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigate to Exchanges">
+    Log in to BitBrokerTrade. In the left column, click **Settings**, then **Exchanges**, and then **Add exchange**.
+  </Step>
+  <Step title="Select Bitvavo">
+    Click the **Bitvavo logo** to choose Bitvavo as the exchange.
+  </Step>
+  <Step title="Fill in the details">
+    In the **Name** field, enter `Bitvavo`. Then paste the previously copied **API key** and **API secret** into the matching fields.
+  </Step>
+  <Step title="Set a reserved amount (optional)">
+    Do you want to keep part of your balance out of the trader? Enable **"Reserved amount"** and enter the desired amount in euros. This amount is never used for purchases.
+  </Step>
+  <Step title="Add the exchange">
+    Check that you have already confirmed the Bitvavo email. Then click **Add**. The connection is now active.
+  </Step>
+</Steps>
+
+<Note>
+  **Reserved amount, how does it work?** Say you have €1,000 on Bitvavo and you set €250 as the reserved amount. The trader will then only work with €750. A balance of €250 will always remain untouched on your euro account.
+</Note>
+
+## Part 3: Connect a trader
+
+Now that the exchange has been added, the next step is to connect a trader to your Bitvavo account. Follow the full step-by-step guide on the [Trader settings](/traders/trader-settings) page.

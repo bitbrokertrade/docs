@@ -1,0 +1,62 @@
+---
+title: "Conectează Bitvavo la BitBrokerTrade printr-o cheie API"
+sidebarTitle: "Bitvavo"
+description: "Creează o cheie API în Bitvavo și conectează contul tău la BitBrokerTrade. Urmează acest ghid pas cu pas pentru o conexiune funcțională."
+---
+
+Pentru ca BitBrokerTrade să tranzacționeze pe contul tău Bitvavo, mai întâi creează o cheie API în Bitvavo și apoi adaug-o în BitBrokerTrade. Acest proces are trei părți: crearea cheii API, adăugarea exchange-ului și conectarea unui trader.
+
+<Warning>
+  După ce creezi o cheie API, Bitvavo trimite un e-mail de confirmare. **Apasă mai întâi pe linkul de confirmare din căsuța ta poștală, înainte de a adăuga exchange-ul în BitBrokerTrade.** Dacă sari peste acest pas, conexiunea va eșua.
+</Warning>
+
+## Partea 1: Creează o cheie API în Bitvavo
+
+<Steps>
+  <Step title="Deschide setările API">
+    Autentifică-te pe [bitvavo.com](https://bitvavo.com) și apasă pe **numele contului** din dreapta sus. Din meniul derulant, alege **"API"**.
+  </Step>
+  <Step title="Adaugă o cheie nouă">
+    Apasă pe **"Adaugă o cheie API nouă"**. Se deschide un formular pentru noua cheie.
+  </Step>
+  <Step title="Setează permisiunile">
+    Dă cheii un nume recognoscibil, de exemplu **"API BitBrokerTrade"**. Apoi activează comutatoarele pentru **"Doar citire"** și **"Tranzacționează date digitale"** (glisează-le spre dreapta). Lasă câmpul **IP-whitelist** gol.
+  </Step>
+  <Step title="Generează cheia">
+    Apasă pe **"Generează cheia API"**. Introdu parola Bitvavo și codul tău 2FA, apoi apasă pe **Confirmă**.
+  </Step>
+  <Step title="Copiază cheile">
+    Apasă pe pictograma de copiere de lângă **cheia API** pentru a o copia în clipboard. Lipește cheia într-un notepad. Fă la fel cu **cheia API secret**. Apoi apasă pe **"Am salvat cheia API secret"**.
+  </Step>
+  <Step title="Confirmă e-mailul de confirmare">
+    Bitvavo trimite acum un e-mail la adresa ta înregistrată. **Deschide e-mailul și apasă pe linkul de confirmare.** Abia atunci cheia API devine activă în Bitvavo.
+  </Step>
+</Steps>
+
+## Partea 2: Adaugă exchange-ul în BitBrokerTrade
+
+<Steps>
+  <Step title="Navighează la Exchange-uri">
+    Autentifică-te la BitBrokerTrade. În coloana din stânga, apasă pe **Setări**, apoi pe **Exchange-uri** și apoi pe **Adaugă exchange**.
+  </Step>
+  <Step title="Selectează Bitvavo">
+    Apasă pe **logo-ul Bitvavo** pentru a alege Bitvavo ca exchange.
+  </Step>
+  <Step title="Completează detaliile">
+    În câmpul **Nume**, introdu `Bitvavo`. Apoi lipește **cheia API** și **API secret** copiate anterior în câmpurile corespunzătoare.
+  </Step>
+  <Step title="Setează o sumă rezervată (opțional)">
+    Vrei să ții o parte din sold în afara trader-ului? Activează **"Sumă rezervată"** și introdu suma dorită în euro. Această sumă nu este folosită niciodată pentru cumpărări.
+  </Step>
+  <Step title="Adaugă exchange-ul">
+    Verifică dacă ai confirmat deja e-mailul de la Bitvavo. Apoi apasă pe **Adaugă**. Conexiunea este acum activă.
+  </Step>
+</Steps>
+
+<Note>
+  **Suma rezervată, cum funcționează?** Să zicem că ai 1.000 € pe Bitvavo și setezi 250 € ca sumă rezervată. Trader-ul va lucra doar cu 750 €. Un sold de 250 € va rămâne întotdeauna neatins în contul tău în euro.
+</Note>
+
+## Partea 3: Conectează un trader
+
+Acum că exchange-ul a fost adăugat, următorul pas este să conectezi un trader la contul tău Bitvavo. Urmează ghidul complet pas cu pas pe pagina [Setări trader](/ro/traders/trader-settings).

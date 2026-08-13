@@ -1,0 +1,62 @@
+---
+title: "Connect Bitstamp to BitBrokerTrade via an API key"
+sidebarTitle: "Bitstamp"
+description: "Create a new API key in Bitstamp with the right permissions and add your Bitstamp account to BitBrokerTrade for automated trading."
+---
+
+Bitstamp is one of the oldest and most trusted European exchanges. To connect BitBrokerTrade to your Bitstamp account, create an API key through Bitstamp's Security menu. Follow the three parts below for a working connection.
+
+<Warning>
+  After you create an API key, Bitstamp sends a confirmation email. **Click the confirmation link in that email before you add the exchange in BitBrokerTrade.** If you add the exchange before confirming, the connection will fail.
+</Warning>
+
+## Part 1: Create an API key in Bitstamp
+
+<Steps>
+  <Step title="Open API Access">
+    Log in to [bitstamp.net](https://bitstamp.net) and click **"Security"** in the menu. Then choose **"API Access"**.
+  </Step>
+  <Step title="Create a new API key">
+    Click **"NEW API key"**. Is there an existing key? Delete it first before creating a new one.
+  </Step>
+  <Step title="Set permissions">
+    Scroll down on the next screen until you see the toggle buttons. Enable the relevant trading permissions by sliding the corresponding toggles to the right.
+  </Step>
+  <Step title="Confirm with 2FA">
+    Click the **confirmation button** at the bottom of the screen and enter the 2FA code from the authenticator app on your phone.
+  </Step>
+  <Step title="Copy the keys">
+    Click the copy icon next to the **API key** to copy it to your clipboard. Paste the key in a notepad. Do the same with the **API secret**. You will need both shortly in BitBrokerTrade.
+  </Step>
+  <Step title="Confirm the confirmation email">
+    Bitstamp sends an email with an activation link. **Open the email and click the link** to activate the API key.
+  </Step>
+</Steps>
+
+## Part 2: Add the exchange in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigate to Exchanges">
+    Log in to BitBrokerTrade. In the left column, click **Settings**, then **Exchanges**, and then **Add exchange**.
+  </Step>
+  <Step title="Select Bitstamp">
+    Click the **Bitstamp logo** to choose Bitstamp as the exchange.
+  </Step>
+  <Step title="Fill in the details">
+    In the **Name** field, enter your Bitstamp account name. Then paste the copied **API key** and **API secret** into the matching fields.
+  </Step>
+  <Step title="Set a reserved amount (optional)">
+    Do you want to keep part of your balance out of the trader? Enable **"Reserved amount"** and enter the desired amount in euros. The trader will never use this amount for purchases.
+  </Step>
+  <Step title="Add the exchange">
+    Make sure you have already confirmed the Bitstamp email. Then click **Add**. The connection is now active.
+  </Step>
+</Steps>
+
+<Note>
+  **Reserved amount, how does it work?** Say you have €1,000 on Bitstamp and you reserve €250. The trader will then only work with €750. The €250 always stays untouched on your euro account at Bitstamp.
+</Note>
+
+## Part 3: Connect a trader
+
+Now that the exchange has been added, the next step is to connect a trader to your Bitstamp account. Follow the full guide on [Trader settings](/traders/trader-settings).

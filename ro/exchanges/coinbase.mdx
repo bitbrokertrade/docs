@@ -1,0 +1,56 @@
+---
+title: "Conectează Coinbase Advanced Trade la BitBrokerTrade"
+sidebarTitle: "Coinbase"
+description: "Generează o cheie API în Coinbase Advanced Trade și conectează contul tău Coinbase la BitBrokerTrade. Urmează acest ghid pas cu pas."
+---
+
+BitBrokerTrade funcționează cu API-ul **Coinbase Advanced Trade**. Acesta este mediul profesional de tranzacționare al Coinbase. Creează o cheie prin meniul Advanced API și apoi adaug-o în BitBrokerTrade. Urmează pașii de mai jos.
+
+## Partea 1: Creează o cheie API în Coinbase
+
+<Steps>
+  <Step title="Deschide Advanced API">
+    Autentifică-te pe [coinbase.com](https://coinbase.com) și apasă pe **"Mai multe"** în bara de meniu din stânga. Pe același ecran, alege opțiunea **"Advanced API"**.
+  </Step>
+  <Step title="Începe fluxul pentru cheia nouă">
+    Apasă pe **"Creează cheia API"** și apoi pe **"Creează cheia API"** pe următorul ecran.
+  </Step>
+  <Step title="Configurează cheia în pop-up">
+    În fereastra pop-up, setează următoarele:
+
+    - **Nume**: dă cheii un nume recognoscibil
+    - **Portofoliu**: alege `standard`
+    - **Permisiuni**: bifează **View** și **Trade**
+    - **IP Whitelist**: lasă câmpul gol, adresa pre-completată este un IP fictiv și nu trebuie eliminată
+
+    Apasă pe **"Creează și descarcă"**.
+  </Step>
+  <Step title="Salvează cheile">
+    Apare un pop-up cu cele două chei ale tale: **API Key** și **API Secret Key**. Copiază ambele în notepad. Nu trebuie să faci nimic cu fișierul `.json` descărcat.
+  </Step>
+  <Step title="Confirmă">
+    Apasă pe **"Am salvat cheia"** pentru a închide pop-up-ul.
+  </Step>
+</Steps>
+
+## Partea 2: Adaugă exchange-ul în BitBrokerTrade
+
+<Steps>
+  <Step title="Navighează la Exchange-uri">
+    Autentifică-te la BitBrokerTrade. În coloana din stânga, apasă pe **Setări**, apoi pe **Exchange-uri** și apoi pe **Adaugă exchange**.
+  </Step>
+  <Step title="Selectează Coinbase Advanced">
+    Apasă pe logo-ul **Coinbase Advanced** pentru a selecta acest exchange.
+  </Step>
+  <Step title="Completează detaliile și adaugă">
+    Introdu **API Key** și **API Secret Key** copiate în câmpurile corespunzătoare. Apasă pe **Adaugă**. Conexiunea cu Coinbase Advanced este acum activă.
+  </Step>
+</Steps>
+
+<Note>
+  Coinbase nu necesită un e-mail de confirmare. Conexiunea este activă imediat după ce apasă pe **Adaugă**, atât timp cât cheile sunt introduse corect.
+</Note>
+
+## Partea 3: Conectează un trader
+
+Acum că exchange-ul a fost adăugat, conectează un trader la contul tău Coinbase. Urmează ghidul complet pe [Setări trader](/ro/traders/trader-settings).

@@ -1,0 +1,65 @@
+---
+title: "Connect a Bybit spot wallet to BitBrokerTrade via API"
+sidebarTitle: "Bybit"
+description: "Create a Bybit account, complete the KYC process, and generate an API key to connect BitBrokerTrade to your Bybit spot wallet."
+---
+
+Bybit is an international exchange for spot trading. To connect BitBrokerTrade to Bybit, you need a verified Bybit account and an API key with the correct permissions. Follow the three parts below to set everything up.
+
+<Warning>
+  When you create the API key in Bybit, **never** enable the **"withdrawals"** option. If withdrawals are enabled, an external party could remove funds from your account. BitBrokerTrade does not need this permission and will never ask for it.
+</Warning>
+
+## Part 1: Create a Bybit account
+
+Do you already have a verified Bybit account? Skip this part and go straight to [Part 2](#part-2-create-an-api-key-in-bybit).
+
+**What you need:** a working email address, a passport or ID card, a mobile phone, a phone number, and the Google Authenticator app.
+
+<Steps>
+  <Step title="Register an account">
+    Go to [www.bybit.com](https://www.bybit.com) and create an account. Confirm your email address using the verification email that Bybit sends.
+  </Step>
+  <Step title="Complete Identity Verification (KYC)">
+    In the main menu, choose **"Identity Verification"** and click **"Verify Now"**. Work through the screens to confirm your identity with your passport or ID card, your personal bank account, and your phone number.
+  </Step>
+  <Step title="Wait for KYC approval">
+    Verification can take a few hours. You will receive a confirmation from Bybit as soon as your account is approved.
+  </Step>
+</Steps>
+
+## Part 2: Create an API key in Bybit
+
+<Steps>
+  <Step title="Open the API settings">
+    Click your **personal icon** in the top right and choose **"API"** from the dropdown. Then click **"Create New Key"**.
+  </Step>
+  <Step title="Set up 2FA (if you have not already)">
+    If you have not yet set up 2FA, Bybit will ask you to do so first via Google Authenticator. Follow the on-screen instructions to activate 2FA.
+  </Step>
+  <Step title="Set permissions">
+    Set the API permissions: enable read and trade access. Make sure the **"withdrawals"** option stays **disabled**.
+  </Step>
+  <Step title="Save the key">
+    Click **Submit**. A screen appears with your **API key** and **API Secret**. Copy both to a notepad, you will need them shortly in BitBrokerTrade. Then click **"Understood"**.
+  </Step>
+</Steps>
+
+## Part 3: Add the exchange in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigate to Exchanges">
+    Log in to BitBrokerTrade. In the left column, click **Settings**, then **Exchanges**, and then **Add exchange**.
+  </Step>
+  <Step title="Select Bybit">
+    Click the **Bybit logo** to select Bybit as the exchange.
+  </Step>
+  <Step title="Enter the API keys">
+    Paste the copied **API key** and **API secret** into the matching fields. Click **Add**.
+  </Step>
+  <Step title="Check the connection">
+    The API connection is tested immediately. The status changes to **"active"** as soon as the connection is successful.
+  </Step>
+</Steps>
+
+Now that the exchange is active, connect a trader to your Bybit account. Follow the guide on [Trader settings](/traders/trader-settings).

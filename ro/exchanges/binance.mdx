@@ -1,0 +1,56 @@
+---
+title: "Conectează Binance la BitBrokerTrade printr-o cheie API"
+sidebarTitle: "Binance"
+description: "Generează o cheie API în Binance API Management și conectează contul tău Binance la BitBrokerTrade pentru tranzacționare crypto automatizată."
+---
+
+Pentru ca BitBrokerTrade să tranzacționeze prin contul tău Binance, creează o cheie API în Binance API Management și adaug-o în BitBrokerTrade. Parcurge cele trei părți de mai jos pentru a finaliza conexiunea.
+
+<Warning>
+  După ce creezi o cheie API, Binance trimite un e-mail de confirmare. **Apasă pe linkul de confirmare din acel e-mail înainte de a adăuga exchange-ul în BitBrokerTrade.** Dacă folosești 2FA prin Google Authenticator, nu există e-mail de confirmare și poți continua imediat.
+</Warning>
+
+## Partea 1: Creează o cheie API în Binance
+
+<Steps>
+  <Step title="Deschide API Management">
+    Autentifică-te pe [binance.com](https://binance.com) și apasă pe **numele contului** din dreapta sus (afișat ca inițialele tale). Din meniul derulant, alege **"API Management"**.
+  </Step>
+  <Step title="Creează o etichetă nouă">
+    Sub **"Label API key to proceed"**, introdu un nume pentru cheia ta, de exemplu `BitBrokerTrade`. Apoi apasă pe **"Create API"**.
+  </Step>
+  <Step title="Setează permisiunile">
+    Setează **API restrictions** astfel încât citirea și tranzacționarea să fie permise. Asigură-te că retragerile **nu** sunt activate. Folosește butonul **Copy** pentru a copia cheia API în clipboard. Lipește-o într-un notepad. Fă la fel cu API secret.
+  </Step>
+  <Step title="Activează e-mailul de confirmare">
+    Binance trimite un e-mail de confirmare. Deschide e-mailul și apasă pe linkul de activare. Folosești Google Authenticator ca 2FA? Atunci poți sări peste acest pas.
+  </Step>
+</Steps>
+
+## Partea 2: Adaugă exchange-ul în BitBrokerTrade
+
+<Steps>
+  <Step title="Navighează la Exchange-uri">
+    Autentifică-te la BitBrokerTrade. În coloana din stânga, apasă pe **Setări**, apoi pe **Exchange-uri** și apoi pe **Adaugă exchange**.
+  </Step>
+  <Step title="Selectează Binance">
+    Apasă pe **logo-ul Binance** pentru a selecta Binance ca exchange.
+  </Step>
+  <Step title="Completează detaliile">
+    În câmpul **Nume**, introdu `Binance`. Apoi lipește **cheia API** și **API secret** copiate anterior în câmpurile corespunzătoare.
+  </Step>
+  <Step title="Setează o sumă rezervată (opțional)">
+    Vrei să ții o parte din sold în afara trader-ului? Activează **"Sumă rezervată"** și introdu suma în euro. Trader-ul nu va folosi niciodată această sumă.
+  </Step>
+  <Step title="Adaugă exchange-ul">
+    Verifică dacă ai finalizat e-mailul de confirmare (sau 2FA). Apoi apasă pe **Adaugă**. Conexiunea este acum activă.
+  </Step>
+</Steps>
+
+<Note>
+  **Suma rezervată, cum funcționează?** Să zicem că ai 1.000 € pe Binance și rezervi 250 €. Trader-ul va lucra doar cu 750 €. Cei 250 € rămân întotdeauna disponibili în contul tău în euro la Binance.
+</Note>
+
+## Partea 3: Conectează un trader
+
+Acum că exchange-ul a fost adăugat, următorul pas este să conectezi un trader la contul tău Binance. Urmează ghidul complet pe [Setări trader](/ro/traders/trader-settings).

@@ -1,0 +1,65 @@
+---
+title: "Conectează spot wallet Bybit la BitBrokerTrade prin API"
+sidebarTitle: "Bybit"
+description: "Creează un cont Bybit, parcurge procesul KYC și generează o cheie API pentru a conecta BitBrokerTrade la spot wallet-ul tău Bybit."
+---
+
+Bybit este un exchange internațional pentru tranzacționare spot. Pentru a conecta BitBrokerTrade la Bybit, ai nevoie de un cont Bybit verificat și o cheie API cu permisiunile corecte. Urmează cele trei părți de mai jos pentru a configura totul.
+
+<Warning>
+  Când creezi cheia API în Bybit, **niciodată** nu activa opțiunea **"withdrawals"** (retrageri). Dacă retragerile sunt activate, o parte externă ar putea scoate fonduri din contul tău. BitBrokerTrade nu are nevoie de această permisiune și nu o va cere niciodată.
+</Warning>
+
+## Partea 1: Creează un cont Bybit
+
+Ai deja un cont Bybit verificat? Sari peste această parte și mergi direct la [Partea 2](#partea-2-creează-o-cheie-api-în-bybit).
+
+**De ce ai nevoie:** o adresă de e-mail validă, un pașaport sau carte de identitate, un telefon mobil, un număr de telefon și aplicația Google Authenticator.
+
+<Steps>
+  <Step title="Înregistrează un cont">
+    Mergi la [www.bybit.com](https://www.bybit.com) și creează un cont. Confirmă adresa de e-mail folosind e-mailul de verificare trimis de Bybit.
+  </Step>
+  <Step title="Finalizează Identity Verification (KYC)">
+    În meniul principal, alege **"Identity Verification"** și apasă pe **"Verify Now"**. Parcurge ecranele pentru a-ți confirma identitatea cu pașaportul sau cartea de identitate, contul bancar personal și numărul de telefon.
+  </Step>
+  <Step title="Așteaptă aprobarea KYC">
+    Verificarea poate dura câteva ore. Vei primi o confirmare de la Bybit imediat ce contul tău este aprobat.
+  </Step>
+</Steps>
+
+## Partea 2: Creează o cheie API în Bybit
+
+<Steps>
+  <Step title="Deschide setările API">
+    Apasă pe **pictograma personală** din dreapta sus și alege **"API"** din meniul derulant. Apoi apasă pe **"Create New Key"**.
+  </Step>
+  <Step title="Configurează 2FA (dacă nu ai făcut deja)">
+    Dacă nu ai configurat încă 2FA, Bybit âți va cere să faci acest lucru mai întâi prin Google Authenticator. Urmează instrucțiunile de pe ecran pentru a activa 2FA.
+  </Step>
+  <Step title="Setează permisiunile">
+    Setează permisiunile API: activează accesul de citire și tranzacționare. Asigură-te că opțiunea **"withdrawals"** rămâne **dezactivată**.
+  </Step>
+  <Step title="Salvează cheia">
+    Apasă pe **Submit**. Apare un ecran cu **cheia API** și **API Secret**. Copiază ambele într-un notepad, vei avea nevoie de ele în curând în BitBrokerTrade. Apoi apasă pe **"Understood"**.
+  </Step>
+</Steps>
+
+## Partea 3: Adaugă exchange-ul în BitBrokerTrade
+
+<Steps>
+  <Step title="Navighează la Exchange-uri">
+    Autentifică-te la BitBrokerTrade. În coloana din stânga, apasă pe **Setări**, apoi pe **Exchange-uri** și apoi pe **Adaugă exchange**.
+  </Step>
+  <Step title="Selectează Bybit">
+    Apasă pe **logo-ul Bybit** pentru a selecta Bybit ca exchange.
+  </Step>
+  <Step title="Introdu cheile API">
+    Lipește **cheia API** și **API secret** copiate în câmpurile corespunzătoare. Apasă pe **Adaugă**.
+  </Step>
+  <Step title="Verifică conexiunea">
+    Conexiunea API este testată imediat. Statusul se schimbă în **"activ"** de îndată ce conexiunea reușește.
+  </Step>
+</Steps>
+
+Acum că exchange-ul este activ, conectează un trader la contul tău Bybit. Urmează ghidul de pe [Setări trader](/ro/traders/trader-settings).

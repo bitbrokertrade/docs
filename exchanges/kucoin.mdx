@@ -1,0 +1,65 @@
+---
+title: "Connect KuCoin to BitBrokerTrade via an API key"
+sidebarTitle: "KuCoin"
+description: "Create a KuCoin account, complete KYC, and generate an API key with spot trading permissions to connect BitBrokerTrade to your KuCoin account."
+---
+
+KuCoin is an international exchange with a wide range of cryptocurrencies. To connect BitBrokerTrade to KuCoin, you need a verified KuCoin account and an API key with spot trading permissions. Follow the three parts below.
+
+<Note>
+  When creating an API key, KuCoin also requires an **API password** that you choose yourself. You will need this password later when adding the exchange in BitBrokerTrade, so save it carefully alongside your API keys. This is different from other exchanges.
+</Note>
+
+## Part 1: Create a KuCoin account
+
+Do you already have a verified KuCoin account? Skip this part and go straight to [Part 2](#part-2-create-an-api-key-in-kucoin).
+
+**What you need:** a working email address, a passport or ID card, a mobile phone, a phone number, and the Google Authenticator app.
+
+<Steps>
+  <Step title="Register an account">
+    Go to [www.kucoin.com](https://www.kucoin.com) and create an account.
+  </Step>
+  <Step title="Complete KYC">
+    Go through the **KYC** (Know Your Client) process to verify your identity. You need your passport or ID card, your phone number, and the Google Authenticator app.
+  </Step>
+  <Step title="Deposit a euro balance">
+    Deposit euros into your spot wallet at KuCoin. BitBrokerTrade trades from your available euro balance.
+  </Step>
+</Steps>
+
+## Part 2: Create an API key in KuCoin
+
+<Steps>
+  <Step title="Open the API settings">
+    Click the **personal icon** in the top right and choose **"API"** from the dropdown. Then click **"Create API"**.
+  </Step>
+  <Step title="Set a name and password">
+    Give the API key a name and choose an **API password**. Remember this password well, you will need it later in BitBrokerTrade.
+  </Step>
+  <Step title="Set permissions">
+    Check the **"Spot trading"** and **"No limit"** options. Then click **Next**.
+  </Step>
+  <Step title="Copy the keys">
+    In the pop-up you will see your **API key**, **API secret**, and the **API password** you chose. Copy all three to a notepad, you will need all three in BitBrokerTrade.
+  </Step>
+</Steps>
+
+## Part 3: Add the exchange in BitBrokerTrade
+
+<Steps>
+  <Step title="Navigate to Exchanges">
+    Log in to BitBrokerTrade. In the left column, click **Settings**, then **Exchanges**, and then **Add exchange**.
+  </Step>
+  <Step title="Select KuCoin">
+    Click the **KuCoin logo** to select KuCoin as the exchange.
+  </Step>
+  <Step title="Fill in the details">
+    Enter the copied **API key**, **API secret**, and the **API password** in the matching fields. Click **Add**.
+  </Step>
+  <Step title="Check the connection">
+    The API connection is tested immediately. The status changes to **"active"** as soon as the connection is successful.
+  </Step>
+</Steps>
+
+Now that the exchange is active, connect a trader to your KuCoin account. Follow the guide on [Trader settings](/traders/trader-settings).

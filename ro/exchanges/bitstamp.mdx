@@ -1,0 +1,62 @@
+---
+title: "Conectează Bitstamp la BitBrokerTrade printr-o cheie API"
+sidebarTitle: "Bitstamp"
+description: "Creează o cheie API nouă în Bitstamp cu permisiunile potrivite și adaugă contul tău Bitstamp la BitBrokerTrade pentru tranzacționare automatizată."
+---
+
+Bitstamp este unul dintre cele mai vechi și mai de încredere exchange-uri europene. Pentru a conecta BitBrokerTrade la contul tău Bitstamp, creează o cheie API prin meniul Security al Bitstamp. Urmează cele trei părți de mai jos pentru o conexiune funcțională.
+
+<Warning>
+  După ce creezi o cheie API, Bitstamp trimite un e-mail de confirmare. **Apasă pe linkul de confirmare din acel e-mail înainte de a adăuga exchange-ul în BitBrokerTrade.** Dacă adaugi exchange-ul înainte de confirmare, conexiunea va eșua.
+</Warning>
+
+## Partea 1: Creează o cheie API în Bitstamp
+
+<Steps>
+  <Step title="Deschide API Access">
+    Autentifică-te pe [bitstamp.net](https://bitstamp.net) și apasă pe **"Security"** în meniu. Apoi alege **"API Access"**.
+  </Step>
+  <Step title="Creează o cheie API nouă">
+    Apasă pe **"NEW API key"**. Există o cheie existentă? Șterge-o mai întâi înainte de a crea una nouă.
+  </Step>
+  <Step title="Setează permisiunile">
+    Derulează în jos pe următorul ecran până când vezi butoanele de comutare. Activează permisiunile de tranzacționare relevante gliseazând comutatoarele corespunzătoare spre dreapta.
+  </Step>
+  <Step title="Confirmă cu 2FA">
+    Apasă pe **butonul de confirmare** din partea de jos a ecranului și introdu codul 2FA din aplicația de authenticator de pe telefonul tău.
+  </Step>
+  <Step title="Copiază cheile">
+    Apasă pe pictograma de copiere de lângă **cheia API** pentru a o copia în clipboard. Lipește cheia într-un notepad. Fă la fel cu **API secret**. Vei avea nevoie de ambele în curând în BitBrokerTrade.
+  </Step>
+  <Step title="Confirmă e-mailul de confirmare">
+    Bitstamp trimite un e-mail cu un link de activare. **Deschide e-mailul și apasă pe link** pentru a activa cheia API.
+  </Step>
+</Steps>
+
+## Partea 2: Adaugă exchange-ul în BitBrokerTrade
+
+<Steps>
+  <Step title="Navighează la Exchange-uri">
+    Autentifică-te la BitBrokerTrade. În coloana din stânga, apasă pe **Setări**, apoi pe **Exchange-uri** și apoi pe **Adaugă exchange**.
+  </Step>
+  <Step title="Selectează Bitstamp">
+    Apasă pe **logo-ul Bitstamp** pentru a alege Bitstamp ca exchange.
+  </Step>
+  <Step title="Completează detaliile">
+    În câmpul **Nume**, introdu numele contului tău Bitstamp. Apoi lipește **cheia API** și **API secret** copiate în câmpurile corespunzătoare.
+  </Step>
+  <Step title="Setează o sumă rezervată (opțional)">
+    Vrei să ții o parte din sold în afara trader-ului? Activează **"Sumă rezervată"** și introdu suma dorită în euro. Trader-ul nu va folosi niciodată această sumă pentru cumpărări.
+  </Step>
+  <Step title="Adaugă exchange-ul">
+    Asigură-te că ai confirmat deja e-mailul de la Bitstamp. Apoi apasă pe **Adaugă**. Conexiunea este acum activă.
+  </Step>
+</Steps>
+
+<Note>
+  **Suma rezervată, cum funcționează?** Să zicem că ai 1.000 € pe Bitstamp și rezervi 250 €. Trader-ul va lucra doar cu 750 €. Cei 250 € rămân întotdeauna neatinși în contul tău în euro la Bitstamp.
+</Note>
+
+## Partea 3: Conectează un trader
+
+Acum că exchange-ul a fost adăugat, următorul pas este să conectezi un trader la contul tău Bitstamp. Urmează ghidul complet pe [Setări trader](/ro/traders/trader-settings).

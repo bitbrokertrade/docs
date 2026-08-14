@@ -32,6 +32,16 @@
       {
         "language": "en",
         "default": true,
+        "navbar": {
+          "links": [
+            { "label": "Docs", "href": "/en/docs" }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Get Started",
+            "href": "/en/quickstart"
+          }
+        },
         "tabs": [
           {
             "tab": "Guide",

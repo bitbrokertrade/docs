@@ -8,7 +8,7 @@
   },
   "favicon": "https://media.brand.dev/d1042968-fb50-48ea-a787-1d8cc0a54442.png",
   "colors": {
-    "primary": "#fc951d",
+    "primary": "#F27100",
     "light": "#363c43",
     "dark": "#c9cbcd"
   },
@@ -23,7 +23,7 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Aanmelden",
+      "label": "Sign up",
       "href": "https://bitbroker.trade/Authentication/Register"
     }
   },
@@ -39,24 +39,51 @@
               {
                 "group": "Introduction",
                 "pages": [
-                  "introduction/what-is-bitbrokertrade"
+                  "introduction/what-is-bitbrokertrade",
+                  "introduction/how-it-works",
+                  "introduction/pricing-and-credits"
                 ]
               },
               {
                 "group": "Getting started",
-                "pages": []
+                "pages": [
+                  "getting-started/sign-up",
+                  "getting-started/first-login-and-menu",
+                  "getting-started/dashboard",
+                  "getting-started/buy-transactions",
+                  "getting-started/sell-transactions",
+                  "getting-started/settings"
+                ]
               },
               {
                 "group": "Connect exchanges",
-                "pages": []
+                "pages": [
+                  "exchanges/what-is-an-exchange",
+                  "exchanges/bitvavo",
+                  "exchanges/binance",
+                  "exchanges/bybit",
+                  "exchanges/bitstamp",
+                  "exchanges/coinbase",
+                  "exchanges/kucoin",
+                  "exchanges/simulator"
+                ]
               },
               {
                 "group": "Set up traders",
-                "pages": []
+                "pages": [
+                  "traders/what-is-a-trader",
+                  "traders/trader-settings",
+                  "traders/trading-strategy",
+                  "traders/supported-coins"
+                ]
               },
               {
                 "group": "Other",
-                "pages": []
+                "pages": [
+                  "other/export-to-excel",
+                  "other/referral-program",
+                  "other/crypto-glossary"
+                ]
               }
             ]
           },
@@ -65,11 +92,21 @@
             "groups": [
               {
                 "group": "Frequently asked questions",
-                "pages": []
+                "pages": [
+                  "faq/general",
+                  "faq/deposits-and-balance",
+                  "faq/returns-and-profit",
+                  "faq/trader-settings-explained"
+                ]
               },
               {
                 "group": "Errors",
-                "pages": []
+                "pages": [
+                  "errors/trader-not-buying",
+                  "errors/sell-problems",
+                  "errors/api-key-problems",
+                  "errors/dashboard-and-balance"
+                ]
               }
             ]
           }
@@ -185,7 +222,14 @@
               {
                 "group": "Conectare exchange-uri",
                 "pages": [
-                  "ro/exchanges/what-is-an-exchange"
+                  "ro/exchanges/what-is-an-exchange",
+                  "ro/exchanges/bitvavo",
+                  "ro/exchanges/binance",
+                  "ro/exchanges/bybit",
+                  "ro/exchanges/bitstamp",
+                  "ro/exchanges/coinbase",
+                  "ro/exchanges/kucoin",
+                  "ro/exchanges/simulator"
                 ]
               },
               {
@@ -236,5 +280,14 @@
   },
   "icons": {
     "library": "fontawesome"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
   }
 }

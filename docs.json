@@ -34,12 +34,12 @@
         "default": true,
         "navbar": {
           "links": [
-            { "label": "Docs", "href": "/en/docs" }
+            { "label": "Get Started", "href": "/getting-started/sign-up" }
           ],
           "primary": {
             "type": "button",
-            "label": "Get Started",
-            "href": "/en/quickstart"
+            "label": "Sign up",
+            "href": "https://bitbroker.trade/Authentication/Register"
           }
         },
         "tabs": [
@@ -124,6 +124,16 @@
       },
       {
         "language": "nl",
+        "navbar": {
+          "links": [
+            { "label": "Aan de slag", "href": "/nl/getting-started/sign-up" }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Aanmelden",
+            "href": "https://bitbroker.trade/Authentication/Register"
+          }
+        },
         "tabs": [
           {
             "tab": "Handleiding",
@@ -206,6 +216,16 @@
       },
       {
         "language": "ro",
+        "navbar": {
+          "links": [
+            { "label": "Începe", "href": "/ro/getting-started/sign-up" }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Pentru a vă înregistra",
+            "href": "https://bitbroker.trade/Authentication/Register"
+          }
+        },
         "tabs": [
           {
             "tab": "Ghid",
